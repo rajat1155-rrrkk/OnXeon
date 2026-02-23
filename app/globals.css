@@ -112,7 +112,7 @@
 
 :root {
   /* Accent colors */
-  --brand: oklch(81.293% 0.26913 141.719)
+  --brand: oklch(81.293% 0.26913 141.719);
   --brand-foreground: oklch(86.335% 0.27643 140.035);
 
   /* Customized shadcn/ui colors */
