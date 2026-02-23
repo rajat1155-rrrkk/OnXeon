@@ -112,8 +112,8 @@
 
 :root {
   /* Accent colors */
-  --brand: oklch(81.001% 0.27264 142.61);
-  --brand-foreground: oklch(81.001% 0.27264 142.61);
+  --brand: oklch(81.293% 0.26913 141.719)
+  --brand-foreground: oklch(86.335% 0.27643 140.035);
 
   /* Customized shadcn/ui colors */
   --background: oklch(97.65% 0.001 17.18);
@@ -122,7 +122,7 @@
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(81.001% 0.27264 142.61);
+  --primary: oklch(58.148% 0.17917 139.255);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
