@@ -63,61 +63,57 @@ export default function Navigation({
   ],
   components = [
     {
-      title: "Alert Dialog",
+      title: "CRM Platforms",
       href: "/docs/primitives/alert-dialog",
       description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
+        "Salesforce, Zoho, HubSpot and custom CRM implementations.",
     },
     {
-      title: "Hover Card",
+      title: "ERP Systems",
       href: "/docs/primitives/hover-card",
-      description:
-        "For sighted users to preview content available behind a link.",
+      description: "ERPNext, SAP integrations and business workflows.",
     },
     {
-      title: "Progress",
+      title: "Cloud Platforms",
       href: "/docs/primitives/progress",
-      description:
-        "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      description: "AWS, Azure and modern cloud deployments.",
     },
     {
-      title: "Scroll-area",
+      title: "System Integration",
       href: "/docs/primitives/scroll-area",
-      description: "Visually or semantically separates content.",
+      description: "Connect enterprise tools and automate workflows.",
     },
     {
-      title: "Tabs",
+      title: "Custom Development",
       href: "/docs/primitives/tabs",
-      description:
-        "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      description: "Tailored software solutions for business needs.",
     },
     {
-      title: "Tooltip",
+      title: "Support & Maintenance",
       href: "/docs/primitives/tooltip",
-      description:
-        "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      description: "Ongoing support and system optimization.",
     },
   ],
   logo = <LaunchUI />,
-  logoTitle = "OnXeon",
-  logoDescription = "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
+  logoTitle = "OnXeon Services",
+  logoDescription = "Enterprise implementation, integration and support services for modern businesses.",
   logoHref = siteConfig.url,
   introItems = [
     {
-      title: "Introduction",
+      title: "CRM Solutions",
       href: siteConfig.url,
       description:
-        "Re-usable components built using Radix UI and Tailwind CSS.",
+        "Implementation and customization of CRM platforms.",
     },
     {
-      title: "Installation",
+      title: "ERP Solutions",
       href: siteConfig.url,
-      description: "How to install dependencies and structure your app.",
+      description: "Deployment and integration of ERP systems.",
     },
     {
-      title: "Typography",
+      title: "Cloud Solutions",
       href: siteConfig.url,
-      description: "Styles for headings, paragraphs, lists...etc",
+      description: "Cloud infrastructure and platform services.",
     },
   ],
 }: NavigationProps) {

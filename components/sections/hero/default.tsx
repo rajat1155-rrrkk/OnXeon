@@ -31,8 +31,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title = "Build reliable enterprise systems with OnXeon",
+  description = "Implementation, customization, and integration for CRM, ERP, and cloud platforms.",
   mockup = (
     <Screenshot
       srcLight="/dashboard-light.png"
@@ -46,7 +46,7 @@ export default function Hero({
   badge = (
     <Badge variant="outline" className="animate-appear">
       <span className="text-muted-foreground">
-        New version of Launch UI is out!
+        Enterprise solutions for modern businesses
       </span>
       <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
         Get started
@@ -62,7 +62,7 @@ export default function Hero({
     },
     {
       href: siteConfig.links.github,
-      text: "Github",
+      text: "Contact Us",
       variant: "glow",
       icon: <Github className="mr-2 size-4" />,
     },
