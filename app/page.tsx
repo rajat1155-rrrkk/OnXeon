@@ -35,8 +35,8 @@ export default function Home() {
             <h2 className="text-3xl font-semibold md:text-4xl">What We Do</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">CRM Implementation</h3>
               <p className="text-muted-foreground mt-3">
@@ -45,8 +45,8 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">ERP Integration</h3>
               <p className="text-muted-foreground mt-3">
@@ -55,8 +55,8 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">System Integration</h3>
               <p className="text-muted-foreground mt-3">
@@ -64,8 +64,8 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">Cloud Deployment</h3>
               <p className="text-muted-foreground mt-3">
@@ -74,8 +74,8 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">Open Source Solutions</h3>
               <p className="text-muted-foreground mt-3">
@@ -87,10 +87,9 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <div className="group relative overflow-hidden bg-gradient-to-b from-green-50 to-white">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/70 to-transparent opacity-20 transition-opacity duration-500 group-hover:opacity-60" />
+      <div>
         <Items
-          className="relative z-10 py-24"
+          className="py-24"
           title="Why OnXeon"
           items={[
             {
@@ -120,9 +119,8 @@ export default function Home() {
           ]}
         />
       </div>
-      <Section className="relative overflow-hidden bg-gradient-to-b from-green-50 to-white py-24">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/70 to-transparent opacity-20" />
-        <div className="container relative z-10 mx-auto max-w-6xl px-6">
+      <Section className="py-24">
+        <div className="container mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold md:text-4xl">
               Typical Projects
@@ -162,9 +160,9 @@ export default function Home() {
             ].map((project) => (
               <div
                 key={project.name}
-                className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300"
+                className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200"
               >
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
                 <div className="relative z-10">
                   <h3 className="text-lg font-semibold">{project.name}</h3>
                   <p className="text-muted-foreground mt-3">
