@@ -1,13 +1,12 @@
 import CTA from "../components/sections/cta/default";
-import FAQ from "../components/sections/faq/default";
 import Footer from "../components/sections/footer/default";
 import Hero from "../components/sections/hero/default";
 import Items from "../components/sections/items/default";
-import Logos from "../components/sections/logos/default";
 import Navbar from "../components/sections/navbar/default";
-import Pricing from "../components/sections/pricing/default";
-import Stats from "../components/sections/stats/default";
+import { Button } from "../components/ui/button";
 import { LayoutLines } from "../components/ui/layout-lines";
+import { Section } from "../components/ui/section";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,38 +29,49 @@ export default function Home() {
           },
         ]}
       />
-      <Logos
-        className="py-24"
-        title="What We Do"
-        subtitle="CRM implementation, ERP implementation, system integration, cloud infrastructure, and open-source solutions delivered with practical execution."
-        cards={[
-          {
-            title: "CRM Implementation",
-            description:
-              "Design and implementation of CRM platforms aligned with real business workflows.",
-          },
-          {
-            title: "ERP Implementation",
-            description:
-              "Structured ERP rollout and customization for operational consistency.",
-          },
-          {
-            title: "System Integration",
-            description:
-              "Reliable integrations across CRM, ERP and internal systems.",
-          },
-          {
-            title: "Cloud Infrastructure",
-            description:
-              "Cloud architecture and deployment foundations for enterprise systems.",
-          },
-          {
-            title: "Open-source Solutions",
-            description:
-              "Self-hosted alternatives that reduce software costs and increase control.",
-          },
-        ]}
-      />
+      <Section className="py-24">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold md:text-4xl">What We Do</h2>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-xl border bg-card p-6">
+              <h3 className="text-lg font-semibold">CRM Implementation</h3>
+              <p className="text-muted-foreground mt-3">
+                Design and implementation of CRM platforms aligned with real
+                business workflows.
+              </p>
+            </div>
+            <div className="rounded-xl border bg-card p-6">
+              <h3 className="text-lg font-semibold">ERP Integration</h3>
+              <p className="text-muted-foreground mt-3">
+                Structured ERP integration and customization for operational
+                consistency.
+              </p>
+            </div>
+            <div className="rounded-xl border bg-card p-6">
+              <h3 className="text-lg font-semibold">System Integration</h3>
+              <p className="text-muted-foreground mt-3">
+                Reliable integrations across CRM, ERP and internal systems.
+              </p>
+            </div>
+            <div className="rounded-xl border bg-card p-6">
+              <h3 className="text-lg font-semibold">Cloud Deployment</h3>
+              <p className="text-muted-foreground mt-3">
+                Cloud architecture and deployment foundations for enterprise
+                systems.
+              </p>
+            </div>
+            <div className="rounded-xl border bg-card p-6">
+              <h3 className="text-lg font-semibold">Open Source Solutions</h3>
+              <p className="text-muted-foreground mt-3">
+                Self-hosted alternatives that reduce software costs and increase
+                control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
       <Items
         className="py-24"
         title="Why OnXeon"
@@ -92,89 +102,61 @@ export default function Home() {
           },
         ]}
       />
-      <Pricing
-        className="py-24"
-        title="Typical Projects"
-        description="CRM implementations, ERP integrations, data migrations, cloud deployments, and system modernization."
-        plans={[
-          {
-            name: "CRM Implementations",
-            description:
-              "New CRM setup and process alignment for sales and support teams.",
-            price: 0,
-            priceLabel: "Contact us",
-            priceNote: "",
-            cta: {
-              variant: "default",
-              label: "Discuss Project",
-              href: "/contact#book",
-            },
-            features: [],
-            variant: "default",
-          },
-          {
-            name: "ERP Integrations",
-            description:
-              "ERP connectivity with CRM, finance and internal systems.",
-            price: 0,
-            priceLabel: "Contact us",
-            priceNote: "",
-            cta: {
-              variant: "default",
-              label: "Discuss Project",
-              href: "/contact#book",
-            },
-            features: [],
-            variant: "glow-brand",
-          },
-          {
-            name: "Data Migrations",
-            description:
-              "Planned and validated migration from legacy tools and datasets.",
-            price: 0,
-            priceLabel: "Contact us",
-            priceNote: "",
-            cta: {
-              variant: "default",
-              label: "Discuss Project",
-              href: "/contact#book",
-            },
-            features: [],
-            variant: "glow",
-          },
-          {
-            name: "Cloud Deployments",
-            description:
-              "Production-ready cloud deployment for enterprise applications.",
-            price: 0,
-            priceLabel: "Contact us",
-            priceNote: "",
-            cta: {
-              variant: "default",
-              label: "Discuss Project",
-              href: "/contact#book",
-            },
-            features: [],
-            variant: "default",
-          },
-          {
-            name: "System Modernization",
-            description:
-              "Incremental modernization of existing enterprise workflows.",
-            price: 0,
-            priceLabel: "Contact us",
-            priceNote: "",
-            cta: {
-              variant: "default",
-              label: "Discuss Project",
-              href: "/contact#book",
-            },
-            features: [],
-            variant: "default",
-          },
-        ]}
-      />
-      <CTA />
+      <Section className="py-24">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold md:text-4xl">
+              Typical Projects
+            </h2>
+            <p className="text-muted-foreground mt-3">
+              CRM implementations, ERP integrations, data migrations, cloud
+              deployments, and system modernization.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                name: "CRM Implementations",
+                description:
+                  "New CRM setup and process alignment for sales and support teams.",
+              },
+              {
+                name: "ERP Integrations",
+                description:
+                  "ERP connectivity with CRM, finance and internal systems.",
+              },
+              {
+                name: "Data Migrations",
+                description:
+                  "Planned and validated migration from legacy tools and datasets.",
+              },
+              {
+                name: "Cloud Deployments",
+                description:
+                  "Production-ready cloud deployment for enterprise applications.",
+              },
+              {
+                name: "System Modernization",
+                description:
+                  "Incremental modernization of existing enterprise workflows.",
+              },
+            ].map((project) => (
+              <div key={project.name} className="rounded-xl border bg-card p-6">
+                <h3 className="text-lg font-semibold">{project.name}</h3>
+                <p className="text-muted-foreground mt-3">
+                  {project.description}
+                </p>
+                <div className="mt-6">
+                  <Button variant="default" asChild>
+                    <Link href="/contact#book">Discuss Project</Link>
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <CTA title="Discuss your next implementation project" />
       <Footer />
     </main>
   );
