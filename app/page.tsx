@@ -35,75 +35,94 @@ export default function Home() {
             <h2 className="text-3xl font-semibold md:text-4xl">What We Do</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl border bg-card p-6">
+            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+              <div className="relative z-10">
               <h3 className="text-lg font-semibold">CRM Implementation</h3>
               <p className="text-muted-foreground mt-3">
                 Design and implementation of CRM platforms aligned with real
                 business workflows.
               </p>
+              </div>
             </div>
-            <div className="rounded-xl border bg-card p-6">
+            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+              <div className="relative z-10">
               <h3 className="text-lg font-semibold">ERP Integration</h3>
               <p className="text-muted-foreground mt-3">
                 Structured ERP integration and customization for operational
                 consistency.
               </p>
+              </div>
             </div>
-            <div className="rounded-xl border bg-card p-6">
+            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+              <div className="relative z-10">
               <h3 className="text-lg font-semibold">System Integration</h3>
               <p className="text-muted-foreground mt-3">
                 Reliable integrations across CRM, ERP and internal systems.
               </p>
+              </div>
             </div>
-            <div className="rounded-xl border bg-card p-6">
+            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+              <div className="relative z-10">
               <h3 className="text-lg font-semibold">Cloud Deployment</h3>
               <p className="text-muted-foreground mt-3">
                 Cloud architecture and deployment foundations for enterprise
                 systems.
               </p>
+              </div>
             </div>
-            <div className="rounded-xl border bg-card p-6">
+            <div className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+              <div className="relative z-10">
               <h3 className="text-lg font-semibold">Open Source Solutions</h3>
               <p className="text-muted-foreground mt-3">
                 Self-hosted alternatives that reduce software costs and increase
                 control.
               </p>
+              </div>
             </div>
           </div>
         </div>
       </Section>
-      <Items
-        className="py-24"
-        title="Why OnXeon"
-        items={[
-          {
-            title: "Enterprise-grade architecture",
-            description:
-              "Architecture designed for reliability, scalability and operational clarity.",
-            icon: null,
-          },
-          {
-            title: "Vendor-neutral approach",
-            description:
-              "Platform recommendations based on fit, not vendor lock-in.",
-            icon: null,
-          },
-          {
-            title: "Long-term maintainability",
-            description:
-              "Systems built to be maintainable by internal teams over time.",
-            icon: null,
-          },
-          {
-            title: "Self-hosted expertise",
-            description:
-              "Strong delivery experience with secure self-hosted enterprise tools.",
-            icon: null,
-          },
-        ]}
-      />
-      <Section className="py-24">
-        <div className="container mx-auto max-w-6xl px-6">
+      <div className="group relative overflow-hidden bg-gradient-to-b from-green-50 to-white">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/70 to-transparent opacity-20 transition-opacity duration-500 group-hover:opacity-60" />
+        <Items
+          className="relative z-10 py-24"
+          title="Why OnXeon"
+          items={[
+            {
+              title: "Enterprise-grade architecture",
+              description:
+                "Architecture designed for reliability, scalability and operational clarity.",
+              icon: null,
+            },
+            {
+              title: "Vendor-neutral approach",
+              description:
+                "Platform recommendations based on fit, not vendor lock-in.",
+              icon: null,
+            },
+            {
+              title: "Long-term maintainability",
+              description:
+                "Systems built to be maintainable by internal teams over time.",
+              icon: null,
+            },
+            {
+              title: "Self-hosted expertise",
+              description:
+                "Strong delivery experience with secure self-hosted enterprise tools.",
+              icon: null,
+            },
+          ]}
+        />
+      </div>
+      <Section className="relative overflow-hidden bg-gradient-to-b from-green-50 to-white py-24">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/70 to-transparent opacity-20" />
+        <div className="container relative z-10 mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold md:text-4xl">
               Typical Projects
@@ -141,15 +160,21 @@ export default function Home() {
                   "Incremental modernization of existing enterprise workflows.",
               },
             ].map((project) => (
-              <div key={project.name} className="rounded-xl border bg-card p-6">
-                <h3 className="text-lg font-semibold">{project.name}</h3>
-                <p className="text-muted-foreground mt-3">
-                  {project.description}
-                </p>
-                <div className="mt-6">
-                  <Button variant="default" asChild>
-                    <Link href="/contact#book">Discuss Project</Link>
-                  </Button>
+              <div
+                key={project.name}
+                className="group relative overflow-hidden rounded-xl border border-green-200 bg-gradient-to-b from-green-50 to-white p-6 transition-colors duration-500 hover:border-green-300"
+              >
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-200/80 to-green-50/20 opacity-40 transition-opacity duration-500 group-hover:opacity-80" />
+                <div className="relative z-10">
+                  <h3 className="text-lg font-semibold">{project.name}</h3>
+                  <p className="text-muted-foreground mt-3">
+                    {project.description}
+                  </p>
+                  <div className="mt-6">
+                    <Button variant="default" asChild>
+                      <Link href="/contact#book">Discuss Project</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
