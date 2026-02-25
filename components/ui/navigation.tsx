@@ -48,7 +48,7 @@ interface NavigationProps {
 export default function Navigation({
   menuItems = [
     {
-      title: "Getting started",
+      title: "Getting Started",
       content: "default",
     },
     {
@@ -117,6 +117,9 @@ export default function Navigation({
     },
   ],
 }: NavigationProps) {
+  const navItemClass =
+    "relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-sm hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/30 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100";
+
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
@@ -124,14 +127,16 @@ export default function Navigation({
           <NavigationMenuItem key={index}>
             {item.isLink ? (
               <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
+                className={cn(navigationMenuTriggerStyle(), navItemClass)}
                 asChild
               >
                 <Link href={item.href || ""}>{item.title}</Link>
               </NavigationMenuLink>
             ) : (
               <>
-                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={navItemClass}>
+                  {item.title}
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   {item.content === "default" ? (
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">

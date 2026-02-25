@@ -1,6 +1,8 @@
+"use client";
+
 import { type VariantProps } from "class-variance-authority";
 import { Menu } from "lucide-react";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -62,12 +64,38 @@ export default function Navbar({
   customNavigation,
   className,
 }: NavbarProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <header className={cn("sticky top-0 z-50 -mb-4 px-4 pb-4", className)}>
-      <div className="fade-bottom bg-background/15 absolute left-0 h-24 w-full backdrop-blur-lg"></div>
+      <div
+        className={cn(
+          "fade-bottom pointer-events-none absolute inset-x-0 top-0 h-40 border-b bg-gradient-to-b from-white/[0.16] via-white/[0.08] to-transparent shadow-[inset_0_1px_0_rgba(255,255,255,0.62),inset_0_-1px_0_rgba(255,255,255,0.18),0_12px_28px_rgba(0,0,0,0.07)] backdrop-blur-md backdrop-saturate-200 backdrop-contrast-125 backdrop-brightness-105 transition-all duration-300 dark:from-white/[0.08] dark:via-white/[0.03] dark:backdrop-brightness-110",
+          isScrolled
+            ? "border-white/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),inset_0_-1px_0_rgba(255,255,255,0.25),0_16px_32px_rgba(0,0,0,0.10),0_0_0_1px_rgba(255,255,255,0.35)] dark:border-white/28 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_0_rgba(255,255,255,0.10),0_16px_32px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.10)]"
+            : "border-white/35 dark:border-white/15",
+        )}
+      />
       <div className="max-w-container relative mx-auto">
-        <NavbarComponent>
-          <NavbarLeft>
+        <NavbarComponent
+          className={cn(
+            "transition-all duration-300",
+            isScrolled ? "py-5" : "py-4",
+          )}
+        >
+          <NavbarLeft
+            className={cn(
+              "transition-transform duration-300",
+              isScrolled ? "translate-y-1" : "translate-y-0",
+            )}
+          >
             <a
               href={homeUrl}
               className="flex items-center gap-2 text-xl font-bold"
@@ -77,12 +105,18 @@ export default function Navbar({
             </a>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
-          <NavbarRight>
+          <NavbarRight
+            className={cn(
+              "transition-transform duration-300",
+              isScrolled ? "translate-y-1" : "translate-y-0",
+            )}
+          >
             {actions.map((action, index) =>
               action.isButton ? (
                 <Button
                   key={index}
                   variant={action.variant || "default"}
+                  className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/35 dark:before:bg-white/15 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100"
                   asChild
                 >
                   <a href={action.href}>
@@ -92,13 +126,17 @@ export default function Navbar({
                   </a>
                 </Button>
               ) : (
-                <a
+                <Button
                   key={index}
-                  href={action.href}
-                  className="hidden text-sm md:block"
+                  variant="ghost"
+                  size="lg"
+                  className="relative hidden overflow-hidden text-sm md:inline-flex transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-green-200/25 dark:hover:shadow-emerald-900/30 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/25 dark:before:bg-white/10 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100"
+                  asChild
                 >
-                  {action.text}
-                </a>
+                  <a href={action.href}>
+                    {action.text}
+                  </a>
+                </Button>
               ),
             )}
             <Sheet>

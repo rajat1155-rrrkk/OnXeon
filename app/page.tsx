@@ -1,7 +1,6 @@
 import CTA from "../components/sections/cta/default";
 import Footer from "../components/sections/footer/default";
 import Hero from "../components/sections/hero/default";
-import Items from "../components/sections/items/default";
 import Navbar from "../components/sections/navbar/default";
 import { Button } from "../components/ui/button";
 import { LayoutLines } from "../components/ui/layout-lines";
@@ -35,8 +34,9 @@ export default function Home() {
             <h2 className="text-3xl font-semibold md:text-4xl">What We Do</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">CRM Implementation</h3>
               <p className="text-muted-foreground mt-3">
@@ -45,8 +45,9 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">ERP Integration</h3>
               <p className="text-muted-foreground mt-3">
@@ -55,8 +56,9 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">System Integration</h3>
               <p className="text-muted-foreground mt-3">
@@ -64,8 +66,9 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">Cloud Deployment</h3>
               <p className="text-muted-foreground mt-3">
@@ -74,8 +77,9 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
               <h3 className="text-lg font-semibold">Open Source Solutions</h3>
               <p className="text-muted-foreground mt-3">
@@ -87,38 +91,51 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <div>
-        <Items
-          className="py-24"
-          title="Why OnXeon"
-          items={[
-            {
-              title: "Enterprise-grade architecture",
-              description:
-                "Architecture designed for reliability, scalability and operational clarity.",
-              icon: null,
-            },
-            {
-              title: "Vendor-neutral approach",
-              description:
-                "Platform recommendations based on fit, not vendor lock-in.",
-              icon: null,
-            },
-            {
-              title: "Long-term maintainability",
-              description:
-                "Systems built to be maintainable by internal teams over time.",
-              icon: null,
-            },
-            {
-              title: "Self-hosted expertise",
-              description:
-                "Strong delivery experience with secure self-hosted enterprise tools.",
-              icon: null,
-            },
-          ]}
-        />
-      </div>
+      <Section className="py-24">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold md:text-4xl">Why OnXeon</h2>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Enterprise-grade architecture",
+                description:
+                  "Architecture designed for reliability, scalability and operational clarity.",
+              },
+              {
+                title: "Vendor-neutral approach",
+                description:
+                  "Platform recommendations based on fit, not vendor lock-in.",
+              },
+              {
+                title: "Long-term maintainability",
+                description:
+                  "Systems built to be maintainable by internal teams over time.",
+              },
+              {
+                title: "Self-hosted expertise",
+                description:
+                  "Strong delivery experience with secure self-hosted enterprise tools.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60"
+              >
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+                <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
+                <div className="relative z-10">
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-muted-foreground mt-3">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
       <Section className="py-24">
         <div className="container mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
@@ -160,16 +177,21 @@ export default function Home() {
             ].map((project) => (
               <div
                 key={project.name}
-                className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/70 to-white p-6 transition-colors duration-500 hover:border-green-200"
+                className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60"
               >
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 opacity-30 transition-opacity duration-500 group-hover:opacity-70" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
+                <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
                 <div className="relative z-10">
                   <h3 className="text-lg font-semibold">{project.name}</h3>
                   <p className="text-muted-foreground mt-3">
                     {project.description}
                   </p>
                   <div className="mt-6">
-                    <Button variant="default" asChild>
+                    <Button
+                      variant="default"
+                      asChild
+                      className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
+                    >
                       <Link href="/contact#book">Discuss Project</Link>
                     </Button>
                   </div>

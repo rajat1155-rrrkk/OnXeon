@@ -47,6 +47,7 @@ export default function CTA({
                 variant={button.variant || "default"}
                 size="lg"
                 asChild
+                className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/35 dark:before:bg-white/15 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100"
               >
                 <a href={button.href}>
                   {button.icon}
