@@ -52,7 +52,6 @@ export default function Navbar({
     { text: "Documentation", href: siteConfig.url },
   ],
   actions = [
-    { text: "Sign in", href: siteConfig.url, isButton: false },
     {
       text: "Get Started",
       href: siteConfig.url,
@@ -77,12 +76,17 @@ export default function Navbar({
     <header className={cn("sticky top-0 z-50 -mb-4 px-4 pb-4", className)}>
       <div
         className={cn(
-          "fade-bottom pointer-events-none absolute inset-x-0 top-0 h-40 border-b bg-gradient-to-b from-white/[0.16] via-white/[0.08] to-transparent shadow-[inset_0_1px_0_rgba(255,255,255,0.62),inset_0_-1px_0_rgba(255,255,255,0.18),0_12px_28px_rgba(0,0,0,0.07)] backdrop-blur-md backdrop-saturate-200 backdrop-contrast-125 backdrop-brightness-105 transition-all duration-300 dark:from-white/[0.08] dark:via-white/[0.03] dark:backdrop-brightness-110",
+          "fade-bottom pointer-events-none absolute inset-x-0 top-0 h-40 overflow-hidden border-b bg-gradient-to-b from-white/[0.08] via-white/[0.03] to-transparent shadow-[inset_0_1px_0_rgba(255,255,255,0.56),inset_0_-1px_0_rgba(255,255,255,0.16),0_14px_30px_rgba(0,0,0,0.06)] backdrop-blur-[2.5px] backdrop-saturate-125 backdrop-contrast-110 backdrop-brightness-102 transition-all duration-300 dark:from-white/[0.04] dark:via-white/[0.018] dark:backdrop-brightness-108",
           isScrolled
-            ? "border-white/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.78),inset_0_-1px_0_rgba(255,255,255,0.25),0_16px_32px_rgba(0,0,0,0.10),0_0_0_1px_rgba(255,255,255,0.35)] dark:border-white/28 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-1px_0_rgba(255,255,255,0.10),0_16px_32px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.10)]"
-            : "border-white/35 dark:border-white/15",
+            ? "border-white/42 shadow-[inset_0_1px_0_rgba(255,255,255,0.68),inset_0_-1px_0_rgba(255,255,255,0.20),0_18px_34px_rgba(0,0,0,0.08),0_0_0_1px_rgba(255,255,255,0.24)] dark:border-white/22 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.30),inset_0_-1px_0_rgba(255,255,255,0.10),0_18px_34px_rgba(0,0,0,0.28),0_0_0_1px_rgba(255,255,255,0.08)]"
+            : "border-white/22 dark:border-white/10",
         )}
-      />
+      >
+        <div className="absolute inset-0 opacity-70 [background:radial-gradient(125%_58%_at_10%_10%,rgba(255,255,255,0.30),transparent_56%),radial-gradient(90%_50%_at_76%_8%,rgba(255,255,255,0.22),transparent_62%),radial-gradient(75%_38%_at_52%_0%,rgba(255,255,255,0.18),transparent_58%),radial-gradient(55%_30%_at_35%_4%,rgba(255,255,255,0.14),transparent_70%)] dark:opacity-48" />
+        <div className="absolute -top-7 left-[6%] h-20 w-56 rotate-[-3deg] rounded-full bg-white/26 blur-xl dark:bg-white/12" />
+        <div className="absolute -top-7 right-[11%] h-16 w-52 rotate-[2.8deg] rounded-full bg-white/20 blur-xl dark:bg-white/10" />
+        <div className="absolute top-2 left-[34%] h-10 w-28 rotate-[-1.5deg] rounded-full bg-white/14 blur-lg dark:bg-white/7" />
+      </div>
       <div className="max-w-container relative mx-auto">
         <NavbarComponent
           className={cn(
