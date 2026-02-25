@@ -48,72 +48,89 @@ interface NavigationProps {
 export default function Navigation({
   menuItems = [
     {
-      title: "Getting Started",
+      title: "Services",
       content: "default",
     },
     {
-      title: "Components",
+      title: "Solutions",
       content: "components",
     },
     {
-      title: "Documentation",
+      title: "About",
       isLink: true,
-      href: siteConfig.url,
+      href: "/about",
+    },
+    {
+      title: "Contact",
+      isLink: true,
+      href: "/contact#book",
     },
   ],
   components = [
     {
       title: "CRM Platforms",
-      href: "/docs/primitives/alert-dialog",
+      href: "/solutions/crm-platforms",
       description:
         "Salesforce, Zoho, HubSpot and custom CRM implementations.",
     },
     {
       title: "ERP Systems",
-      href: "/docs/primitives/hover-card",
+      href: "/solutions/erp-systems",
       description: "ERPNext, SAP integrations and business workflows.",
     },
     {
       title: "Cloud Platforms",
-      href: "/docs/primitives/progress",
+      href: "/solutions/cloud-platforms",
       description: "AWS, Azure and modern cloud deployments.",
     },
     {
       title: "System Integration",
-      href: "/docs/primitives/scroll-area",
+      href: "/solutions/system-integration",
       description: "Connect enterprise tools and automate workflows.",
     },
     {
       title: "Custom Development",
-      href: "/docs/primitives/tabs",
+      href: "/solutions/custom-development",
       description: "Tailored software solutions for business needs.",
     },
     {
       title: "Support & Maintenance",
-      href: "/docs/primitives/tooltip",
+      href: "/solutions/support-maintenance",
       description: "Ongoing support and system optimization.",
     },
   ],
   logo = <LaunchUI />,
   logoTitle = "OnXeon Services",
-  logoDescription = "Enterprise implementation, integration and support services for modern businesses.",
-  logoHref = siteConfig.url,
+  logoDescription =
+    "Enterprise implementation, integration and support services for modern businesses.",
+  logoHref = "/services/onxeon-services",
   introItems = [
     {
+      title: "OnXeon Services",
+      href: "/services/onxeon-services",
+      description:
+        "Explore delivery models for implementation, integration and long-term support.",
+    },
+    {
       title: "CRM Solutions",
-      href: siteConfig.url,
+      href: "/services/crm-solutions",
       description:
         "Implementation and customization of CRM platforms.",
     },
     {
       title: "ERP Solutions",
-      href: siteConfig.url,
+      href: "/services/erp-solutions",
       description: "Deployment and integration of ERP systems.",
     },
     {
       title: "Cloud Solutions",
-      href: siteConfig.url,
+      href: "/services/cloud-solutions",
       description: "Cloud infrastructure and platform services.",
+    },
+    {
+      title: "Services Overview",
+      href: "/services",
+      description: "See all service tracks and project engagement options.",
     },
   ],
 }: NavigationProps) {

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+
 export default function ContactPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-24 space-y-8">
@@ -8,12 +10,14 @@ export default function ContactPage() {
         Contact OnXeon to discuss implementations, integrations or system improvements.
       </p>
       <p className="font-medium">hello@onxeon.com</p>
-      <Link
+      <Button variant="default" asChild>
+            <Link
         href="mailto:hello@onxeon.com"
-        className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-primary-foreground"
+        
       >
         Email Us
       </Link>
+          </Button>
     </div>
   );
 }

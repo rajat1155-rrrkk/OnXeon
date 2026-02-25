@@ -45,16 +45,16 @@ interface NavbarProps {
 export default function Navbar({
   logo = <LaunchUI />,
   name = "OnXeon",
-  homeUrl = siteConfig.url,
+  homeUrl = "/",
   mobileLinks = [
-    { text: "Getting Started", href: siteConfig.url },
-    { text: "Components", href: siteConfig.url },
-    { text: "Documentation", href: siteConfig.url },
+    { text: "Services", href: "/services" },
+    { text: "Solutions", href: "/solutions" },
+    { text: "About", href: "/about" },
   ],
   actions = [
     {
       text: "Get Started",
-      href: siteConfig.url,
+      href: "/contact#book",
       isButton: true,
       variant: "default",
     },

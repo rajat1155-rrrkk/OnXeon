@@ -1,7 +1,5 @@
 import CTA from "../components/sections/cta/default";
-import Footer from "../components/sections/footer/default";
 import Hero from "../components/sections/hero/default";
-import Navbar from "../components/sections/navbar/default";
 import { Button } from "../components/ui/button";
 import { LayoutLines } from "../components/ui/layout-lines";
 import { Section } from "../components/ui/section";
@@ -11,7 +9,6 @@ export default function Home() {
   return (
     <main className="bg-background text-foreground min-h-screen w-full [&_.max-w-container]:container [&_.max-w-container]:mx-auto [&_.max-w-container]:max-w-6xl [&_.max-w-container]:px-6 [&_.container]:mx-auto [&_.container]:max-w-6xl [&_.container]:px-6">
       <LayoutLines />
-      <Navbar />
       <Hero
         title="Enterprise systems implemented right."
         description="We implement, customize and integrate CRM, ERP and cloud platforms across Salesforce, SAP, Zoho, Odoo, ServiceNow, AWS, GCP and Azure with reliable long-term architecture."
@@ -283,7 +280,6 @@ export default function Home() {
         </div>
       </Section>
       <CTA title="Discuss your next implementation project" />
-      <Footer />
     </main>
   );
 }
