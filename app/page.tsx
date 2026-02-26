@@ -229,40 +229,56 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-12 max-w-4xl space-y-4">
             {[
               {
                 title: "Enterprise-grade architecture",
+                teaser: "Lower rework risk in production rollouts",
                 description:
                   "Architecture designed for reliability, scalability and operational clarity.",
               },
               {
                 title: "Vendor-neutral approach",
+                teaser: "Platform choices based on fit and outcomes",
                 description:
                   "Platform recommendations based on fit, not vendor lock-in.",
               },
               {
                 title: "Long-term maintainability",
+                teaser: "Cleaner handover for internal ownership",
                 description:
                   "Systems built to be maintainable by internal teams over time.",
               },
               {
                 title: "Self-hosted expertise",
+                teaser: "Better control over cost, data and operations",
                 description:
                   "Strong delivery experience with secure self-hosted enterprise tools.",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60"
+                className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card px-6 py-5 transition-all duration-500 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35"
               >
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
-                <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
-                <div className="relative z-10">
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="text-muted-foreground mt-3">
-                    {item.description}
-                  </p>
+                <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
+                <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.28),transparent_45%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.22),transparent_45%)]" />
+                <div className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 shadow-[inset_0_0_0_1px_rgba(74,222,128,0.45)] dark:shadow-[inset_0_0_0_1px_rgba(52,211,153,0.35)]" />
+                <div className="pointer-events-none absolute inset-y-0 left-[-42%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 transition-all duration-700 group-hover:left-[125%] group-hover:opacity-100 dark:via-white/35" />
+                <div className="relative z-10 flex items-start gap-4">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-green-500/70 transition-all duration-500 group-hover:scale-125 group-hover:bg-green-500 group-hover:shadow-[0_0_14px_rgba(34,197,94,0.7)] group-hover:animate-pulse dark:bg-emerald-500/70 dark:group-hover:bg-emerald-400 dark:group-hover:shadow-[0_0_14px_rgba(16,185,129,0.7)]" />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-1">
+                      {item.title}
+                    </h3>
+                    <div className="relative mt-3 h-12 overflow-hidden">
+                      <p className="text-xs text-muted-foreground/80 transition-all duration-300 group-hover:-translate-y-2 group-hover:opacity-0">
+                        {item.teaser}
+                      </p>
+                      <p className="text-muted-foreground absolute inset-x-0 top-0 translate-y-2 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
