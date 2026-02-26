@@ -37,9 +37,9 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="group relative mt-10 overflow-hidden rounded-2xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-6 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30">
+          <div className="group/section relative mt-10 overflow-hidden rounded-2xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-6 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30">
             <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent opacity-70 dark:via-emerald-400/60" />
-            <span className="pointer-events-none absolute -top-10 right-8 h-24 w-24 rounded-full bg-green-300/25 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
+            <span className="pointer-events-none absolute -top-10 right-8 h-24 w-24 rounded-full bg-green-300/25 blur-2xl opacity-0 transition-opacity duration-500 group-hover/section:opacity-100 dark:bg-emerald-500/20" />
             <div className="text-sm text-muted-foreground">
               Platforms and products we implement, integrate and support.
             </div>
@@ -82,18 +82,19 @@ export default function Home() {
                     <Link
                       key={platform.name}
                       href={platform.href}
-                      className="group relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
+                      className="group/item relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
                     >
-                      <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
-                      <span className="pointer-events-none absolute -inset-4 rounded-xl bg-green-300/20 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
-                      <span className="pointer-events-none absolute inset-y-0 left-[-45%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-700 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/40" />
+                      <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 dark:via-emerald-400/70" />
+                      <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
+                      <span className="pointer-events-none absolute -inset-4 rounded-xl bg-green-300/20 blur-xl opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 dark:bg-emerald-500/20" />
+                      <span className="pointer-events-none absolute inset-y-0 left-[-45%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-700 group-hover/item:left-[130%] group-hover/item:opacity-100 dark:via-white/40" />
                       <img
                         src={platform.src}
                         alt={`${platform.name} logo`}
-                        className="relative z-10 h-5 w-5 rounded-sm object-contain transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-3"
+                        className="relative z-10 h-5 w-5 rounded-sm object-contain transition-transform duration-500 group-hover/item:scale-110 group-hover/item:-rotate-2"
                         loading="lazy"
                       />
-                      <span className="relative z-10 text-sm font-medium transition-all duration-300 group-hover:text-foreground group-hover:tracking-wide">
+                      <span className="relative z-10 text-sm font-medium transition-all duration-300 group-hover/item:text-foreground group-hover/item:tracking-[0.01em]">
                         {platform.name}
                       </span>
                     </Link>
@@ -140,18 +141,19 @@ export default function Home() {
                     <Link
                       key={platform.name}
                       href={platform.href}
-                      className="group relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
+                      className="group/item relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
                     >
-                      <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
-                      <span className="pointer-events-none absolute -inset-4 rounded-xl bg-green-300/20 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
-                      <span className="pointer-events-none absolute inset-y-0 left-[-45%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-700 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/40" />
+                      <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 dark:via-emerald-400/70" />
+                      <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
+                      <span className="pointer-events-none absolute -inset-4 rounded-xl bg-green-300/20 blur-xl opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 dark:bg-emerald-500/20" />
+                      <span className="pointer-events-none absolute inset-y-0 left-[-45%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-700 group-hover/item:left-[130%] group-hover/item:opacity-100 dark:via-white/40" />
                       <img
                         src={platform.src}
                         alt={`${platform.name} logo`}
-                        className="relative z-10 h-5 w-5 rounded-sm object-contain transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-3"
+                        className="relative z-10 h-5 w-5 rounded-sm object-contain transition-transform duration-500 group-hover/item:scale-110 group-hover/item:-rotate-2"
                         loading="lazy"
                       />
-                      <span className="relative z-10 text-sm font-medium transition-all duration-300 group-hover:text-foreground group-hover:tracking-wide">
+                      <span className="relative z-10 text-sm font-medium transition-all duration-300 group-hover/item:text-foreground group-hover/item:tracking-[0.01em]">
                         {platform.name}
                       </span>
                     </Link>

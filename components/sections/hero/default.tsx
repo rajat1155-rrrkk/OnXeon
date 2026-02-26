@@ -9,8 +9,8 @@ import Github from "../../logos/github";
 import { Badge } from "../../ui/badge";
 import { Button, buttonVariants } from "../../ui/button";
 import Glow from "../../ui/glow";
+import LogoPlayground from "../../ui/logo-playground";
 import { Mockup, MockupFrame } from "../../ui/mockup";
-import Screenshot from "../../ui/screenshot";
 import { Section } from "../../ui/section";
 
 interface HeroButtonProps {
@@ -33,16 +33,7 @@ interface HeroProps {
 export default function Hero({
   title = "Build reliable enterprise systems with OnXeon",
   description = "Implementation, customization, and integration for CRM, ERP, and cloud platforms.",
-  mockup = (
-    <Screenshot
-      srcLight="/dashboard-light.png"
-      srcDark="/dashboard-dark.png"
-      alt="Launch UI app screenshot"
-      width={1248}
-      height={765}
-      className="w-full"
-    />
-  ),
+  mockup = <LogoPlayground />,
   badge = (
     <Badge variant="outline" className="animate-appear">
       <span className="text-muted-foreground">
@@ -72,7 +63,7 @@ export default function Hero({
   return (
     <Section
       className={cn(
-        "fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0",
+        "overflow-hidden pb-0 sm:pb-0 md:pb-0",
         className,
       )}
     >
