@@ -46,25 +46,55 @@ export default function Home() {
                 <h3 className="text-sm font-semibold">Enterprise Platforms</h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
-                    { name: "Salesforce", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png" },
-                    { name: "SAP", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/512px-SAP_2011_logo.svg.png" },
-                    { name: "ServiceNow", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/ServiceNow_logo.svg/512px-ServiceNow_logo.svg.png" },
-                    { name: "AWS", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" },
-                    { name: "Azure", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/512px-Microsoft_Azure_Logo.svg.png" },
-                    { name: "GCP", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
+                    {
+                      name: "Salesforce",
+                      src: "/logos/Salesforce.png",
+                      href: "/solutions/crm-platforms",
+                    },
+                    {
+                      name: "SAP",
+                      src: "/logos/SAP.png",
+                      href: "/solutions/erp-systems",
+                    },
+                    {
+                      name: "ServiceNow",
+                      src: "/logos/ServiceNow.jpg",
+                      href: "/solutions/crm-platforms",
+                    },
+                    {
+                      name: "AWS",
+                      src: "/logos/AWS.png",
+                      href: "/solutions/cloud-platforms",
+                    },
+                    {
+                      name: "Azure",
+                      src: "/logos/Azure.png",
+                      href: "/solutions/cloud-platforms",
+                    },
+                    {
+                      name: "GCP",
+                      src: "/logos/GCP.svg",
+                      href: "/solutions/cloud-platforms",
+                    },
                   ].map((platform) => (
-                    <div
+                    <Link
                       key={platform.name}
-                      className="flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2"
+                      href={platform.href}
+                      className="group relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
                     >
+                      <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
+                      <span className="pointer-events-none absolute -inset-4 rounded-xl bg-green-300/20 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
+                      <span className="pointer-events-none absolute inset-y-0 left-[-45%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-700 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/40" />
                       <img
                         src={platform.src}
                         alt={`${platform.name} logo`}
-                        className="h-5 w-5 rounded-sm object-contain"
+                        className="relative z-10 h-5 w-5 rounded-sm object-contain transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-3"
                         loading="lazy"
                       />
-                      <span className="text-sm font-medium">{platform.name}</span>
-                    </div>
+                      <span className="relative z-10 text-sm font-medium transition-all duration-300 group-hover:text-foreground group-hover:tracking-wide">
+                        {platform.name}
+                      </span>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -74,25 +104,55 @@ export default function Home() {
                 </h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
-                    { name: "Plane", src: "https://cdn.simpleicons.org/plane" },
-                    { name: "ERPNext", src: "https://cdn.simpleicons.org/erpnext/7E7EFF" },
-                    { name: "Odoo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Odoo_logo.svg/512px-Odoo_logo.svg.png" },
-                    { name: "Nextcloud", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nextcloud_Logo.svg/512px-Nextcloud_Logo.svg.png" },
-                    { name: "PostgreSQL", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/512px-Postgresql_elephant.svg.png" },
-                    { name: "Docker", src: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" },
+                    {
+                      name: "Plane",
+                      src: "/logos/Plane.png",
+                      href: "/services/onxeon-services",
+                    },
+                    {
+                      name: "ERPNext",
+                      src: "/logos/ERPnext.png",
+                      href: "/services/erp-solutions",
+                    },
+                    {
+                      name: "Odoo",
+                      src: "/logos/odoo.png",
+                      href: "/services/erp-solutions",
+                    },
+                    {
+                      name: "Nextcloud",
+                      src: "/logos/Nextcloud.png",
+                      href: "/services/onxeon-services",
+                    },
+                    {
+                      name: "PostgreSQL",
+                      src: "/logos/Postgresql.png",
+                      href: "/services/cloud-solutions",
+                    },
+                    {
+                      name: "Docker",
+                      src: "/logos/Docker.png",
+                      href: "/services/cloud-solutions",
+                    },
                   ].map((platform) => (
-                    <div
+                    <Link
                       key={platform.name}
-                      className="flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2"
+                      href={platform.href}
+                      className="group relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-3 py-2 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
                     >
+                      <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
+                      <span className="pointer-events-none absolute -inset-4 rounded-xl bg-green-300/20 blur-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
+                      <span className="pointer-events-none absolute inset-y-0 left-[-45%] w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-700 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/40" />
                       <img
                         src={platform.src}
                         alt={`${platform.name} logo`}
-                        className="h-5 w-5 rounded-sm object-contain"
+                        className="relative z-10 h-5 w-5 rounded-sm object-contain transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-3"
                         loading="lazy"
                       />
-                      <span className="text-sm font-medium">{platform.name}</span>
-                    </div>
+                      <span className="relative z-10 text-sm font-medium transition-all duration-300 group-hover:text-foreground group-hover:tracking-wide">
+                        {platform.name}
+                      </span>
+                    </Link>
                   ))}
                 </div>
               </div>
