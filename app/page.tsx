@@ -46,12 +46,12 @@ export default function Home() {
                 <h3 className="text-sm font-semibold">Enterprise Platforms</h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
-                    { name: "Salesforce", src: "https://logo.clearbit.com/salesforce.com" },
-                    { name: "SAP", src: "https://logo.clearbit.com/sap.com" },
-                    { name: "ServiceNow", src: "https://logo.clearbit.com/servicenow.com" },
-                    { name: "AWS", src: "https://logo.clearbit.com/aws.amazon.com" },
-                    { name: "Azure", src: "https://logo.clearbit.com/azure.microsoft.com" },
-                    { name: "GCP", src: "https://logo.clearbit.com/cloud.google.com" },
+                    { name: "Salesforce", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png" },
+                    { name: "SAP", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/512px-SAP_2011_logo.svg.png" },
+                    { name: "ServiceNow", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/ServiceNow_logo.svg/512px-ServiceNow_logo.svg.png" },
+                    { name: "AWS", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" },
+                    { name: "Azure", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Microsoft_Azure_Logo.svg/512px-Microsoft_Azure_Logo.svg.png" },
+                    { name: "GCP", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
                   ].map((platform) => (
                     <div
                       key={platform.name}
@@ -74,12 +74,12 @@ export default function Home() {
                 </h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
-                    { name: "Plane", src: "https://logo.clearbit.com/plane.so" },
-                    { name: "ERPNext", src: "https://logo.clearbit.com/erpnext.com" },
-                    { name: "Odoo", src: "https://logo.clearbit.com/odoo.com" },
-                    { name: "Nextcloud", src: "https://logo.clearbit.com/nextcloud.com" },
-                    { name: "PostgreSQL", src: "https://logo.clearbit.com/postgresql.org" },
-                    { name: "Docker", src: "https://logo.clearbit.com/docker.com" },
+                    { name: "Plane", src: "https://cdn.simpleicons.org/plane" },
+                    { name: "ERPNext", src: "https://cdn.simpleicons.org/erpnext/7E7EFF" },
+                    { name: "Odoo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Odoo_logo.svg/512px-Odoo_logo.svg.png" },
+                    { name: "Nextcloud", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nextcloud_Logo.svg/512px-Nextcloud_Logo.svg.png" },
+                    { name: "PostgreSQL", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/512px-Postgresql_elephant.svg.png" },
+                    { name: "Docker", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Docker_logo.png/512px-Docker_logo.png" },
                   ].map((platform) => (
                     <div
                       key={platform.name}
