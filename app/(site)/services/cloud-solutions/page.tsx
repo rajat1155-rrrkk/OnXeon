@@ -62,6 +62,14 @@ export default function CloudSolutionsPage() {
             Cloud delivery across enterprise hyperscalers and self-hosted infrastructure, balanced for reliability,
             security and long-term cost efficiency.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:scale-[1.03] hover:border-brand/55 hover:bg-brand/18 hover:text-brand hover:shadow-lg hover:shadow-brand/20"
+            >
+              Launch Cloud Orbit
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">

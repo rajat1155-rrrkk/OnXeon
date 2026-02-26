@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const focusLinks: Record<string, string> = {
+    Salesforce: "/solutions/crm-platforms",
+    SAP: "/solutions/erp-systems",
+    "System Integrations": "/solutions/system-integration",
+    "Self-Hosted Platforms": "/services/onxeon-services",
+    "Open Source Solutions": "/services/onxeon-services",
+    "Enhancements & Support": "/services/onxeon-services",
+  };
+
   return (
     <Section>
       <div className="max-w-6xl mx-auto px-6 py-24">
@@ -30,6 +39,14 @@ export default function AboutPage() {
             teams choosing affordable self-hosted alternatives. We combine implementation rigor with vendor-neutral
             recommendations based on fit, cost and long-term maintainability.
           </p>
+          <div className="mt-4">
+            <Link
+              href="/contact#book"
+              className="group/xeon inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:scale-[1.02] hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-[0_0_18px_hsl(var(--brand)/0.26)]"
+            >
+              Built For Velocity
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -58,12 +75,13 @@ export default function AboutPage() {
               "Open Source Solutions",
               "Enhancements & Support",
             ].map((item) => (
-              <span
+              <Link
                 key={item}
+                href={focusLinks[item] || "/services"}
                 className="rounded-full border border-green-200/80 bg-green-50/70 px-2.5 py-1 dark:border-emerald-800/60 dark:bg-emerald-900/20"
               >
                 {item}
-              </span>
+              </Link>
             ))}
           </div>
           <p className="mt-4 text-sm text-muted-foreground">

@@ -35,6 +35,14 @@ const erpCapabilities = [
   "Cross-system integration with CRM and cloud services",
 ];
 
+const productLinks: Record<string, string> = {
+  SAP: "/solutions/erp-systems",
+  ERPNext: "/services/erp-solutions",
+  Odoo: "/services/erp-solutions",
+  "Other modular open-source stacks": "/services/erp-solutions",
+  "Enterprise-grade module ecosystems": "/services/erp-solutions",
+};
+
 export default function ErpSystemsPage() {
   return (
     <Section>
@@ -47,6 +55,14 @@ export default function ErpSystemsPage() {
             ERP architecture decisions driven by fit, complexity and budget. We implement enterprise suites and open
             self-hosted stacks with the same delivery rigor.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:rotate-[-1deg] hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-md hover:shadow-brand/20"
+            >
+              Engineer ERP Control
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -58,9 +74,13 @@ export default function ErpSystemsPage() {
               <h2 className="text-xl font-semibold">{item.title}</h2>
               <div className="flex flex-wrap gap-2 pt-3">
                 {item.stack.map((s) => (
-                  <span key={s} className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground">
+                  <Link
+                    key={s}
+                    href={productLinks[s] || "/services/erp-solutions"}
+                    className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:border-green-300 hover:text-foreground hover:shadow-sm hover:shadow-green-200/30 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/25"
+                  >
                     {s}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <p className="mt-4 text-sm text-muted-foreground">{item.details}</p>

@@ -48,6 +48,14 @@ export default function ServicesPage() {
           <p className="relative z-10 mt-3 text-muted-foreground max-w-3xl mx-auto text-center">
             Delivery services across enterprise SaaS/OEM systems and affordable self-hosted alternatives.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="group/xeon inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/60 hover:bg-brand/18 hover:text-brand hover:shadow-md hover:shadow-brand/25"
+            >
+              Power Up Delivery
+            </Link>
+          </div>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (

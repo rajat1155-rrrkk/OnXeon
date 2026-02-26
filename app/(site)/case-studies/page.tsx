@@ -41,6 +41,14 @@ export default function CaseStudiesPage() {
           <p className="text-muted-foreground">
             Representative project types and outcomes from enterprise delivery engagements.
           </p>
+          <div>
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-[0_0_16px_hsl(var(--brand)/0.24)]"
+            >
+              See Xeon Outcomes
+            </Link>
+          </div>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {studies.map((study) => (

@@ -47,6 +47,14 @@ export default function DocsPage() {
             How OnXeon plans, builds and supports enterprise systems across CRM,
             ERP, cloud and self-hosted environments.
           </p>
+          <div>
+            <Link
+              href="/contact#book"
+              className="relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand before:absolute before:inset-y-0 before:left-[-58%] before:w-[42%] before:-skew-x-12 before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent before:opacity-0 before:transition-all before:duration-500 hover:before:left-[124%] hover:before:opacity-100 dark:before:via-white/25"
+            >
+              Unlock Xeon Playbooks
+            </Link>
+          </div>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {sections.map((item) => (

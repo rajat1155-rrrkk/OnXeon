@@ -46,7 +46,7 @@ export default function Hero({
         Enterprise solutions for modern businesses
       </span>
       <a
-        href={siteConfig.getStartedUrl}
+        href="/contact#book"
         className="group/xeon relative z-10 inline-flex items-center gap-1.5 rounded-full border border-transparent px-2 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-foreground transition-all duration-300 group-hover/badge:border-brand/40 group-hover/badge:bg-brand/14 group-hover/badge:text-brand group-hover/xeon:shadow-[0_0_18px_hsl(var(--brand)/0.25)]"
       >
         Get Xeoned

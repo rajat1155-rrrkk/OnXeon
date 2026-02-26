@@ -50,6 +50,21 @@ const productGroups = [
   },
 ];
 
+const productLinks: Record<string, string> = {
+  Salesforce: "/solutions/crm-platforms",
+  SAP: "/solutions/erp-systems",
+  ServiceNow: "/blog/servicenow-enterprise-workflows",
+  AWS: "/solutions/cloud-platforms",
+  Azure: "/solutions/cloud-platforms",
+  GCP: "/solutions/cloud-platforms",
+  Plane: "/blog/self-hosted-platform-operations",
+  ERPNext: "/services/erp-solutions",
+  Odoo: "/services/erp-solutions",
+  Nextcloud: "/services/cloud-solutions",
+  PostgreSQL: "/services/cloud-solutions",
+  Docker: "/services/cloud-solutions",
+};
+
 export default function OnXeonServicesPage() {
   return (
     <Section>
@@ -62,6 +77,14 @@ export default function OnXeonServicesPage() {
             Vendor-neutral delivery across enterprise SaaS platforms and affordable self-hosted alternatives. We
             design practical systems that are reliable today and maintainable long term.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="group/xeon inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:scale-[1.03] hover:border-brand/55 hover:bg-brand/18 hover:text-brand hover:shadow-lg hover:shadow-brand/20"
+            >
+              Activate Hybrid Edge
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -88,9 +111,13 @@ export default function OnXeonServicesPage() {
               <h2 className="text-xl font-semibold">{group.title}</h2>
               <div className="grid gap-2 pt-3 sm:grid-cols-2">
                 {group.items.map((item) => (
-                  <div key={item} className="rounded-lg border border-border/70 bg-background/70 px-3 py-2 text-sm text-muted-foreground">
+                  <Link
+                    key={item}
+                    href={productLinks[item] || "/services/onxeon-services"}
+                    className="group/item rounded-lg border border-border/70 bg-background/70 px-3 py-2 text-sm text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:border-green-300 hover:text-foreground hover:shadow-sm hover:shadow-green-200/30 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/25"
+                  >
                     {item}
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

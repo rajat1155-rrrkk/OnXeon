@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { Section } from "@/components/ui/section";
 
@@ -12,8 +13,21 @@ export default function PrivacyPage() {
   return (
     <Section>
       <div className="max-w-4xl mx-auto py-24 space-y-8">
-        <h1 className="text-3xl md:text-4xl font-semibold">Privacy Policy</h1>
-        <p className="text-muted-foreground">Last updated: February 25, 2026</p>
+        <div className="group relative overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/80 to-card p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card dark:hover:shadow-emerald-900/25">
+          <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/25 blur-3xl dark:bg-emerald-500/20" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
+          <div className="pointer-events-none absolute inset-y-0 left-[-45%] w-[40%] -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 transition-all duration-900 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/25" />
+          <div className="relative z-10 space-y-3">
+            <h1 className="text-3xl md:text-4xl font-semibold">Privacy Policy</h1>
+            <p className="text-muted-foreground">Last updated: February 25, 2026</p>
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-[0_0_14px_hsl(var(--brand)/0.24)]"
+            >
+              Policy Clarity First
+            </Link>
+          </div>
+        </div>
 
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">1. Overview</h2>
@@ -158,7 +172,29 @@ export default function PrivacyPage() {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-xl font-semibold">12. Contact</h2>
+          <h2 className="text-xl font-semibold">
+            12. Project-Specific Agreements and Communications
+          </h2>
+          <p className="text-muted-foreground">
+            Project-specific contracts or direct written communications (for
+            example, signed agreements, proposals, email approvals, or
+            messaging confirmations including WhatsApp) may include privacy and
+            data-handling terms specific to that engagement.
+          </p>
+          <p className="text-muted-foreground">
+            Where applicable and lawful, those project-specific written terms
+            will take precedence for that project over this general Privacy
+            Policy.
+          </p>
+          <p className="text-muted-foreground">
+            This includes short written confirmations, including single-line
+            messages, where they explicitly define privacy handling for a
+            specific project.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold">13. Contact</h2>
           <p className="text-muted-foreground">
             For privacy-related inquiries, please use the{" "}
             <a href="/contact#book" className="text-foreground underline underline-offset-4">

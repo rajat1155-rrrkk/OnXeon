@@ -35,6 +35,16 @@ const deliveryAreas = [
   "Cost optimization and capacity planning",
 ];
 
+const productLinks: Record<string, string> = {
+  AWS: "/solutions/cloud-platforms",
+  Azure: "/solutions/cloud-platforms",
+  GCP: "/solutions/cloud-platforms",
+  Docker: "/services/cloud-solutions",
+  "Kubernetes/K3s": "/services/cloud-solutions",
+  PostgreSQL: "/services/cloud-solutions",
+  Nextcloud: "/services/cloud-solutions",
+};
+
 export default function CloudPlatformsPage() {
   return (
     <Section>
@@ -47,6 +57,14 @@ export default function CloudPlatformsPage() {
             Platform strategy for enterprise cloud and self-hosted infrastructure, with clear trade-offs for scale,
             security, cost and maintainability.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/18 hover:text-brand after:absolute after:right-2 after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-brand/80 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100"
+            >
+              Scale Green Compute
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -58,9 +76,13 @@ export default function CloudPlatformsPage() {
               <h2 className="text-xl font-semibold">{item.title}</h2>
               <div className="flex flex-wrap gap-2 pt-3">
                 {item.options.map((opt) => (
-                  <span key={opt} className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground">
+                  <Link
+                    key={opt}
+                    href={productLinks[opt] || "/services/cloud-solutions"}
+                    className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:border-green-300 hover:text-foreground hover:shadow-sm hover:shadow-green-200/30 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/25"
+                  >
                     {opt}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <p className="mt-4 text-sm text-muted-foreground">{item.description}</p>

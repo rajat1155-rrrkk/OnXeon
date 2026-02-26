@@ -29,6 +29,14 @@ export default function ContactPage() {
             Share your stack, goals and constraints. We help with enterprise SaaS implementations and affordable
             self-hosted alternatives, then propose a practical engagement model and execution path.
           </p>
+          <div className="mt-4">
+            <Link
+              href="/contact#book"
+              className="group/xeon relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/18 hover:text-brand before:absolute before:inset-y-0 before:left-[-60%] before:w-[45%] before:-skew-x-12 before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent before:opacity-0 before:transition-all before:duration-500 hover:before:left-[125%] hover:before:opacity-100 dark:before:via-white/30"
+            >
+              Start The Greenlight
+            </Link>
+          </div>
         </div>
       </section>
 

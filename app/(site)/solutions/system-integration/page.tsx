@@ -37,6 +37,21 @@ const integrationStacks = [
   },
 ];
 
+const productLinks: Record<string, string> = {
+  Salesforce: "/solutions/crm-platforms",
+  SAP: "/solutions/erp-systems",
+  ServiceNow: "/blog/servicenow-enterprise-workflows",
+  AWS: "/solutions/cloud-platforms",
+  Azure: "/solutions/cloud-platforms",
+  GCP: "/solutions/cloud-platforms",
+  ERPNext: "/services/erp-solutions",
+  Odoo: "/services/erp-solutions",
+  Plane: "/blog/self-hosted-platform-operations",
+  Nextcloud: "/services/cloud-solutions",
+  PostgreSQL: "/services/cloud-solutions",
+  Docker: "/services/cloud-solutions",
+};
+
 export default function SystemIntegrationPage() {
   return (
     <Section>
@@ -49,6 +64,14 @@ export default function SystemIntegrationPage() {
             Clean integrations across OEM platforms and open self-hosted tools, designed for reliability,
             observability and maintainable long-term operations.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:scale-[1.02] hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-lg hover:shadow-brand/20"
+            >
+              Wire The Flow Fast
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
@@ -73,9 +96,13 @@ export default function SystemIntegrationPage() {
               <h2 className="text-xl font-semibold">{stack.heading}</h2>
               <div className="grid gap-2 pt-3 sm:grid-cols-2">
                 {stack.items.map((item) => (
-                  <div key={item} className="rounded-lg border border-border/70 bg-background/70 px-3 py-2 text-sm text-muted-foreground">
+                  <Link
+                    key={item}
+                    href={productLinks[item] || "/solutions/system-integration"}
+                    className="group/item rounded-lg border border-border/70 bg-background/70 px-3 py-2 text-sm text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:border-green-300 hover:text-foreground hover:shadow-sm hover:shadow-green-200/30 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/25"
+                  >
                     {item}
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -10,7 +10,7 @@ export default function Home() {
     <main className="bg-background text-foreground min-h-screen w-full [&_.max-w-container]:container [&_.max-w-container]:mx-auto [&_.max-w-container]:max-w-6xl [&_.max-w-container]:px-6 [&_.container]:mx-auto [&_.container]:max-w-6xl [&_.container]:px-6">
       <LayoutLines />
       <Hero
-        title="Enterprise and affordable self-hosted systems implemented right."
+        title="Enterprise and self-hosted systems, done right."
         description="We implement and integrate enterprise SaaS platforms such as Salesforce, SAP and ServiceNow, and we deliver affordable self-hosted alternatives across CRM, ERP and cloud using open-source tools."
         buttons={[
           {

@@ -43,6 +43,14 @@ export default function CareersPage() {
             We work on practical enterprise systems with a vendor-neutral,
             engineering-focused approach.
           </p>
+          <div>
+            <Link
+              href="/contact#book"
+              className="group/xeon inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/18 hover:text-brand hover:shadow-[0_0_16px_hsl(var(--brand)/0.24)]"
+            >
+              Build Fast Systems
+            </Link>
+          </div>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {roles.map((role) => (

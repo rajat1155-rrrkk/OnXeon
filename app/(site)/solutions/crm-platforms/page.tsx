@@ -33,6 +33,15 @@ const crmPatterns = [
   "Workflow automation and notifications",
 ];
 
+const productLinks: Record<string, string> = {
+  Salesforce: "/solutions/crm-platforms",
+  ServiceNow: "/blog/servicenow-enterprise-workflows",
+  "Zoho CRM": "/services/crm-solutions",
+  SuiteCRM: "/services/crm-solutions",
+  EspoCRM: "/services/crm-solutions",
+  "Odoo CRM": "/services/erp-solutions",
+};
+
 export default function CrmPlatformsPage() {
   return (
     <Section>
@@ -45,6 +54,14 @@ export default function CrmPlatformsPage() {
             Choose the CRM stack that fits your operating model. We deliver both enterprise OEM platforms and
             affordable self-hosted alternatives.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-[0_0_14px_hsl(var(--brand)/0.24)]"
+            >
+              Shape CRM Velocity
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -56,9 +73,13 @@ export default function CrmPlatformsPage() {
               <h2 className="text-xl font-semibold">{group.type}</h2>
               <div className="flex flex-wrap gap-2 pt-3">
                 {group.options.map((item) => (
-                  <span key={item} className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground">
+                  <Link
+                    key={item}
+                    href={productLinks[item] || "/services/crm-solutions"}
+                    className="rounded-full border border-border/70 bg-background/70 px-3 py-1 text-xs text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:border-green-300 hover:text-foreground hover:shadow-sm hover:shadow-green-200/30 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/25"
+                  >
                     {item}
-                  </span>
+                  </Link>
                 ))}
               </div>
               <p className="mt-4 text-sm text-muted-foreground">{group.notes}</p>

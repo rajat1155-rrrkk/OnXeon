@@ -74,6 +74,14 @@ export default function CrmSolutionsPage() {
             We implement and optimize CRM systems with a vendor-neutral approach: enterprise platforms where needed,
             self-hosted alternatives where cost control and ownership matter.
           </p>
+          <div className="relative z-10 mt-4">
+            <Link
+              href="/contact#book"
+              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/60 hover:bg-brand/18 hover:text-brand hover:shadow-[0_0_16px_hsl(var(--brand)/0.24)]"
+            >
+              Ignite CRM Flow
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
