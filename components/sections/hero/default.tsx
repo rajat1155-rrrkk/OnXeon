@@ -35,13 +35,22 @@ export default function Hero({
   description = "Implementation, customization, and integration for CRM, ERP, and cloud platforms.",
   mockup = <LogoPlayground />,
   badge = (
-    <Badge variant="outline" className="animate-appear">
+    <Badge
+      variant="outline"
+      className="group/badge animate-appear relative overflow-hidden border-brand/30 bg-background/80 backdrop-blur-sm"
+    >
+      <span className="pointer-events-none absolute inset-y-0 left-[-52%] w-[38%] -skew-x-12 bg-gradient-to-r from-transparent via-white/85 to-transparent opacity-0 transition-all duration-500 group-hover/badge:left-[128%] group-hover/badge:opacity-100 dark:via-white/35" />
+      <span className="pointer-events-none absolute inset-y-[35%] left-[-28%] h-[30%] w-10 rounded-full bg-brand/50 opacity-0 blur-md transition-all duration-300 group-hover/badge:left-[110%] group-hover/badge:opacity-100" />
+      <span className="pointer-events-none absolute inset-0 rounded-full border border-brand/20 opacity-0 transition-opacity duration-300 group-hover/badge:opacity-100" />
       <span className="text-muted-foreground">
         Enterprise solutions for modern businesses
       </span>
-      <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
-        <ArrowRightIcon className="size-3" />
+      <a
+        href={siteConfig.getStartedUrl}
+        className="group/xeon relative z-10 inline-flex items-center gap-1.5 rounded-full border border-transparent px-2 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-foreground transition-all duration-300 group-hover/badge:border-brand/40 group-hover/badge:bg-brand/14 group-hover/badge:text-brand group-hover/xeon:shadow-[0_0_18px_hsl(var(--brand)/0.25)]"
+      >
+        Get Xeoned
+        <ArrowRightIcon className="size-3 transition-transform duration-300 group-hover/xeon:translate-x-1 group-hover/xeon:scale-110" />
       </a>
     </Badge>
   ),

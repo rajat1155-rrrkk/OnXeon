@@ -135,7 +135,7 @@ export default function Navigation({
   ],
 }: NavigationProps) {
   const navItemClass =
-    "relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-sm hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/30 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100";
+    "group/nav relative overflow-hidden rounded-md border border-transparent transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:bg-brand/8 hover:shadow-md hover:shadow-brand/15 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/30 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100";
 
   return (
     <NavigationMenu className="hidden md:flex">
@@ -160,7 +160,7 @@ export default function Navigation({
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
-                            className="from-muted/30 to-muted/10 flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                            className="from-muted/35 to-muted/10 flex h-full w-full flex-col justify-end rounded-md border border-border/70 bg-linear-to-b p-6 no-underline outline-hidden shadow-sm shadow-brand/5 transition-all duration-300 select-none focus:shadow-md hover:border-brand/35 hover:shadow-lg hover:shadow-brand/15"
                             href={logoHref}
                           >
                             {logo}
@@ -216,11 +216,12 @@ function ListItem({
         <a
           data-slot="list-item"
           className={cn(
-            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors select-none",
+            "group/item relative block space-y-1 rounded-md border border-transparent p-3 leading-none no-underline outline-hidden transition-all duration-300 select-none hover:border-brand/30 hover:bg-brand/8 hover:text-accent-foreground hover:shadow-sm hover:shadow-brand/15 focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           {...props}
         >
+          <span className="pointer-events-none absolute inset-y-0 left-0 w-0 rounded-r-full bg-brand/60 transition-all duration-300 group-hover/item:w-[3px]" />
           <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}

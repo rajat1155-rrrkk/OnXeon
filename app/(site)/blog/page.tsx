@@ -81,15 +81,21 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <div className="group relative overflow-hidden rounded-xl border bg-card p-6 space-y-3 transition-all duration-300 hover:shadow-md">
+        <div className="group relative overflow-hidden rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-6 space-y-3 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/30">
+          <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/40 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
+          <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
           <p className="text-xs uppercase tracking-wide text-muted-foreground">
             Featured
           </p>
           <h2 className="relative z-10 text-2xl font-semibold">{featuredPost.title}</h2>
           <p className="relative z-10 text-muted-foreground">{featuredPost.description}</p>
           <div className="relative z-10">
-            <Button variant="default" asChild>
+            <Button
+              variant="default"
+              asChild
+              className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
+            >
               <Link href={featuredPost.href}>Read Article</Link>
             </Button>
           </div>
@@ -125,8 +131,10 @@ export default function BlogPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {recentPosts.map((post) => (
               <Link key={post.title} href={post.href}>
-                <Card className="group relative h-full overflow-hidden transition-all duration-300 hover:shadow-md hover:border-green-300 dark:hover:border-emerald-700/60">
+                <Card className="group relative h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200/35 hover:border-green-300 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/30">
+                  <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/35 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
+                  <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
                   <CardHeader>
                     <CardTitle className="relative z-10">{post.title}</CardTitle>
                     <CardDescription className="relative z-10">{post.description}</CardDescription>
@@ -145,8 +153,10 @@ export default function BlogPage() {
             <h2 className="relative z-10 text-2xl font-semibold">Practical Guides</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <Card className="group relative h-full overflow-hidden transition-all duration-300 hover:shadow-md hover:border-green-300 dark:hover:border-emerald-700/60">
+            <Card className="group relative h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200/35 hover:border-green-300 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/30">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/35 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <CardHeader>
                 <CardTitle className="relative z-10">CRM Rollout Checklist</CardTitle>
                 <CardDescription className="relative z-10">
@@ -155,8 +165,10 @@ export default function BlogPage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="group relative h-full overflow-hidden transition-all duration-300 hover:shadow-md hover:border-green-300 dark:hover:border-emerald-700/60">
+            <Card className="group relative h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200/35 hover:border-green-300 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/30">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/35 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <CardHeader>
                 <CardTitle className="relative z-10">ERP Integration Playbook</CardTitle>
                 <CardDescription className="relative z-10">
@@ -165,8 +177,10 @@ export default function BlogPage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="group relative h-full overflow-hidden transition-all duration-300 hover:shadow-md hover:border-green-300 dark:hover:border-emerald-700/60">
+            <Card className="group relative h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200/35 hover:border-green-300 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/30">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/35 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
+              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <CardHeader>
                 <CardTitle className="relative z-10">Self-Hosted Operations Baseline</CardTitle>
                 <CardDescription className="relative z-10">
@@ -178,7 +192,11 @@ export default function BlogPage() {
         </div>
 
         <div className="text-center pt-2">
-          <Button variant="default" asChild>
+          <Button
+            variant="default"
+            asChild
+            className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
+          >
             <Link
             href="/contact#book"
             

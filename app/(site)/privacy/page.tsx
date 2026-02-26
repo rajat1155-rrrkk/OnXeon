@@ -160,12 +160,9 @@ export default function PrivacyPage() {
         <section className="space-y-3">
           <h2 className="text-xl font-semibold">12. Contact</h2>
           <p className="text-muted-foreground">
-            For privacy-related inquiries, contact us at{" "}
-            <a
-              href="mailto:Rajat@OnXeon.com"
-              className="text-foreground underline underline-offset-4"
-            >
-              Rajat@OnXeon.com
+            For privacy-related inquiries, please use the{" "}
+            <a href="/contact#book" className="text-foreground underline underline-offset-4">
+              contact inquiry form
             </a>
             .
           </p>
