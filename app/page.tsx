@@ -37,12 +37,14 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-6">
+          <div className="group relative mt-10 overflow-hidden rounded-2xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-6 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30">
+            <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent opacity-70 dark:via-emerald-400/60" />
+            <span className="pointer-events-none absolute -top-10 right-8 h-24 w-24 rounded-full bg-green-300/25 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
             <div className="text-sm text-muted-foreground">
               Platforms and products we implement, integrate and support.
             </div>
             <div className="mt-5 grid gap-5 md:grid-cols-2">
-              <div className="rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4">
+              <div className="rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-green-300/80 dark:hover:border-emerald-700/60 hover:shadow-md hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
                 <h3 className="text-sm font-semibold">Enterprise Platforms</h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
@@ -98,7 +100,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div className="rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4">
+              <div className="rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-green-300/80 dark:hover:border-emerald-700/60 hover:shadow-md hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
                 <h3 className="text-sm font-semibold">
                   Open Source & Self-Hosted
                 </h3>
@@ -159,55 +161,65 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
               <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
-              <h3 className="text-lg font-semibold">CRM Implementation</h3>
+              <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">CRM Implementation</h3>
               <p className="text-muted-foreground mt-3">
                 Design and implementation of Salesforce, Zoho and ServiceNow
                 workflows aligned with business operations.
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
               <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
-              <h3 className="text-lg font-semibold">ERP Integration</h3>
+              <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">ERP Integration</h3>
               <p className="text-muted-foreground mt-3">
                 Structured SAP and Odoo integration with finance, operations
                 and reporting systems.
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
               <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
-              <h3 className="text-lg font-semibold">System Integration</h3>
+              <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">System Integration</h3>
               <p className="text-muted-foreground mt-3">
                 Reliable API and workflow integration across CRM, ERP and
                 internal tools.
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
               <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
-              <h3 className="text-lg font-semibold">Cloud Deployment</h3>
+              <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">Cloud Deployment</h3>
               <p className="text-muted-foreground mt-3">
                 Cloud architecture and deployment on AWS, GCP and Azure for
                 production enterprise systems.
               </p>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60">
+            <div className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+              <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
               <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
               <div className="relative z-10">
-              <h3 className="text-lg font-semibold">Open Source Solutions</h3>
+              <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">Open Source Solutions</h3>
               <p className="text-muted-foreground mt-3">
                 Vendor-neutral and self-hosted alternatives that reduce
                 licensing costs and increase control.
@@ -331,12 +343,14 @@ export default function Home() {
             ].map((project) => (
               <div
                 key={project.name}
-                className="group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-colors duration-500 hover:border-green-200 dark:hover:border-emerald-700/60"
+                className="group relative overflow-hidden rounded-xl border border-border/70 bg-gradient-to-b from-card/95 to-background/85 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300/70 dark:hover:border-emerald-600/60 hover:shadow-lg hover:shadow-green-200/20 dark:hover:shadow-emerald-900/30"
               >
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
-                <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-300/60 via-green-500/70 to-green-300/60 opacity-70 transition-opacity duration-500 group-hover:opacity-100 dark:from-emerald-500/50 dark:via-emerald-400/70 dark:to-emerald-500/50" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-green-200/35 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
+                <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_85%_15%,rgba(34,197,94,0.24),transparent_45%)] dark:bg-[radial-gradient(circle_at_85%_15%,rgba(16,185,129,0.2),transparent_45%)]" />
+                <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[46%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/70 dark:via-white/25 to-transparent opacity-0 transition-all duration-900 group-hover:left-[130%] group-hover:opacity-100" />
                 <div className="relative z-10">
-                  <h3 className="text-lg font-semibold">{project.name}</h3>
+                  <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">{project.name}</h3>
                   <p className="text-muted-foreground mt-3">
                     {project.description}
                   </p>
