@@ -9,10 +9,10 @@ export default function ContactPage() {
       <p>
         Contact OnXeon to discuss implementations, integrations or system improvements.
       </p>
-      <p className="font-medium">hello@onxeon.com</p>
+      <p className="font-medium">Rajat@OnXeon.com</p>
       <Button variant="default" asChild>
             <Link
-        href="mailto:hello@onxeon.com"
+        href="mailto:Rajat@OnXeon.com"
         
       >
         Email Us

@@ -57,7 +57,7 @@ export default function CareersPage() {
             Send your profile and relevant project experience to our team.
           </p>
           <Button variant="default" asChild>
-            <Link href="mailto:hello@onxeon.com" >
+            <Link href="mailto:Rajat@OnXeon.com" >
             Apply via Email
           </Link>
           </Button>

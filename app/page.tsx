@@ -76,10 +76,10 @@ export default function Home() {
                   {[
                     { name: "Plane", src: "https://cdn.simpleicons.org/plane" },
                     { name: "ERPNext", src: "https://cdn.simpleicons.org/erpnext/7E7EFF" },
-                    { name: "Odoo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Odoo_logo.svg/512px-Odoo_logo.svg.png" },
+                    { name: "Odoo", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Odoo_logo.svg/512px-Odoo_logo.svg.png" },
                     { name: "Nextcloud", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nextcloud_Logo.svg/512px-Nextcloud_Logo.svg.png" },
                     { name: "PostgreSQL", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/512px-Postgresql_elephant.svg.png" },
-                    { name: "Docker", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Docker_logo.png/512px-Docker_logo.png" },
+                    { name: "Docker", src: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" },
                   ].map((platform) => (
                     <div
                       key={platform.name}

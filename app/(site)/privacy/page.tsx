@@ -162,10 +162,10 @@ export default function PrivacyPage() {
           <p className="text-muted-foreground">
             For privacy-related inquiries, contact us at{" "}
             <a
-              href="mailto:hello@onxeon.com"
+              href="mailto:Rajat@OnXeon.com"
               className="text-foreground underline underline-offset-4"
             >
-              hello@onxeon.com
+              Rajat@OnXeon.com
             </a>
             .
           </p>
