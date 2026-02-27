@@ -61,6 +61,11 @@ export default function Navigation({
       href: "/about",
     },
     {
+      title: "Blueprints",
+      isLink: true,
+      href: "/blueprints",
+    },
+    {
       title: "Contact",
       isLink: true,
       href: "/contact#book",

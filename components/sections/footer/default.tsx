@@ -65,7 +65,7 @@ export default function FooterSection({
     {
       title: "Resources",
       links: [
-        { text: "Case Studies", href: "/case-studies" },
+        { text: "Project Blueprints", href: "/blueprints" },
         { text: "Documentation", href: "/docs" },
         { text: "Contact", href: "/contact#book" },
       ],

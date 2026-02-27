@@ -67,6 +67,7 @@ export default function Navbar({
   mobileLinks = [
     { text: "Services", href: "/services" },
     { text: "Solutions", href: "/solutions" },
+    { text: "Blueprints", href: "/blueprints" },
     { text: "About", href: "/about" },
   ],
   actions = [
