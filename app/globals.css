@@ -215,3 +215,89 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes mobile-fx-sheen {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-premium-tap {
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.22s ease,
+      border-color 0.22s ease,
+      background-color 0.22s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-premium-tap:active {
+    transform: translateY(-1px) scale(0.985);
+    box-shadow:
+      0 0 0 1px hsl(var(--brand) / 0.36),
+      0 10px 24px -12px hsl(var(--brand) / 0.7);
+  }
+
+  .mobile-premium-tap::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      130px circle at var(--tap-x, 50%) var(--tap-y, 50%),
+      hsl(var(--brand) / 0.2),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .mobile-premium-tap:active::before {
+    opacity: 1;
+  }
+
+  .mobile-scroll-fx .mobile-fx-target {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+    filter: saturate(0.92);
+    transition:
+      opacity 0.55s ease-out,
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.5s ease-out;
+  }
+
+  .mobile-scroll-fx .mobile-fx-target.mobile-fx-inview {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: saturate(1);
+  }
+
+  .mobile-scroll-fx .mobile-fx-target.mobile-fx-inview::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: -8px auto -8px -55%;
+    width: 45%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--brand) / 0.04) 40%,
+      hsl(var(--brand) / 0.14) 55%,
+      transparent 100%
+    );
+    animation: mobile-fx-sheen 820ms ease-out 1;
+  }
+}
