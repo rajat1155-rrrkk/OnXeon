@@ -113,3 +113,65 @@ The goal is to help businesses move from ideas to working systems efficiently.
 ---
 
 ## Project Structure
+
+
+app/ → Application routes and pages
+components/ → Reusable components
+config/ → Configuration
+lib/ → Utilities
+public/ → Static assets
+styles/ → Global styling
+
+
+---
+
+## Running Locally
+
+Clone the repository:
+
+
+git clone https://github.com/rajat1155-rrrkk/OnXeon.git
+
+
+Install dependencies:
+
+
+npm install
+
+
+Run development server:
+
+
+npm run dev
+
+
+Open:
+
+
+http://localhost:3000
+
+
+---
+
+## Deployment
+
+OnXeon is deployed on Vercel:
+
+https://onxeon.vercel.app
+
+---
+
+## Vision
+
+OnXeon aims to provide a reliable platform for building modern digital systems for businesses and startups.
+
+The focus is on creating scalable, optimized, and production-ready software.
+
+---
+
+## Author
+
+Rajat K
+
+GitHub:
+https://github.com/rajat1155-rrrkk
