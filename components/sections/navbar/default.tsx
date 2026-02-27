@@ -15,6 +15,7 @@ import {
   NavbarRight,
 } from "../../ui/navbar";
 import Navigation from "../../ui/navigation";
+import { ThemeCycleButton } from "../../ui/mode-toggle";
 import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
 
 interface NavbarLink {
@@ -141,12 +142,13 @@ export default function Navbar({
               isScrolled ? "md:translate-y-1" : "translate-y-0",
             )}
           >
+            <ThemeCycleButton className="mr-1 md:mr-2" />
             {actions.map((action, index) =>
               action.isButton ? (
                 <Button
                   key={index}
                   variant={action.variant || "default"}
-                  className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/25 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/35 dark:before:bg-white/15 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100"
+                  className="mobile-premium-tap group/nav-cta relative isolate overflow-hidden rounded-full border border-border/70 px-4 shadow-[0_10px_24px_-16px_hsl(var(--foreground)/0.35)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:shadow-[0_14px_28px_-18px_hsl(var(--brand)/0.6)] before:absolute before:inset-y-0 before:left-[-58%] before:w-[40%] before:skew-x-[-18deg] before:rounded-[inherit] before:bg-white/32 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[122%] hover:before:opacity-100"
                   asChild
                 >
                   <a href={action.href}>
