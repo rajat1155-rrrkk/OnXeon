@@ -1131,10 +1131,10 @@ export default function ProjectBlueprintsExplorer() {
               key={track}
               type="button"
               onClick={() => setByTrack(track)}
-              className={`mobile-premium-tap rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
+              className={`mobile-premium-tap chrome-hover rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
                 selected
                   ? "border-brand/45 bg-brand/12 text-foreground shadow-sm shadow-brand/20"
-                  : "border-border/70 bg-card/70 text-muted-foreground hover:border-brand/35 hover:text-foreground"
+                  : "border-border/70 bg-card/70 text-muted-foreground hover:border-brand/35 hover:bg-brand/8 hover:text-foreground"
               }`}
             >
               {track} <span className="opacity-70">({count})</span>
@@ -1152,10 +1152,10 @@ export default function ProjectBlueprintsExplorer() {
               key={category}
               type="button"
               onClick={() => setByCategory(category)}
-              className={`mobile-premium-tap rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
+              className={`mobile-premium-tap chrome-hover rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
                 selected
                   ? "border-brand/45 bg-brand/12 text-foreground shadow-sm shadow-brand/20"
-                  : "border-border/70 bg-card/70 text-muted-foreground hover:border-brand/35 hover:text-foreground"
+                  : "border-border/70 bg-card/70 text-muted-foreground hover:border-brand/35 hover:bg-brand/8 hover:text-foreground"
               }`}
             >
               {category} <span className="opacity-70">({count})</span>
@@ -1172,12 +1172,14 @@ export default function ProjectBlueprintsExplorer() {
               key={item.id}
               type="button"
               onClick={() => setActiveBlueprint(item.id)}
-              className={`group text-left rounded-xl border p-4 transition-all duration-300 ${
+              className={`group chrome-hover chrome-float-card premium-subsection-card text-left rounded-xl p-4 transition-all duration-300 ${
                 selected
-                  ? "border-brand/45 bg-brand/10 shadow-md shadow-brand/15"
-                  : "border-border/70 bg-card/80 hover:border-brand/35 hover:bg-brand/8"
+                  ? "border-brand/45 bg-brand/10 shadow-md shadow-brand/20"
+                  : "hover:border-brand/35 hover:bg-brand/8"
               }`}
             >
+              <span className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 [background:linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.1)_30%,transparent_52%)] dark:[background:linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.05)_30%,transparent_52%)]" />
+              <span className="pointer-events-none absolute top-1/2 -left-[55%] h-10 w-[34%] -translate-y-1/2 -skew-x-12 rounded-sm bg-white/55 opacity-0 blur-[1px] transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100 dark:bg-white/22" />
               <p className="text-sm font-semibold">{item.title}</p>
               <p className="mt-1 text-sm text-muted-foreground">{item.summary}</p>
               <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
@@ -1190,10 +1192,10 @@ export default function ProjectBlueprintsExplorer() {
 
       <div
         key={panelKey}
-        className="animate-appear group relative overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/70 to-card p-6 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card dark:hover:shadow-emerald-900/25"
+        className="premium-dropdown-shell animate-appear group relative overflow-hidden rounded-2xl border p-6 transition-all duration-500 hover:shadow-xl hover:shadow-brand/20"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
-        <div className="pointer-events-none absolute -top-16 right-3 h-28 w-28 rounded-full bg-green-300/20 blur-2xl dark:bg-emerald-500/20" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/65 to-transparent" />
+        <div className="pointer-events-none absolute -top-16 right-3 h-28 w-28 rounded-full bg-brand/20 blur-2xl dark:bg-brand/14" />
 
         <div className="relative z-10">
           <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
@@ -1204,7 +1206,7 @@ export default function ProjectBlueprintsExplorer() {
           <p className="mt-2 text-muted-foreground">{active.summary}</p>
 
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className="rounded-xl border border-border/70 bg-card/80 p-4">
+            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Environment
               </p>
@@ -1215,7 +1217,7 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-border/70 bg-card/80 p-4">
+            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Use Cases
               </p>
@@ -1226,7 +1228,7 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-border/70 bg-card/80 p-4">
+            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Integration Layer
               </p>
@@ -1237,7 +1239,7 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-border/70 bg-card/80 p-4">
+            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Delivery Model
               </p>
