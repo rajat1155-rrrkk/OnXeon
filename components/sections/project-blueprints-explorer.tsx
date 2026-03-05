@@ -13,9 +13,65 @@ type Blueprint = {
   integrations: string[];
   delivery: string[];
   timeline: string;
+  links?: Array<{ label: string; href: string }>;
+  products?: string[];
+  visuals?: Array<{ src: string; alt: string }>;
 };
 
 const blueprints: Blueprint[] = [
+  {
+    id: "home-improvement-platform",
+    title: "Home Improvement Platform Blueprint",
+    category: "Home Services",
+    track: "Self-Hosted",
+    summary:
+      "Blueprint aligned to the live Rome repair services website, extended with affordable self-hosted CRM, project management, dealer, location, and field-agent operations.",
+    environment: [
+      "Web customer portal + Desktop operations console + Mobile field-agent app",
+      "Self-hosted CRM + ticketing workflows",
+      "Project and dispatch orchestration with SLA tracking",
+    ],
+    useCase: [
+      "Lead capture to estimate to booking lifecycle",
+      "Job assignment, route planning, and on-site proof-of-service",
+      "Post-service follow-up, feedback, and repeat-service automation",
+    ],
+    integrations: [
+      "ERPNext for service billing and inventory",
+      "Twenty CRM + Plane project tracking",
+      "NocoDB/Metabase reporting + Formbricks feedback analytics",
+    ],
+    delivery: [
+      "Customer journey and service flow mapping",
+      "Self-hosted stack setup and integration contracts",
+      "Pilot region rollout with dispatcher + technician workflows",
+      "Runbook handover and cost-optimized support cadence",
+    ],
+    timeline: "6-10 weeks",
+    links: [
+      {
+        label: "Open Live Website",
+        href: "https://home-improvement-inky.vercel.app/",
+      },
+      {
+        label: "Discuss Similar Build",
+        href: "/contact#book",
+      },
+    ],
+    products: [
+      "Twenty CRM (self-hosted Service Cloud alternative)",
+      "ERPNext (service billing, inventory, contracts)",
+      "Plane (project and sprint management)",
+      "ToolJet or Appsmith (dealer + operations admin panels)",
+      "Baserow/NocoDB (dealer and location management records)",
+      "Frappe Helpdesk/Zammad (customer support and SLA workflows)",
+      "Agent mobile app module (dispatch, geolocation, job updates)",
+    ],
+    visuals: [
+      { src: "/dashboard-light.png", alt: "Home services operations dashboard preview" },
+      { src: "/dashboard-dark.png", alt: "Service workflow and KPI dashboard preview" },
+    ],
+  },
   {
     id: "crm-multi-team",
     title: "CRM Operations Blueprint",
@@ -1172,7 +1228,7 @@ export default function ProjectBlueprintsExplorer() {
               key={item.id}
               type="button"
               onClick={() => setActiveBlueprint(item.id)}
-              className={`group chrome-hover chrome-float-card premium-subsection-card text-left rounded-xl p-4 transition-all duration-300 ${
+              className={`group premium-soft-card chrome-hover chrome-float-card premium-subsection-card text-left rounded-xl p-4 transition-all duration-300 ${
                 selected
                   ? "border-brand/45 bg-brand/10 shadow-md shadow-brand/20"
                   : "hover:border-brand/35 hover:bg-brand/8"
@@ -1192,7 +1248,7 @@ export default function ProjectBlueprintsExplorer() {
 
       <div
         key={panelKey}
-        className="premium-dropdown-shell animate-appear group relative overflow-hidden rounded-2xl border p-6 transition-all duration-500 hover:shadow-xl hover:shadow-brand/20"
+        className="premium-dropdown-shell premium-soft-card animate-appear group relative overflow-hidden rounded-2xl border p-6 transition-all duration-500 hover:shadow-xl hover:shadow-brand/20"
       >
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/65 to-transparent" />
         <div className="pointer-events-none absolute -top-16 right-3 h-28 w-28 rounded-full bg-brand/20 blur-2xl dark:bg-brand/14" />
@@ -1206,7 +1262,7 @@ export default function ProjectBlueprintsExplorer() {
           <p className="mt-2 text-muted-foreground">{active.summary}</p>
 
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
+            <div className="premium-subsection-card premium-soft-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Environment
               </p>
@@ -1217,7 +1273,7 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
+            <div className="premium-subsection-card premium-soft-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Use Cases
               </p>
@@ -1228,7 +1284,7 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
+            <div className="premium-subsection-card premium-soft-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Integration Layer
               </p>
@@ -1239,7 +1295,7 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
+            <div className="premium-subsection-card premium-soft-card chrome-hover rounded-xl p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
                 Delivery Model
               </p>
@@ -1253,6 +1309,51 @@ export default function ProjectBlueprintsExplorer() {
               </p>
             </div>
           </div>
+
+          {active.products && active.products.length > 0 ? (
+            <div className="premium-subsection-card premium-soft-card mt-4 rounded-xl p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+                Affordable Self-Hosted Ecosystem
+              </p>
+              <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                {active.products.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {active.visuals && active.visuals.length > 0 ? (
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              {active.visuals.map((image) => (
+                <div
+                  key={image.src}
+                  className="premium-subsection-card premium-soft-card overflow-hidden rounded-xl border"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-44 w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
+
+          {active.links && active.links.length > 0 ? (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {active.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="premium-soft-card chrome-hover inline-flex items-center rounded-full border border-brand/35 bg-brand/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:border-brand/55 hover:bg-brand/14"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

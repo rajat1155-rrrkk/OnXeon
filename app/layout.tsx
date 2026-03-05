@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/contexts/theme-provider";
 import Footer from "@/components/sections/footer/default";
 import Navbar from "@/components/sections/navbar/default";
+import PremiumCardMouseGlow from "@/components/ui/premium-card-mouse-glow";
 import { inter } from "@/lib/fonts";
 
 import { siteConfig } from "../config/site";
@@ -70,6 +71,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-background antialiased`}>
         <ThemeProvider>
+          <PremiumCardMouseGlow />
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <div className="flex-1">{children}</div>

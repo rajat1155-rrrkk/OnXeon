@@ -85,7 +85,7 @@ export default function Home() {
               <Link
                 key={card.title}
                 href={card.href}
-                className="mobile-premium-tap group relative min-w-[84%] snap-center overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/90 to-card p-5 shadow-sm transition-all duration-500 active:scale-[0.98] dark:border-emerald-900/40 dark:from-emerald-950/45 dark:to-card"
+                className="mobile-premium-tap premium-soft-card group relative min-w-[84%] snap-center overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/90 to-card p-5 shadow-sm transition-all duration-500 active:scale-[0.98] dark:border-emerald-900/40 dark:from-emerald-950/45 dark:to-card"
               >
                 <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent dark:via-emerald-400/70" />
                 <span className="pointer-events-none absolute -top-8 right-0 h-20 w-20 rounded-full bg-green-300/25 blur-2xl transition-opacity duration-500 group-active:opacity-100 dark:bg-emerald-500/20" />
@@ -121,14 +121,14 @@ export default function Home() {
           <p className="mobile-fx-target mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground md:hidden">
             Swipe above for capability previews, then use the sections below for platform depth and delivery confidence.
           </p>
-          <div className="mobile-fx-target group/section relative mt-8 hidden overflow-hidden rounded-2xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-4 sm:mt-10 sm:p-6 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30 md:block">
+          <div className="mobile-fx-target premium-soft-card group/section relative mt-8 hidden overflow-hidden rounded-2xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-4 sm:mt-10 sm:p-6 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:hover:shadow-emerald-900/30 md:block">
             <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent opacity-70 dark:via-emerald-400/60" />
             <span className="pointer-events-none absolute -top-10 right-8 h-24 w-24 rounded-full bg-green-300/25 blur-2xl opacity-0 transition-opacity duration-500 group-hover/section:opacity-100 dark:bg-emerald-500/20" />
             <div className="text-sm text-muted-foreground">
               Platforms and products we implement, integrate and support.
             </div>
             <div className="mt-5 grid gap-5 md:grid-cols-2">
-              <div className="mobile-fx-target rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-green-300/80 dark:hover:border-emerald-700/60 hover:shadow-md hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
+              <div className="mobile-fx-target premium-soft-card rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-green-300/80 dark:hover:border-emerald-700/60 hover:shadow-md hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
                 <h3 className="text-sm font-semibold">Enterprise Platforms</h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
@@ -166,7 +166,7 @@ export default function Home() {
                     <Link
                       key={platform.name}
                       href={platform.href}
-                      className="group/item relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-2.5 py-2 sm:px-3 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
+                      className="group/item premium-soft-card relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-2.5 py-2 sm:px-3 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
                     >
                       <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 dark:via-emerald-400/70" />
                       <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
@@ -185,7 +185,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div className="mobile-fx-target rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-green-300/80 dark:hover:border-emerald-700/60 hover:shadow-md hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
+              <div className="mobile-fx-target premium-soft-card rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-background/70 p-4 transition-all duration-500 hover:-translate-y-0.5 hover:border-green-300/80 dark:hover:border-emerald-700/60 hover:shadow-md hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
                 <h3 className="text-sm font-semibold">
                   Open Source & Self-Hosted
                 </h3>
@@ -225,7 +225,7 @@ export default function Home() {
                     <Link
                       key={platform.name}
                       href={platform.href}
-                      className="group/item relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-2.5 py-2 sm:px-3 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
+                      className="group/item premium-soft-card relative overflow-hidden flex items-center gap-2 rounded-lg border border-green-100/80 dark:border-emerald-900/40 bg-card px-2.5 py-2 sm:px-3 transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-300/30 dark:hover:shadow-emerald-900/40"
                     >
                       <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/80 to-transparent opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 dark:via-emerald-400/70" />
                       <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 bg-gradient-to-r from-transparent via-green-100/55 to-transparent dark:via-emerald-500/20" />
@@ -266,7 +266,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="mobile-fx-target mobile-premium-tap rounded-xl border border-green-100/80 bg-gradient-to-b from-green-50/75 to-card p-4 dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card"
+                className="mobile-fx-target mobile-premium-tap premium-soft-card rounded-xl border border-green-100/80 bg-gradient-to-b from-green-50/75 to-card p-4 dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card"
               >
                 <h3 className="text-sm font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
@@ -274,7 +274,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-10 hidden gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2 lg:grid md:grid">
-            <div className="mobile-fx-target group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+            <div className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
               <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
@@ -287,7 +287,7 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="mobile-fx-target group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+            <div className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
               <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
@@ -300,7 +300,7 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="mobile-fx-target group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+            <div className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
               <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
@@ -313,7 +313,7 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="mobile-fx-target group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+            <div className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
               <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
@@ -326,7 +326,7 @@ export default function Home() {
               </p>
               </div>
             </div>
-            <div className="mobile-fx-target group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
+            <div className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35">
               <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.26),transparent_46%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.2),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/60 to-green-50/10 dark:from-emerald-500/15 dark:to-transparent opacity-30 dark:opacity-40 transition-opacity duration-500 group-hover:opacity-70 dark:group-hover:opacity-80" />
@@ -383,7 +383,7 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="mobile-fx-target group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card px-6 py-5 transition-all duration-500 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35"
+                className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-green-100 dark:border-emerald-900/45 bg-gradient-to-b from-green-50/70 to-white dark:from-emerald-950/45 dark:to-card px-6 py-5 transition-all duration-500 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/35"
               >
                 <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
                 <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,197,94,0.28),transparent_45%)] dark:bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.22),transparent_45%)]" />
@@ -456,7 +456,7 @@ export default function Home() {
             ].map((project) => (
               <div
                 key={project.name}
-                className="mobile-fx-target group relative overflow-hidden rounded-xl border border-border/70 bg-gradient-to-b from-card/95 to-background/85 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300/70 dark:hover:border-emerald-600/60 hover:shadow-lg hover:shadow-green-200/20 dark:hover:shadow-emerald-900/30"
+                className="mobile-fx-target premium-soft-card group relative overflow-hidden rounded-xl border border-border/70 bg-gradient-to-b from-card/95 to-background/85 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300/70 dark:hover:border-emerald-600/60 hover:shadow-lg hover:shadow-green-200/20 dark:hover:shadow-emerald-900/30"
               >
                 <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-300/60 via-green-500/70 to-green-300/60 opacity-70 transition-opacity duration-500 group-hover:opacity-100 dark:from-emerald-500/50 dark:via-emerald-400/70 dark:to-emerald-500/50" />
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-green-200/35 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />

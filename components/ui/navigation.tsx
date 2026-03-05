@@ -140,7 +140,7 @@ export default function Navigation({
   ],
 }: NavigationProps) {
   const navItemClass =
-    "group/nav chrome-hover rounded-md border border-transparent";
+    "group/nav chrome-hover premium-soft-card rounded-md border border-transparent";
 
   return (
     <NavigationMenu className="hidden md:flex">
@@ -165,7 +165,7 @@ export default function Navigation({
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
-                            className="premium-subsection-card premium-nav-card group/feature chrome-hover from-muted/35 to-muted/10 relative flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden shadow-sm shadow-brand/5 select-none focus:shadow-md"
+                            className="premium-subsection-card premium-nav-card premium-soft-card group/feature chrome-hover from-muted/35 to-muted/10 relative flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden shadow-sm shadow-brand/5 select-none focus:shadow-md"
                             href={logoHref}
                           >
                             <span className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover/feature:opacity-100 [background:linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.08)_22%,transparent_42%)] dark:[background:linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.04)_22%,transparent_42%)]" />
@@ -225,6 +225,7 @@ function ListItem({
           data-slot="list-item"
           className={cn(
             "group/item premium-nav-card chrome-hover relative block space-y-1 rounded-md border border-border/55 bg-card/55 p-3 leading-none no-underline outline-hidden shadow-[0_10px_20px_-20px_hsl(var(--foreground)/0.4)] select-none hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "premium-soft-card",
             "premium-subsection-card",
             className,
           )}

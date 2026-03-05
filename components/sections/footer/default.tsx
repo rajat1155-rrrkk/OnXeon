@@ -80,9 +80,9 @@ export default function FooterSection({
   className,
 }: FooterProps) {
   const columnClass =
-    "group relative overflow-hidden rounded-xl border border-border/70 bg-card/84 p-4 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl hover:shadow-brand/15";
+    "group premium-soft-card relative overflow-hidden rounded-xl border border-border/70 bg-card/84 p-4 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-brand/50 hover:shadow-xl hover:shadow-brand/15";
   const footerItemClass =
-    "group/item relative block w-full overflow-hidden rounded-lg border border-transparent bg-background/70 px-3 py-2 text-muted-foreground text-sm transition-all duration-300 hover:-translate-y-px hover:border-brand/35 hover:bg-brand/12 hover:text-foreground hover:shadow-sm hover:shadow-brand/10";
+    "group/item premium-soft-card relative block w-full overflow-hidden rounded-lg border border-transparent bg-background/70 px-3 py-2 text-muted-foreground text-sm transition-all duration-300 hover:-translate-y-px hover:border-brand/35 hover:bg-brand/12 hover:text-foreground hover:shadow-sm hover:shadow-brand/10";
   const policyClass =
     "text-muted-foreground transition-colors duration-200 hover:text-foreground";
 
@@ -91,7 +91,7 @@ export default function FooterSection({
       <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-brand/70 to-transparent" />
       <div className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_right,rgba(16,185,129,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(16,185,129,0.06)_1px,transparent_1px)] [background-size:32px_32px] opacity-25" />
       <div className="max-w-container relative z-10 mx-auto">
-        <Footer className="relative mt-5 overflow-hidden rounded-2xl border border-border/70 bg-card/45 px-3 pt-10 shadow-[0_14px_40px_-24px_hsl(var(--brand)/0.35)] backdrop-blur-xl md:mt-6 md:px-4 md:pt-14">
+        <Footer className="premium-soft-card relative mt-5 overflow-hidden rounded-2xl border border-border/70 bg-card/45 px-3 pt-10 shadow-[0_14px_40px_-24px_hsl(var(--brand)/0.35)] backdrop-blur-xl md:mt-6 md:px-4 md:pt-14">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-brand/5 dark:from-white/5" />
           <div className="pointer-events-none absolute -top-24 left-0 h-64 w-64 rounded-full bg-brand/12 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 right-0 h-64 w-64 rounded-full bg-brand/12 blur-3xl" />
@@ -150,7 +150,7 @@ export default function FooterSection({
               </FooterColumn>
             ))}
           </FooterContent>
-          <FooterBottom className="mt-5 rounded-lg border-t border-border/70 bg-card/55 px-3 py-3 shadow-[inset_0_1px_0_hsl(var(--foreground)/0.08)] backdrop-blur-sm md:mt-6">
+          <FooterBottom className="premium-soft-card mt-5 rounded-lg border-t border-border/70 bg-card/55 px-3 py-3 shadow-[inset_0_1px_0_hsl(var(--foreground)/0.08)] backdrop-blur-sm md:mt-6">
             <div>{copyright}</div>
             <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-start md:justify-end md:gap-4">
               {policies.map((policy, index) => (

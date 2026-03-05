@@ -549,6 +549,73 @@
     );
 }
 
+.premium-soft-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  backdrop-filter: blur(10px) saturate(112%);
+  -webkit-backdrop-filter: blur(10px) saturate(112%);
+  background-color: color-mix(in oklab, var(--card) 82%, transparent);
+  transition:
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 260ms ease,
+    background-color 260ms ease;
+  box-shadow:
+    0 14px 28px -24px color-mix(in oklab, var(--foreground) 45%, transparent),
+    0 6px 12px -12px color-mix(in oklab, var(--foreground) 35%, transparent);
+}
+
+.premium-soft-card::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(
+    220px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklab, var(--brand) 20%, transparent) 0%,
+    color-mix(in oklab, var(--brand) 10%, transparent) 28%,
+    transparent 72%
+  );
+  transition: opacity 260ms ease;
+}
+
+.premium-soft-card::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -12px;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(
+    70% 55% at 50% 70%,
+    color-mix(in oklab, var(--brand) 28%, transparent) 0%,
+    transparent 78%
+  );
+  filter: blur(10px);
+  transition: opacity 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-soft-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in oklab, var(--brand) 24%, var(--border));
+  background-color: color-mix(in oklab, var(--card) 72%, transparent);
+  box-shadow:
+    0 20px 34px -20px color-mix(in oklab, var(--foreground) 38%, transparent),
+    0 16px 30px -22px color-mix(in oklab, var(--brand) 35%, transparent);
+}
+
+.premium-soft-card:hover::before {
+  opacity: 1;
+}
+
+.premium-soft-card:hover::after {
+  opacity: 1;
+}
+
 .premium-nav-card {
   position: relative;
   isolation: isolate;
@@ -556,91 +623,27 @@
   transform-style: preserve-3d;
   backface-visibility: hidden;
   transition:
-    transform 620ms cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 620ms cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 420ms ease,
-    background-color 420ms ease,
-    filter 420ms ease;
-}
-
-.premium-nav-card::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  opacity: 0;
-  background:
-    radial-gradient(
-      130% 90% at 50% -20%,
-      rgba(255, 255, 255, 0.24),
-      rgba(255, 255, 255, 0) 58%
-    ),
-    linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 10%,
-      rgba(255, 255, 255, 0.08) 35%,
-      rgba(255, 255, 255, 0) 65%
-    );
-  transition: opacity 620ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.premium-nav-card::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  left: -45%;
-  top: -20%;
-  width: 38%;
-  height: 160%;
-  transform: skewX(-16deg);
-  border-radius: 0.35rem;
-  opacity: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.32) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transition:
-    left 1100ms cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 620ms cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: 60ms;
-}
-
-@keyframes premium-nav-card-sway {
-  0% {
-    transform: perspective(960px) translateY(-2.2px) rotateX(2deg) rotateY(-0.5deg) scale(1.003);
-  }
-  50% {
-    transform: perspective(960px) translateY(-4.6px) rotateX(3.2deg) rotateY(0.8deg) scale(1.006);
-  }
-  100% {
-    transform: perspective(960px) translateY(-2.2px) rotateX(2deg) rotateY(-0.5deg) scale(1.003);
-  }
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 260ms ease,
+    background-color 260ms ease,
+    filter 260ms ease;
+  box-shadow:
+    0 14px 28px -24px color-mix(in oklab, var(--foreground) 45%, transparent),
+    0 6px 12px -12px color-mix(in oklab, var(--foreground) 35%, transparent);
 }
 
 .premium-nav-card:hover {
-  transform: perspective(960px) translateY(-2.2px) rotateX(2deg) rotateY(-0.5deg) scale(1.003);
-  animation: premium-nav-card-sway 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-  animation-delay: 90ms;
-  border-color: color-mix(in oklab, var(--brand) 22%, var(--border));
-  background-color: color-mix(in oklab, var(--card) 90%, var(--brand) 10%);
+  transform: translateY(-4px);
+  border-color: color-mix(in oklab, var(--brand) 24%, var(--border));
+  background-color: color-mix(in oklab, var(--card) 94%, var(--brand) 6%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.52),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.12),
-    0 18px 34px -20px color-mix(in oklab, var(--brand) 52%, transparent),
-    0 0 0 1px color-mix(in oklab, var(--brand) 16%, transparent);
-  filter: saturate(1.04);
-}
-
-.premium-nav-card:hover::before {
-  opacity: 1;
-}
-
-.premium-nav-card:hover::after {
-  left: 118%;
-  opacity: 0.75;
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    0 20px 34px -20px color-mix(in oklab, var(--foreground) 34%, transparent),
+    0 16px 30px -22px color-mix(in oklab, var(--brand) 35%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--brand) 10%, transparent);
+  filter: saturate(1.02);
 }
 
 .dark .premium-dropdown-shell {
@@ -666,37 +669,20 @@
     );
 }
 
-.dark .premium-nav-card::before {
-  background:
-    radial-gradient(
-      130% 90% at 50% -20%,
-      rgba(255, 255, 255, 0.12),
-      rgba(255, 255, 255, 0) 58%
-    ),
-    linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 10%,
-      rgba(255, 255, 255, 0.04) 35%,
-      rgba(255, 255, 255, 0) 65%
-    );
-}
-
-.dark .premium-nav-card::after {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.16) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
 .dark .premium-nav-card:hover {
-  background-color: color-mix(in oklab, var(--card) 88%, var(--brand) 12%);
+  background-color: color-mix(in oklab, var(--card) 92%, var(--brand) 8%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.16),
     inset 0 -1px 0 rgba(255, 255, 255, 0.05),
-    0 18px 34px -18px color-mix(in oklab, var(--brand) 45%, rgba(0, 0, 0, 0.45)),
-    0 0 0 1px color-mix(in oklab, var(--brand) 20%, transparent);
+    0 20px 34px -18px color-mix(in oklab, var(--brand) 35%, rgba(0, 0, 0, 0.45)),
+    0 0 0 1px color-mix(in oklab, var(--brand) 14%, transparent);
+}
+
+.dark .premium-soft-card:hover {
+  background-color: color-mix(in oklab, var(--card) 76%, transparent);
+  box-shadow:
+    0 20px 34px -18px color-mix(in oklab, var(--foreground) 32%, rgba(0, 0, 0, 0.5)),
+    0 16px 30px -22px color-mix(in oklab, var(--brand) 30%, rgba(0, 0, 0, 0.6));
 }
 
 @media (max-width: 767px) {
