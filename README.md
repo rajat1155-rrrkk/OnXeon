@@ -5,7 +5,7 @@ OnXeon is a modern development platform focused on helping companies and startup
 The platform provides optimized architecture, reusable components, and modern development practices for building production-ready applications.
 
 Live Demo:  
-https://onxeon.vercel.app
+www.onxeon.com
 
 ---
 
