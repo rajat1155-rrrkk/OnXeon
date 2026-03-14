@@ -4,7 +4,12 @@ import Link from "next/link";
 import * as React from "react";
 import { ReactNode } from "react";
 
-import { siteConfig } from "@/config/site";
+import {
+  desktopMenuItems,
+  navigationBranding,
+  serviceIntroItems,
+  solutionComponentItems,
+} from "@/config/navigation";
 import { cn } from "@/lib/utils";
 
 import LaunchUI from "../logos/launch-ui";
@@ -46,98 +51,13 @@ interface NavigationProps {
 }
 
 export default function Navigation({
-  menuItems = [
-    {
-      title: "Services",
-      content: "default",
-    },
-    {
-      title: "Solutions",
-      content: "components",
-    },
-    {
-      title: "About",
-      isLink: true,
-      href: "/about",
-    },
-    {
-      title: "Blueprints",
-      isLink: true,
-      href: "/blueprints",
-    },
-    {
-      title: "Contact",
-      isLink: true,
-      href: "/contact#book",
-    },
-  ],
-  components = [
-    {
-      title: "CRM Platforms",
-      href: "/solutions/crm-platforms",
-      description:
-        "Salesforce, Zoho, HubSpot and custom CRM implementations.",
-    },
-    {
-      title: "ERP Systems",
-      href: "/solutions/erp-systems",
-      description: "ERPNext, SAP integrations and business workflows.",
-    },
-    {
-      title: "Cloud Platforms",
-      href: "/solutions/cloud-platforms",
-      description: "AWS, Azure and modern cloud deployments.",
-    },
-    {
-      title: "System Integration",
-      href: "/solutions/system-integration",
-      description: "Connect enterprise tools and automate workflows.",
-    },
-    {
-      title: "Custom Development",
-      href: "/solutions/custom-development",
-      description: "Tailored software solutions for business needs.",
-    },
-    {
-      title: "Support & Maintenance",
-      href: "/solutions/support-maintenance",
-      description: "Ongoing support and system optimization.",
-    },
-  ],
+  menuItems = desktopMenuItems,
+  components = solutionComponentItems,
   logo = <LaunchUI />,
-  logoTitle = "OnXeon Services",
-  logoDescription =
-    "Enterprise implementation, integration and support services for modern businesses.",
-  logoHref = "/services/onxeon-services",
-  introItems = [
-    {
-      title: "OnXeon Services",
-      href: "/services/onxeon-services",
-      description:
-        "Explore delivery models for implementation, integration and long-term support.",
-    },
-    {
-      title: "CRM Solutions",
-      href: "/services/crm-solutions",
-      description:
-        "Implementation and customization of CRM platforms.",
-    },
-    {
-      title: "ERP Solutions",
-      href: "/services/erp-solutions",
-      description: "Deployment and integration of ERP systems.",
-    },
-    {
-      title: "Cloud Solutions",
-      href: "/services/cloud-solutions",
-      description: "Cloud infrastructure and platform services.",
-    },
-    {
-      title: "Services Overview",
-      href: "/services",
-      description: "See all service tracks and project engagement options.",
-    },
-  ],
+  logoTitle = navigationBranding.logoTitle,
+  logoDescription = navigationBranding.logoDescription,
+  logoHref = navigationBranding.logoHref,
+  introItems = serviceIntroItems,
 }: NavigationProps) {
   const navItemClass =
     "group/nav chrome-hover rounded-md border border-transparent";
@@ -145,8 +65,8 @@ export default function Navigation({
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
-        {menuItems.map((item, index) => (
-          <NavigationMenuItem key={index}>
+        {menuItems.map((item) => (
+          <NavigationMenuItem key={`${item.title}-${item.href ?? "menu"}`}>
             {item.isLink ? (
               <NavigationMenuLink
                 className={cn(navigationMenuTriggerStyle(), navItemClass)}
@@ -164,7 +84,7 @@ export default function Navigation({
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <a
+                          <Link
                             className="premium-subsection-card premium-nav-card group/feature chrome-hover from-muted/35 to-muted/10 relative flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden shadow-sm shadow-brand/5 select-none focus:shadow-md"
                             href={logoHref}
                           >
@@ -178,11 +98,11 @@ export default function Navigation({
                             <p className="text-muted-foreground text-sm leading-tight">
                               {logoDescription}
                             </p>
-                          </a>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
-                      {introItems.map((intro, i) => (
-                        <ListItem key={i} href={intro.href} title={intro.title}>
+                      {introItems.map((intro) => (
+                        <ListItem key={intro.href} href={intro.href} title={intro.title}>
                           {intro.description}
                         </ListItem>
                       ))}
@@ -217,11 +137,11 @@ function ListItem({
   title,
   children,
   ...props
-}: React.ComponentProps<"a"> & { title: string }) {
+}: React.ComponentProps<typeof Link> & { title: string }) {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
           data-slot="list-item"
           className={cn(
             "group/item premium-nav-card chrome-hover relative block space-y-1 rounded-md border border-border/55 bg-card/55 p-3 leading-none no-underline outline-hidden shadow-[0_10px_20px_-20px_hsl(var(--foreground)/0.4)] select-none hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -237,7 +157,7 @@ function ListItem({
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );

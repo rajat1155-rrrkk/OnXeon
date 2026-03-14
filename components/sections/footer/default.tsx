@@ -1,6 +1,11 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 
-import { siteConfig } from "@/config/site";
+import {
+  footerColumns,
+  footerCopyright,
+  footerPolicies,
+} from "@/config/navigation";
 import { cn } from "@/lib/utils";
 
 import LaunchUI from "../../logos/launch-ui";
@@ -35,47 +40,9 @@ interface FooterProps {
 export default function FooterSection({
   logo = <LaunchUI />,
   name = "OnXeon",
-  columns = [
-    {
-      title: "Company",
-      links: [
-        { text: "About", href: "/about" },
-        { text: "Careers", href: "/careers" },
-        { text: "Blog", href: "/blog" },
-      ],
-    },
-    {
-      title: "Services",
-      links: [
-        { text: "OnXeon Services", href: "/services/onxeon-services" },
-        { text: "CRM Solutions", href: "/services/crm-solutions" },
-        { text: "ERP Solutions", href: "/services/erp-solutions" },
-        { text: "Cloud Solutions", href: "/services/cloud-solutions" },
-      ],
-    },
-    {
-      title: "Solutions",
-      links: [
-        { text: "CRM Platforms", href: "/solutions/crm-platforms" },
-        { text: "ERP Systems", href: "/solutions/erp-systems" },
-        { text: "Cloud Platforms", href: "/solutions/cloud-platforms" },
-        { text: "System Integration", href: "/solutions/system-integration" },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { text: "Project Blueprints", href: "/blueprints" },
-        { text: "Documentation", href: "/docs" },
-        { text: "Contact", href: "/contact#book" },
-      ],
-    },
-  ],
-  copyright = "© 2026 OnXeon. All rights reserved.",
-  policies = [
-    { text: "Privacy Policy", href: "/privacy" },
-    { text: "Terms of Service", href: "/terms" },
-  ],
+  columns = footerColumns,
+  copyright = footerCopyright,
+  policies = footerPolicies,
   showModeToggle = true,
   className,
 }: FooterProps) {
@@ -111,32 +78,32 @@ export default function FooterSection({
                 established businesses.
               </p>
               <div className="flex flex-wrap gap-2 pt-1">
-                <a
+                <Link
                   href="/contact#book"
                   className="group/cta relative inline-flex items-center overflow-hidden rounded-md border border-brand/40 bg-brand/14 px-2.5 py-1 text-xs font-medium text-foreground transition-all duration-300 hover:-translate-y-px hover:bg-brand/24 hover:shadow-md hover:shadow-brand/25"
                 >
                   <span className="pointer-events-none absolute inset-y-0 left-[-55%] w-[45%] -skew-x-12 bg-gradient-to-r from-transparent via-white/55 to-transparent opacity-0 transition-all duration-700 group-hover/cta:left-[125%] group-hover/cta:opacity-100" />
                   Book Consultation
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/services/onxeon-services"
                   className="group/cta-secondary relative inline-flex items-center overflow-hidden rounded-md border border-border bg-background/70 px-2.5 py-1 text-xs font-medium text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:text-foreground hover:border-brand/40 hover:shadow-sm hover:shadow-brand/15"
                 >
                   <span className="pointer-events-none absolute inset-y-0 left-[-52%] w-[42%] -skew-x-12 bg-gradient-to-r from-transparent via-white/65 to-transparent opacity-0 transition-all duration-700 group-hover/cta-secondary:left-[120%] group-hover/cta-secondary:opacity-100 dark:via-white/20" />
                   Explore Services
-                </a>
+                </Link>
               </div>
             </FooterColumn>
-            {columns.map((column, index) => (
-              <FooterColumn key={index} className={columnClass}>
+            {columns.map((column) => (
+              <FooterColumn key={column.title} className={columnClass}>
                 <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-70" />
                 <h3 className="text-xs uppercase tracking-[0.08em] text-muted-foreground pt-1 font-semibold transition-colors duration-300 group-hover:text-foreground">
                   {column.title}
                 </h3>
                 <div className="grid gap-2">
-                  {column.links.map((link, linkIndex) => (
-                    <a
-                      key={linkIndex}
+                  {column.links.map((link) => (
+                    <Link
+                      key={`${column.title}-${link.href}`}
                       href={link.href}
                       className={footerItemClass}
                     >
@@ -144,7 +111,7 @@ export default function FooterSection({
                       <span className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover/item:opacity-100 bg-gradient-to-r from-transparent via-brand/8 to-transparent" />
                       <span className="pointer-events-none absolute inset-y-1 left-0 w-0 rounded-r-full bg-brand/60 transition-all duration-250 group-hover/item:w-[3px]" />
                       <span className="relative z-10">{link.text}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </FooterColumn>
@@ -153,10 +120,10 @@ export default function FooterSection({
           <FooterBottom className="mt-5 rounded-lg border-t border-border/70 bg-card/55 px-3 py-3 shadow-[inset_0_1px_0_hsl(var(--foreground)/0.08)] backdrop-blur-sm md:mt-6">
             <div>{copyright}</div>
             <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-start md:justify-end md:gap-4">
-              {policies.map((policy, index) => (
-                <a key={index} href={policy.href} className={policyClass}>
+              {policies.map((policy) => (
+                <Link key={policy.href} href={policy.href} className={policyClass}>
                   {policy.text}
-                </a>
+                </Link>
               ))}
               {showModeToggle && <ModeToggle />}
             </div>

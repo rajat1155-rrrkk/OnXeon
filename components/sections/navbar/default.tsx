@@ -2,9 +2,15 @@
 
 import { type VariantProps } from "class-variance-authority";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
 
-import { siteConfig } from "@/config/site";
+import {
+  navbarActions,
+  navbarMobileLinks,
+  navbarMobileServiceItems,
+  navbarMobileSolutionItems,
+} from "@/config/navigation";
 import { cn } from "@/lib/utils";
 
 import LaunchUI from "../../logos/launch-ui";
@@ -43,41 +49,12 @@ interface NavbarProps {
   className?: string;
 }
 
-const mobileServiceItems = [
-  { title: "OnXeon Services", href: "/services/onxeon-services" },
-  { title: "CRM Solutions", href: "/services/crm-solutions" },
-  { title: "ERP Solutions", href: "/services/erp-solutions" },
-  { title: "Cloud Solutions", href: "/services/cloud-solutions" },
-  { title: "Services Overview", href: "/services" },
-];
-
-const mobileSolutionItems = [
-  { title: "CRM Platforms", href: "/solutions/crm-platforms" },
-  { title: "ERP Systems", href: "/solutions/erp-systems" },
-  { title: "Cloud Platforms", href: "/solutions/cloud-platforms" },
-  { title: "System Integration", href: "/solutions/system-integration" },
-  { title: "Custom Development", href: "/solutions/custom-development" },
-  { title: "Support & Maintenance", href: "/solutions/support-maintenance" },
-];
-
 export default function Navbar({
   logo = <LaunchUI />,
   name = "OnXeon",
   homeUrl = "/",
-  mobileLinks = [
-    { text: "Services", href: "/services" },
-    { text: "Solutions", href: "/solutions" },
-    { text: "Blueprints", href: "/blueprints" },
-    { text: "About", href: "/about" },
-  ],
-  actions = [
-    {
-      text: "Get Started",
-      href: "/contact#book",
-      isButton: true,
-      variant: "default",
-    },
-  ],
+  mobileLinks = navbarMobileLinks,
+  actions = navbarActions,
   showNavigation = true,
   customNavigation,
   className,
@@ -126,7 +103,7 @@ export default function Navbar({
               isScrolled ? "md:translate-y-1" : "translate-y-0",
             )}
           >
-            <a
+            <Link
               href={homeUrl}
               className="group relative flex items-center gap-2 text-xl font-bold"
             >
@@ -134,7 +111,7 @@ export default function Navbar({
                 {logo}
               </span>
               {name}
-            </a>
+            </Link>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
           <NavbarRight
@@ -144,31 +121,31 @@ export default function Navbar({
             )}
           >
             <ThemeCycleButton className="mr-1 md:mr-2" />
-            {actions.map((action, index) =>
+            {actions.map((action) =>
               action.isButton ? (
                 <Button
-                  key={index}
+                  key={`${action.text}-${action.href}`}
                   variant={action.variant || "default"}
                   className="mobile-premium-tap group/nav-cta relative isolate overflow-hidden rounded-full border border-border/70 px-4 shadow-[0_10px_24px_-16px_hsl(var(--foreground)/0.35)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:shadow-[0_14px_28px_-18px_hsl(var(--brand)/0.6)] before:absolute before:inset-y-0 before:left-[-58%] before:w-[40%] before:skew-x-[-18deg] before:rounded-[inherit] before:bg-white/32 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[122%] hover:before:opacity-100"
                   asChild
                 >
-                  <a href={action.href}>
+                  <Link href={action.href}>
                     {action.icon}
                     {action.text}
                     {action.iconRight}
-                  </a>
+                  </Link>
                 </Button>
               ) : (
                 <Button
-                  key={index}
+                  key={`${action.text}-${action.href}`}
                   variant="ghost"
                   size="lg"
                   className="relative hidden overflow-hidden text-sm md:inline-flex transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-green-200/25 dark:hover:shadow-emerald-900/30 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/25 dark:before:bg-white/10 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100"
                   asChild
                 >
-                  <a href={action.href}>
+                  <Link href={action.href}>
                     {action.text}
-                  </a>
+                  </Link>
                 </Button>
               ),
             )}
@@ -185,21 +162,21 @@ export default function Navbar({
               </SheetTrigger>
               <SheetContent side="right" className="w-[85vw] max-w-sm">
                 <nav className="grid gap-4 text-base font-medium">
-                  <a
+                  <Link
                     href={homeUrl}
                     className="group/item relative flex items-center gap-2 rounded-lg border border-border/70 bg-card/65 px-3 py-2.5 text-lg font-semibold transition-all duration-300 active:scale-[0.99]"
                   >
                     <span>{name}</span>
-                  </a>
-                  {mobilePrimaryLinks.map((link, index) => (
-                    <a
-                      key={index}
+                  </Link>
+                  {mobilePrimaryLinks.map((link) => (
+                    <Link
+                      key={`${link.text}-${link.href}`}
                       href={link.href}
                       className="mobile-premium-tap group/item relative overflow-hidden rounded-lg border border-border/70 bg-card/60 px-3 py-2.5 text-muted-foreground transition-all duration-300 hover:border-brand/40 hover:bg-brand/10 hover:text-foreground active:scale-[0.99]"
                     >
                       <span className="pointer-events-none absolute inset-y-0 left-[-55%] w-[42%] -skew-x-12 bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-0 transition-all duration-700 group-active/item:left-[130%] group-active/item:opacity-100 dark:via-white/20" />
                       {link.text}
-                    </a>
+                    </Link>
                   ))}
                   <div className="rounded-lg border border-border/70 bg-card/55 p-3">
                     <button
@@ -229,15 +206,15 @@ export default function Navbar({
                           : "max-h-0 gap-0 opacity-0",
                       )}
                     >
-                      {mobileServiceItems.map((item) => (
-                        <a
+                      {navbarMobileServiceItems.map((item) => (
+                        <Link
                           key={item.title}
                           href={item.href}
                           className="mobile-premium-tap group/item relative overflow-hidden rounded-md border border-transparent px-2 py-1.5 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/30 hover:bg-brand/10 hover:text-foreground active:scale-[0.99]"
                         >
                           <span className="pointer-events-none absolute inset-y-0 left-0 w-0 rounded-r-full bg-brand/60 transition-all duration-300 group-hover/item:w-[3px]" />
                           {item.title}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -269,24 +246,24 @@ export default function Navbar({
                           : "max-h-0 gap-0 opacity-0",
                       )}
                     >
-                      {mobileSolutionItems.map((item) => (
-                        <a
+                      {navbarMobileSolutionItems.map((item) => (
+                        <Link
                           key={item.title}
                           href={item.href}
                           className="mobile-premium-tap group/item relative overflow-hidden rounded-md border border-transparent px-2 py-1.5 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/30 hover:bg-brand/10 hover:text-foreground active:scale-[0.99]"
                         >
                           <span className="pointer-events-none absolute inset-y-0 left-0 w-0 rounded-r-full bg-brand/60 transition-all duration-300 group-hover/item:w-[3px]" />
                           {item.title}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
-                  <a
+                  <Link
                     href="/contact#book"
                     className="mobile-premium-tap mt-1 inline-flex items-center justify-center rounded-lg border border-brand/40 bg-brand/12 px-3 py-2 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-brand/18 hover:shadow-sm hover:shadow-brand/20"
                   >
                     Book a Consultation
-                  </a>
+                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>
