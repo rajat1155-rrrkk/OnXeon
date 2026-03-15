@@ -118,47 +118,6 @@ We commonly build:
 
 ---
 
-## Project Structure
----
-
-## Running Locally
-
-Clone the repository:
-
-
-git clone https://github.com/rajat1155-rrrkk/OnXeon.git
-
-
-Install dependencies:
-
-
-npm install
-
-
-Run the development server:
-
-
-npm run dev
-
-
-Open in your browser:
-
-
-http://localhost:3000
-
-
----
-
-## Deployment
-
-Production website:
-
-https://www.onxeon.com
-
-The project is deployed using Vercel infrastructure for reliable and scalable hosting.
-
----
-
 ## Vision
 
 OnXeon aims to provide a reliable development foundation for modern digital products.
@@ -174,6 +133,18 @@ https://www.onxeon.com
 
 GitHub:  
 https://github.com/rajat1155-rrrkk
+
+---
+
+## Acknowledgement
+
+We would like to thank all developers, contributors, and users who take the time to explore, use, or improve this repository.
+
+Projects like this grow stronger through collaboration, feedback, and shared ideas from the developer community.
+
+Your contributions, suggestions, and improvements help make the platform better over time, and they are always appreciated.
+
+Thank you for being part of the journey.
 
 ---
 
