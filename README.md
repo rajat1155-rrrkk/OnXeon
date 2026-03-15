@@ -119,3 +119,64 @@ We commonly build:
 ---
 
 ## Project Structure
+---
+
+## Running Locally
+
+Clone the repository:
+
+
+git clone https://github.com/rajat1155-rrrkk/OnXeon.git
+
+
+Install dependencies:
+
+
+npm install
+
+
+Run the development server:
+
+
+npm run dev
+
+
+Open in your browser:
+
+
+http://localhost:3000
+
+
+---
+
+## Deployment
+
+Production website:
+
+https://www.onxeon.com
+
+The project is deployed using Vercel infrastructure for reliable and scalable hosting.
+
+---
+
+## Vision
+
+OnXeon aims to provide a reliable development foundation for modern digital products.
+
+Our focus is on building scalable, maintainable, and production-ready software that helps businesses grow and operate more efficiently.
+
+---
+
+## Contact
+
+Website:  
+https://www.onxeon.com
+
+GitHub:  
+https://github.com/rajat1155-rrrkk
+
+---
+
+## License
+
+This project is licensed under the MIT License.
