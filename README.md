@@ -1,28 +1,21 @@
 # OnXeon
 
-OnXeon is a modern development platform focused on helping companies and startups build scalable digital systems quickly and efficiently.
+OnXeon is a software development studio that helps startups and businesses build scalable web platforms, SaaS products, and custom internal systems.
 
-The platform provides optimized architecture, reusable components, and modern development practices for building production-ready applications.
+We specialize in modern web technologies and production-ready system architectures designed for long-term reliability and performance.
 
-Live Demo:  
-www.onxeon.com
+Live Website:  
+https://www.onxeon.com
 
 ---
 
-## What OnXeon Does
+## About OnXeon
 
-OnXeon helps businesses build reliable software systems using modern technologies and optimized architectures.
+OnXeon focuses on helping companies turn ideas into reliable digital systems.
 
-We focus on building:
+We design and build modern applications using scalable technologies and structured development practices.
 
-- Web applications
-- Custom software systems
-- Business platforms
-- Automation tools
-- Internal dashboards
-- SaaS platforms
-
-OnXeon provides the technical foundation needed to turn ideas into working systems.
+Our goal is to help businesses launch products faster while maintaining clean, maintainable, and efficient codebases.
 
 ---
 
@@ -30,63 +23,77 @@ OnXeon provides the technical foundation needed to turn ideas into working syste
 
 ### Custom Web Development
 
-We build modern web applications using scalable architectures and optimized performance practices.
+We build modern web applications with scalable architecture and optimized performance.
 
 Typical projects include:
 
 - Business websites
 - SaaS platforms
-- Admin dashboards
 - Client portals
+- Admin dashboards
 - Startup platforms
 
 ---
 
 ### Software System Development
 
-OnXeon helps companies build structured software systems designed for long-term growth.
+OnXeon helps organizations build structured software systems designed for long-term growth.
 
 Examples include:
 
 - CRM systems
 - ERP tools
-- Workflow automation
-- Business management platforms
+- Workflow automation platforms
+- Business management systems
 - Custom internal tools
 
 ---
 
-### Startup Development
+### Startup Product Development
 
-OnXeon helps startups turn ideas into working platforms.
+We help startups transform ideas into working platforms.
 
-This includes:
+Our startup development services include:
 
 - MVP development
-- System architecture
-- Scalable foundations
-- Product interfaces
+- Product architecture
 - Technical setup
+- Scalable foundations
+- Product interface development
 
 ---
 
 ### Platform Optimization
 
-OnXeon improves existing systems by optimizing performance and structure.
+We help improve existing applications by optimizing performance, architecture, and user experience.
 
-This includes:
+Optimization services include:
 
-- Speed optimization
-- Codebase cleanup
-- UI improvements
-- Architecture improvements
-- Performance tuning
+- Performance improvements
+- Codebase refactoring
+- UI enhancements
+- Architecture restructuring
+- System scalability improvements
+
+---
+
+## Why OnXeon
+
+• Production-ready system architecture  
+• Modern scalable technology stack  
+• Fast MVP development for startups  
+• Clean and maintainable codebases  
+• Long-term scalability focus  
+
+Our approach prioritizes reliability, efficiency, and structured development.
 
 ---
 
 ## Technology Stack
 
-OnXeon uses modern technologies to build scalable systems.
+OnXeon uses modern technologies to build reliable digital systems.
+
+Core technologies include:
 
 - Next.js
 - React
@@ -94,85 +101,21 @@ OnXeon uses modern technologies to build scalable systems.
 - TailwindCSS
 - Modern API architectures
 
-These technologies allow fast development and reliable performance.
+These technologies allow rapid development while maintaining strong performance and scalability.
 
 ---
 
-## How OnXeon Helps Companies
+## Typical Projects
 
-OnXeon provides companies with:
+We commonly build:
 
-- Structured system development
-- Modern technology solutions
-- Fast development cycles
-- Scalable architectures
-- Clean maintainable code
-
-The goal is to help businesses move from ideas to working systems efficiently.
+- SaaS platforms
+- Startup MVPs
+- Business automation systems
+- Internal dashboards
+- Customer portals
+- Workflow management tools
 
 ---
 
 ## Project Structure
-
-
-app/ → Application routes and pages
-components/ → Reusable components
-config/ → Configuration
-lib/ → Utilities
-public/ → Static assets
-styles/ → Global styling
-
-
----
-
-## Running Locally
-
-Clone the repository:
-
-
-git clone https://github.com/rajat1155-rrrkk/OnXeon.git
-
-
-Install dependencies:
-
-
-npm install
-
-
-Run development server:
-
-
-npm run dev
-
-
-Open:
-
-
-http://localhost:3000
-
-
----
-
-## Deployment
-
-OnXeon is deployed on Vercel:
-
-https://onxeon.vercel.app
-
----
-
-## Vision
-
-OnXeon aims to provide a reliable platform for building modern digital systems for businesses and startups.
-
-The focus is on creating scalable, optimized, and production-ready software.
-
----
-
-## Author
-
-Rajat K
-
-GitHub:
-https://github.com/rajat1155-rrrkk
-update Mar 12
