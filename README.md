@@ -138,13 +138,12 @@ https://github.com/rajat1155-rrrkk
 
 ## Acknowledgement
 
-We would like to thank all developers, contributors, and users who take the time to explore, use, or improve this repository.
+Thanking all developers, contributors, and users who take the time to explore, use, or improve this repository.
 
 Projects like this grow stronger through collaboration, feedback, and shared ideas from the developer community.
 
-Your contributions, suggestions, and improvements help make the platform better over time, and they are always appreciated.
-
-Thank you for being part of the journey.
+Your contributions, suggestions, and improvements help make the platform better over time, and they are always appreciated
+Thank you
 
 ---
 
