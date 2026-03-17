@@ -5,7 +5,7 @@ OnXeon is a software development studio that helps startups and businesses build
 We specialize in modern web technologies and production-ready system architectures designed for long-term reliability and performance.
 
 Live Website:  
-https://www.onxeon.com
+www.onxeon.com
 
 ---
 
