@@ -9,13 +9,11 @@ export default function HomeTypicalProjectsSection() {
     <Section className="py-20 md:py-24">
       <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="group relative inline-flex justify-center">
-            <div className="pointer-events-none absolute -inset-x-10 -inset-y-4 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-              <div className="h-full w-full rounded-full bg-green-300/20 blur-2xl dark:bg-emerald-500/15" />
-            </div>
-            <h2 className="relative z-10 text-3xl font-semibold md:text-4xl">Typical Projects</h2>
-          </div>
-          <p className="text-muted-foreground mt-3">
+          <p className="text-muted-foreground text-[11px] font-semibold tracking-[0.22em] uppercase">
+            Project Shapes
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Typical Projects</h2>
+          <p className="text-muted-foreground mt-4 text-sm leading-6 sm:text-base">
             CRM and ERP implementations, OEM platform integrations, cloud deployments, and modernization programs.
           </p>
         </div>
@@ -23,17 +21,16 @@ export default function HomeTypicalProjectsSection() {
           {typicalProjects.map((project) => (
             <div
               key={project.name}
-              className="mobile-fx-target group relative overflow-hidden rounded-xl border border-border/70 bg-gradient-to-b from-card/95 to-background/85 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-green-300/70 hover:shadow-lg hover:shadow-green-200/20 dark:hover:border-emerald-600/60 dark:hover:shadow-emerald-900/30"
+              className="mobile-fx-target group relative overflow-hidden rounded-[1.55rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] p-6 shadow-[0_18px_38px_-30px_hsl(var(--foreground)/0.14)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_46px_-34px_hsl(var(--foreground)/0.18)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]"
             >
               <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-300/60 via-green-500/70 to-green-300/60 opacity-70 transition-opacity duration-500 group-hover:opacity-100 dark:from-emerald-500/50 dark:via-emerald-400/70 dark:to-emerald-500/50" />
-              <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-green-200/35 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/20" />
-              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_85%_15%,rgba(34,197,94,0.24),transparent_45%)] dark:bg-[radial-gradient(circle_at_85%_15%,rgba(16,185,129,0.2),transparent_45%)]" />
-              <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[46%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-0 transition-all duration-900 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/25" />
+              <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-green-200/24 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-emerald-500/14" />
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(circle_at_85%_15%,rgba(34,197,94,0.12),transparent_45%)] dark:bg-[radial-gradient(circle_at_85%_15%,rgba(16,185,129,0.1),transparent_45%)]" />
               <div className="relative z-10">
-                <h3 className="text-lg font-semibold transition-transform duration-500 group-hover:translate-x-[1px]">
+                <h3 className="text-lg font-semibold tracking-[-0.02em] transition-transform duration-500 group-hover:translate-x-[1px]">
                   {project.name}
                 </h3>
-                <p className="text-muted-foreground mt-3">{project.description}</p>
+                <p className="text-muted-foreground mt-3 leading-6">{project.description}</p>
               </div>
             </div>
           ))}
