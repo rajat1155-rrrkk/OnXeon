@@ -13,18 +13,20 @@ export default function PrivacyPage() {
   return (
     <Section>
       <div className="max-w-4xl mx-auto py-24 space-y-8">
-        <div className="group relative overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/80 to-card p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card dark:hover:shadow-emerald-900/25">
-          <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/25 blur-3xl dark:bg-emerald-500/20" />
+        <div className="group relative overflow-hidden rounded-[2rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] p-8 shadow-[0_24px_54px_-40px_hsl(var(--foreground)/0.16)] transition-all duration-500 hover:shadow-[0_30px_62px_-44px_hsl(var(--foreground)/0.2)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))] md:p-10">
+          <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/18 blur-3xl dark:bg-emerald-500/14" />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
-          <div className="pointer-events-none absolute inset-y-0 left-[-45%] w-[40%] -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 transition-all duration-900 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/25" />
           <div className="relative z-10 space-y-3">
-            <h1 className="text-3xl md:text-4xl font-semibold">Privacy Policy</h1>
+            <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-muted-foreground">
+              Legal & Privacy
+            </p>
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-[-0.03em]">Privacy Policy</h1>
             <p className="text-muted-foreground">Last updated: February 25, 2026</p>
             <Link
               href="/contact#book"
               className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-[0_0_14px_hsl(var(--brand)/0.24)]"
             >
-              Policy Clarity First
+              Contact On Privacy
             </Link>
           </div>
         </div>
@@ -197,9 +199,9 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold">13. Contact</h2>
           <p className="text-muted-foreground">
             For privacy-related inquiries, please use the{" "}
-            <a href="/contact#book" className="text-foreground underline underline-offset-4">
+            <Link href="/contact#book" className="text-foreground underline underline-offset-4">
               contact inquiry form
-            </a>
+            </Link>
             .
           </p>
           <p className="text-muted-foreground">
