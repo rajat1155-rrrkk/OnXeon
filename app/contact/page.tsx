@@ -14,27 +14,25 @@ export default function ContactPage() {
   return (
     <Section>
       <div className="max-w-6xl mx-auto px-6 py-24">
-      <section className="group relative overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/80 to-card p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card dark:hover:shadow-emerald-900/25">
-        <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/25 blur-3xl dark:bg-emerald-500/20" />
+      <section className="group relative overflow-hidden rounded-[2rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] p-8 shadow-[0_24px_54px_-40px_hsl(var(--foreground)/0.16)] transition-all duration-500 hover:shadow-[0_30px_62px_-44px_hsl(var(--foreground)/0.2)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))] md:p-10">
+        <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/18 blur-3xl dark:bg-emerald-500/14" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
-        <div className="pointer-events-none absolute inset-y-0 left-[-45%] w-[40%] -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 transition-all duration-900 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/25" />
         <div className="relative z-10">
-          <p className="text-xs font-semibold tracking-[0.08em] uppercase text-muted-foreground">
-            Contact OnXeon
+          <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-muted-foreground">
+            Advisory Call
           </p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-semibold">
-            Discuss your next implementation with our team.
+          <h1 className="mt-3 text-3xl md:text-4xl font-semibold tracking-[-0.03em]">
+            Start the conversation with context.
           </h1>
-          <p className="mt-3 max-w-3xl text-muted-foreground">
-            Share your stack, goals and constraints. We help with enterprise SaaS implementations and affordable
-            self-hosted alternatives, then propose a practical engagement model and execution path.
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
+            Share your current stack, priorities and constraints. We will review the context, identify the likely delivery path and come back with practical next steps.
           </p>
           <div className="mt-4">
             <Link
               href="/contact#book"
               className="group/xeon relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/18 hover:text-brand before:absolute before:inset-y-0 before:left-[-60%] before:w-[45%] before:-skew-x-12 before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent before:opacity-0 before:transition-all before:duration-500 hover:before:left-[125%] hover:before:opacity-100 dark:before:via-white/30"
             >
-              Start The Greenlight
+              Go To Inquiry Form
             </Link>
           </div>
         </div>
