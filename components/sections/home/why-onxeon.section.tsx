@@ -4,18 +4,18 @@ import { Section } from "../../ui/section";
 
 export default function HomeWhyOnXeonSection() {
   return (
-    <Section className="py-20 md:py-24">
+    <Section className="py-24 md:py-28">
       <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-muted-foreground text-[11px] font-semibold tracking-[0.22em] uppercase">
-            Positioning
+            Why Clients Choose Us
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Why OnXeon</h2>
           <p className="text-muted-foreground mt-4 text-sm leading-6 sm:text-base">
-            We favor clarity, maintainability, and business fit over flashy architecture or vendor-driven complexity.
+            We prioritise clarity, maintainability and business fit over unnecessary complexity or fashionable architecture.
           </p>
         </div>
-        <div className="mx-auto mt-10 max-w-4xl space-y-3 sm:mt-12 sm:space-y-4">
+        <div className="mx-auto mt-12 max-w-4xl space-y-4 sm:mt-14 sm:space-y-5">
           {whyOnXeonItems.map((item) => (
             <div
               key={item.title}

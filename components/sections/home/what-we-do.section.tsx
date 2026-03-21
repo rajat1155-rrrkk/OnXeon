@@ -49,15 +49,15 @@ export default function HomeWhatWeDoSection() {
           </div>
         </div>
       </Section>
-      <Section className="py-20 md:py-24">
+      <Section className="py-24 md:py-28">
         <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-muted-foreground text-[11px] font-semibold tracking-[0.22em] uppercase">
               Capabilities
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">What We Do</h2>
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">How We Deliver</h2>
             <p className="text-muted-foreground mt-4 text-sm leading-6 sm:text-base">
-              Delivery across enterprise platforms and carefully selected self-hosted systems, with structure built for long-term operational confidence.
+              Delivery across enterprise platforms and carefully chosen self-hosted systems, with the operational discipline expected of long-lived business infrastructure.
             </p>
           </div>
           <p className="mobile-fx-target mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground md:hidden">
@@ -67,7 +67,7 @@ export default function HomeWhatWeDoSection() {
             <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent opacity-70 dark:via-emerald-400/60" />
             <span className="pointer-events-none absolute -top-10 right-8 h-24 w-24 rounded-full bg-green-300/18 blur-2xl opacity-0 transition-opacity duration-500 group-hover/section:opacity-100 dark:bg-emerald-500/14" />
             <div className="text-sm text-muted-foreground">
-              Platforms and products we implement, integrate and support.
+              Platforms and products we implement, integrate and steward over time.
             </div>
             <div className="mt-5 grid gap-5 md:grid-cols-2">
               <div className="mobile-fx-target rounded-[1.35rem] border border-white/68 bg-background/78 p-5 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-28px_hsl(var(--foreground)/0.14)] dark:border-white/7">
@@ -92,7 +92,7 @@ export default function HomeWhatWeDoSection() {
                 </div>
               </div>
               <div className="mobile-fx-target rounded-[1.35rem] border border-white/68 bg-background/78 p-5 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-28px_hsl(var(--foreground)/0.14)] dark:border-white/7">
-                <h3 className="text-sm font-semibold">Open Source & Self-Hosted</h3>
+                <h3 className="text-sm font-semibold">Open-Source And Self-Hosted</h3>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {selfHostedPlatforms.map((platform) => (
                     <Link
@@ -125,7 +125,7 @@ export default function HomeWhatWeDoSection() {
               </div>
             ))}
           </div>
-          <div className="mt-10 hidden gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2 lg:grid md:grid">
+          <div className="mt-12 hidden gap-5 sm:mt-14 sm:gap-7 sm:grid-cols-2 lg:grid md:grid">
             {coreCapabilities.map((capability) => (
               <div
                 key={capability.title}

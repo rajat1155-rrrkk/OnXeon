@@ -30,12 +30,12 @@ export interface ProjectItem {
 export const homepageHeroButtons = [
   {
     href: "/contact#book",
-    text: "Book a Consultation",
+    text: "Schedule a Consultation",
     variant: "default" as const,
   },
   {
     href: "/solutions",
-    text: "See Solutions",
+    text: "Explore Solutions",
     variant: "glow" as const,
   },
 ];
@@ -44,42 +44,42 @@ export const mobileReelCards: LinkCard[] = [
   {
     title: "CRM Implementation",
     description:
-      "Salesforce, Zoho and ServiceNow workflows configured for real business operations.",
+      "Salesforce, Zoho and ServiceNow environments shaped around real operating needs.",
     href: "/services/crm-solutions",
     tag: "CRM",
   },
   {
     title: "ERP Integration",
     description:
-      "SAP, Odoo and ERPNext integration with finance, operations and reporting layers.",
+      "SAP, Odoo and ERPNext integrated across finance, operations and reporting.",
     href: "/services/erp-solutions",
     tag: "ERP",
   },
   {
     title: "System Integration",
     description:
-      "API and event-driven integration between CRM, ERP and internal business tools.",
+      "API and event-led integration across CRM, ERP and internal business systems.",
     href: "/solutions/system-integration",
     tag: "Integrations",
   },
   {
     title: "Cloud Deployments",
     description:
-      "Production delivery on AWS, Azure and GCP with reliable deployment practices.",
+      "Production deployment on AWS, Azure and GCP with disciplined operating standards.",
     href: "/solutions/cloud-platforms",
     tag: "Cloud",
   },
   {
     title: "Open Source Stack",
     description:
-      "Plane, Nextcloud, PostgreSQL and Docker-based self-hosted alternatives.",
+      "Plane, Nextcloud, PostgreSQL and Docker-based alternatives for greater control.",
     href: "/services/onxeon-services",
     tag: "Self-Hosted",
   },
   {
     title: "Long-Term Support",
     description:
-      "Enhancements, performance improvements and maintainable handover models.",
+      "Enhancements, stabilisation and support models designed for clean internal ownership.",
     href: "/solutions/support-maintenance",
     tag: "Support",
   },
@@ -155,17 +155,17 @@ export const whatWeDoHighlights: TextCard[] = [
   {
     title: "Enterprise SaaS Implementations",
     description:
-      "Salesforce, SAP and ServiceNow delivery aligned to business process and governance.",
+      "Salesforce, SAP and ServiceNow delivery aligned with business process, governance and adoption.",
   },
   {
     title: "Affordable Self-Hosted Delivery",
     description:
-      "Plane, ERPNext, Odoo and Nextcloud stacks to reduce recurring licensing exposure.",
+      "Plane, ERPNext, Odoo and Nextcloud stacks for organisations seeking more control and lower recurring cost.",
   },
   {
-    title: "Integration + Long-Term Support",
+    title: "Integration And Long-Term Support",
     description:
-      "API and workflow integrations with enhancement support after go-live.",
+      "Integration architecture, workflow orchestration and measured support beyond go-live.",
   },
 ];
 
@@ -173,52 +173,52 @@ export const coreCapabilities: TextCard[] = [
   {
     title: "CRM Implementation",
     description:
-      "Design and implementation of Salesforce, Zoho and ServiceNow workflows aligned with business operations.",
+      "CRM environments designed around how teams sell, serve and operate day to day.",
   },
   {
     title: "ERP Integration",
     description:
-      "Structured SAP and Odoo integration with finance, operations and reporting systems.",
+      "ERP integrations structured to support finance, operations and management reporting with clarity.",
   },
   {
     title: "System Integration",
     description:
-      "Reliable API and workflow integration across CRM, ERP and internal tools.",
+      "Reliable API and workflow integration across customer platforms, back-office systems and internal tools.",
   },
   {
     title: "Cloud Deployment",
     description:
-      "Cloud architecture and deployment on AWS, GCP and Azure for production enterprise systems.",
+      "Cloud architecture and deployment on AWS, GCP and Azure for production-grade business systems.",
   },
   {
     title: "Open Source Solutions",
     description:
-      "Vendor-neutral and self-hosted alternatives that reduce licensing costs and increase control.",
+      "Vendor-neutral and self-hosted alternatives that improve control, reduce recurring spend and keep future options open.",
   },
 ];
 
 export const whyOnXeonItems: WhyItem[] = [
   {
     title: "Enterprise-grade architecture",
-    teaser: "Lower rework risk in production rollouts",
+    teaser: "Lower rework risk when programmes move into production",
     description:
-      "Architecture designed for reliability, scalability and operational clarity.",
+      "Architecture shaped for reliability, scalability and operational clarity from the outset.",
   },
   {
     title: "Vendor-neutral approach",
-    teaser: "Platform choices based on fit and outcomes",
-    description: "Platform recommendations based on fit, not vendor lock-in.",
+    teaser: "Recommendations grounded in fit, context and outcomes",
+    description: "Platform decisions driven by fit, operating reality and long-term value, not vendor preference.",
   },
   {
     title: "Long-term maintainability",
-    teaser: "Cleaner handover for internal ownership",
-    description: "Systems built to be maintainable by internal teams over time.",
+    teaser: "A cleaner handover for internal ownership",
+    description: "Systems designed so internal teams can run, extend and govern them with confidence over time.",
   },
   {
     title: "Self-hosted expertise",
-    teaser: "Better control over cost, data and operations",
+    teaser: "Greater control over cost, data posture and operations",
     description:
-      "Strong delivery experience with secure self-hosted enterprise tools.",
+      "Delivery experience across secure self-hosted platforms for organisations that value control and operational flexibility.",
   },
 ];
 
@@ -226,26 +226,26 @@ export const typicalProjects: ProjectItem[] = [
   {
     name: "CRM Implementations",
     description:
-      "Salesforce, Zoho and ServiceNow implementation for sales, service and internal operations.",
+      "Salesforce, Zoho and ServiceNow programmes for sales, service and internal operating teams.",
   },
   {
     name: "ERP Integrations",
     description:
-      "SAP and Odoo integration with CRM, finance platforms and internal business systems.",
+      "SAP and Odoo integration with CRM, finance platforms and surrounding operational systems.",
   },
   {
     name: "OEM Platform Integrations",
     description:
-      "Integrate OEM and third-party platforms into your enterprise stack with stable interfaces.",
+      "OEM and third-party platform integrations designed with stable contracts and operational resilience.",
   },
   {
     name: "Cloud Deployments",
     description:
-      "Production-ready deployment and hardening on AWS, GCP and Azure.",
+      "Production deployment, hardening and environment stewardship on AWS, GCP and Azure.",
   },
   {
     name: "System Modernization",
     description:
-      "Incremental modernization of legacy workflows, integrations and platform architecture.",
+      "Measured modernisation of legacy workflows, integrations and platform architecture without needless disruption.",
   },
 ];

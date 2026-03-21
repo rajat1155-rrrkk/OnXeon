@@ -6,18 +6,18 @@ import { Section } from "../../ui/section";
 
 export default function HomeTypicalProjectsSection() {
   return (
-    <Section className="py-20 md:py-24">
+    <Section className="py-24 md:py-28">
       <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-muted-foreground text-[11px] font-semibold tracking-[0.22em] uppercase">
-            Project Shapes
+            Typical Engagements
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Typical Projects</h2>
           <p className="text-muted-foreground mt-4 text-sm leading-6 sm:text-base">
-            CRM and ERP implementations, OEM platform integrations, cloud deployments, and modernization programs.
+            CRM and ERP programmes, OEM platform integrations, cloud environments and carefully managed modernisation work.
           </p>
         </div>
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:mt-14 sm:gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {typicalProjects.map((project) => (
             <div
               key={project.name}
@@ -35,13 +35,13 @@ export default function HomeTypicalProjectsSection() {
             </div>
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-14 flex justify-center">
           <Button
             variant="default"
             asChild
             className="mobile-premium-tap group/project-btn relative overflow-hidden rounded-full border border-border/70 px-6 shadow-[0_10px_24px_-16px_hsl(var(--foreground)/0.35)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:shadow-[0_14px_28px_-18px_hsl(var(--brand)/0.6)] before:absolute before:inset-y-0 before:left-[-58%] before:w-[40%] before:skew-x-[-18deg] before:bg-white/32 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[122%] hover:before:opacity-100"
           >
-            <Link href="/contact#book">Discuss Project</Link>
+            <Link href="/contact#book">Discuss Your Programme</Link>
           </Button>
         </div>
       </div>
