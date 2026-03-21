@@ -7,7 +7,7 @@ export const navbarMobileLinks = [
 
 export const navbarActions = [
   {
-    text: "Get Started",
+    text: "Schedule A Call",
     href: "/contact#book",
     isButton: true,
     variant: "default" as const,
@@ -15,11 +15,11 @@ export const navbarActions = [
 ];
 
 export const navbarMobileServiceItems = [
-  { title: "OnXeon Services", href: "/services/onxeon-services" },
+  { title: "Advisory & Delivery", href: "/services/onxeon-services" },
   { title: "CRM Solutions", href: "/services/crm-solutions" },
   { title: "ERP Solutions", href: "/services/erp-solutions" },
   { title: "Cloud Solutions", href: "/services/cloud-solutions" },
-  { title: "Services Overview", href: "/services" },
+  { title: "All Services", href: "/services" },
 ];
 
 export const navbarMobileSolutionItems = [
@@ -51,7 +51,7 @@ export const desktopMenuItems = [
     href: "/blueprints",
   },
   {
-    title: "Contact",
+    title: "Advisory Call",
     isLink: true,
     href: "/contact#book",
   },
@@ -61,61 +61,61 @@ export const solutionComponentItems = [
   {
     title: "CRM Platforms",
     href: "/solutions/crm-platforms",
-    description: "Salesforce, Zoho, HubSpot and custom CRM implementations.",
+    description: "CRM platform direction spanning Salesforce, Zoho, HubSpot and tailored delivery.",
   },
   {
     title: "ERP Systems",
     href: "/solutions/erp-systems",
-    description: "ERPNext, SAP integrations and business workflows.",
+    description: "ERP systems, SAP integration and business process design.",
   },
   {
     title: "Cloud Platforms",
     href: "/solutions/cloud-platforms",
-    description: "AWS, Azure and modern cloud deployments.",
+    description: "Cloud environments on AWS, Azure and modern production infrastructure.",
   },
   {
     title: "System Integration",
     href: "/solutions/system-integration",
-    description: "Connect enterprise tools and automate workflows.",
+    description: "Integration architecture connecting enterprise tools with operational clarity.",
   },
   {
     title: "Custom Development",
     href: "/solutions/custom-development",
-    description: "Tailored software solutions for business needs.",
+    description: "Selective custom development for situations where packaged tools fall short.",
   },
   {
     title: "Support & Maintenance",
     href: "/solutions/support-maintenance",
-    description: "Ongoing support and system optimization.",
+    description: "Measured support, stabilisation and ongoing optimisation.",
   },
 ];
 
 export const serviceIntroItems = [
   {
-    title: "OnXeon Services",
+    title: "Advisory & Delivery",
     href: "/services/onxeon-services",
     description:
-      "Explore delivery models for implementation, integration and long-term support.",
+      "Explore how we structure implementation, integration and long-term support engagements.",
   },
   {
     title: "CRM Solutions",
     href: "/services/crm-solutions",
-    description: "Implementation and customization of CRM platforms.",
+    description: "Implementation, configuration and refinement of CRM platforms.",
   },
   {
     title: "ERP Solutions",
     href: "/services/erp-solutions",
-    description: "Deployment and integration of ERP systems.",
+    description: "ERP deployment and integration shaped around operating realities.",
   },
   {
     title: "Cloud Solutions",
     href: "/services/cloud-solutions",
-    description: "Cloud infrastructure and platform services.",
+    description: "Cloud infrastructure, environments and deployment stewardship.",
   },
   {
-    title: "Services Overview",
+    title: "All Services",
     href: "/services",
-    description: "See all service tracks and project engagement options.",
+    description: "Review the full service portfolio and engagement models.",
   },
 ];
 
@@ -131,7 +131,7 @@ export const footerColumns = [
   {
     title: "Services",
     links: [
-      { text: "OnXeon Services", href: "/services/onxeon-services" },
+      { text: "Advisory & Delivery", href: "/services/onxeon-services" },
       { text: "CRM Solutions", href: "/services/crm-solutions" },
       { text: "ERP Solutions", href: "/services/erp-solutions" },
       { text: "Cloud Solutions", href: "/services/cloud-solutions" },
@@ -151,7 +151,7 @@ export const footerColumns = [
     links: [
       { text: "Project Blueprints", href: "/blueprints" },
       { text: "Documentation", href: "/docs" },
-      { text: "Contact", href: "/contact#book" },
+      { text: "Schedule A Call", href: "/contact#book" },
     ],
   },
 ];
@@ -164,8 +164,8 @@ export const footerPolicies = [
 export const footerCopyright = "© 2026 OnXeon. All rights reserved.";
 
 export const navigationBranding = {
-  logoTitle: "OnXeon Services",
+  logoTitle: "Advisory & Delivery",
   logoDescription:
-    "Enterprise implementation, integration and support services for modern businesses.",
+    "Enterprise implementation, integration and support for organisations building with long-term intent.",
   logoHref: "/services/onxeon-services",
 };

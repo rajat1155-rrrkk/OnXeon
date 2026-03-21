@@ -73,9 +73,9 @@ export default function FooterSection({
                 <h3 className="text-xl font-semibold tracking-tight">{name}</h3>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Enterprise SaaS implementations, system integrations, and
-                affordable self-hosted open-source solutions for startups and
-                established businesses.
+                Enterprise implementation, integration and self-hosted delivery
+                for organisations that value clarity, control and long-term
+                maintainability.
               </p>
               <div className="flex flex-wrap gap-2 pt-1">
                 <Link
@@ -83,14 +83,14 @@ export default function FooterSection({
                   className="group/cta relative inline-flex items-center overflow-hidden rounded-md border border-brand/40 bg-brand/14 px-2.5 py-1 text-xs font-medium text-foreground transition-all duration-300 hover:-translate-y-px hover:bg-brand/24 hover:shadow-md hover:shadow-brand/25"
                 >
                   <span className="pointer-events-none absolute inset-y-0 left-[-55%] w-[45%] -skew-x-12 bg-gradient-to-r from-transparent via-white/55 to-transparent opacity-0 transition-all duration-700 group-hover/cta:left-[125%] group-hover/cta:opacity-100" />
-                  Book Consultation
+                  Schedule A Call
                 </Link>
                 <Link
                   href="/services/onxeon-services"
                   className="group/cta-secondary relative inline-flex items-center overflow-hidden rounded-md border border-border bg-background/70 px-2.5 py-1 text-xs font-medium text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:text-foreground hover:border-brand/40 hover:shadow-sm hover:shadow-brand/15"
                 >
                   <span className="pointer-events-none absolute inset-y-0 left-[-52%] w-[42%] -skew-x-12 bg-gradient-to-r from-transparent via-white/65 to-transparent opacity-0 transition-all duration-700 group-hover/cta-secondary:left-[120%] group-hover/cta-secondary:opacity-100 dark:via-white/20" />
-                  Explore Services
+                  Review Services
                 </Link>
               </div>
             </FooterColumn>

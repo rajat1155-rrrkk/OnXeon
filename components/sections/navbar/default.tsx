@@ -262,7 +262,7 @@ export default function Navbar({
                     href="/contact#book"
                     className="mobile-premium-tap mt-1 inline-flex items-center justify-center rounded-lg border border-brand/40 bg-brand/12 px-3 py-2 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-brand/18 hover:shadow-sm hover:shadow-brand/20"
                   >
-                    Book a Consultation
+                    Schedule A Call
                   </Link>
                 </nav>
               </SheetContent>
