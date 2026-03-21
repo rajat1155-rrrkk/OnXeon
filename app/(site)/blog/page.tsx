@@ -154,67 +154,85 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
-      <div className="max-w-6xl mx-auto py-24 space-y-12">
-        <div className="group relative overflow-hidden rounded-2xl border border-green-100/80 bg-gradient-to-b from-green-50/80 to-card p-8 text-center dark:border-emerald-900/40 dark:from-emerald-950/35 dark:to-card transition-all duration-500 hover:shadow-xl hover:shadow-green-200/30 dark:hover:shadow-emerald-900/25">
-          <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/25 blur-3xl dark:bg-emerald-500/20" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
-          <div className="pointer-events-none absolute inset-y-0 left-[-45%] w-[40%] -skew-x-12 bg-gradient-to-r from-transparent via-white/80 to-transparent opacity-0 transition-all duration-900 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/25" />
-          <div className="relative z-10 text-center space-y-4 max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-semibold">Enterprise Implementation Blog</h1>
-            <p className="text-muted-foreground">
-              Practical guides for enterprise SaaS implementation and affordable self-hosted alternatives across CRM,
-              ERP, cloud and system integration.
+      <div className="mx-auto max-w-6xl space-y-12 py-24">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] px-8 py-10 text-center shadow-[0_24px_54px_-40px_hsl(var(--foreground)/0.16)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))] md:px-14 md:py-14">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent dark:via-white/20" />
+          <div className="pointer-events-none absolute -left-10 top-10 h-40 w-40 rounded-full bg-brand/10 blur-3xl dark:bg-brand/12" />
+          <div className="pointer-events-none absolute -right-10 bottom-4 h-44 w-44 rounded-full bg-brand/8 blur-3xl dark:bg-brand/10" />
+          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-5">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              OnXeon Journal
             </p>
+            <div className="space-y-4">
+              <h1 className="text-balance text-3xl font-semibold tracking-[-0.04em] text-foreground md:text-5xl">
+                Enterprise ideas, written for teams making consequential platform decisions.
+              </h1>
+              <p className="mx-auto max-w-2xl text-pretty text-sm leading-7 text-muted-foreground md:text-base">
+                Practical notes on CRM, ERP, cloud and self-hosted delivery, shaped by the realities of architecture,
+                implementation risk and long-term operating cost.
+              </p>
+            </div>
             <div className="pt-1">
               <Link
                 href="/contact#book"
-                className="group/xeon relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand after:absolute after:right-2 after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-brand/70 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100"
+                className="inline-flex items-center rounded-full border border-brand/25 bg-white/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/45 hover:text-brand dark:bg-white/5"
               >
-                Spark New Ideas
+                Suggest A Topic
               </Link>
             </div>
             <div className="flex flex-wrap justify-center gap-2 pt-1 text-xs text-muted-foreground">
-              <span className="rounded-full border border-green-200/80 bg-green-50/70 px-3 py-1 dark:border-emerald-800/60 dark:bg-emerald-900/20">8+ Articles</span>
-              <span className="rounded-full border border-green-200/80 bg-green-50/70 px-3 py-1 dark:border-emerald-800/60 dark:bg-emerald-900/20">CRM / ERP / Cloud</span>
-              <span className="rounded-full border border-green-200/80 bg-green-50/70 px-3 py-1 dark:border-emerald-800/60 dark:bg-emerald-900/20">SaaS + Self-Hosted</span>
+              <span className="rounded-full border border-border/70 bg-white/75 px-3 py-1 dark:bg-white/5">
+                Strategy, delivery and operations
+              </span>
+              <span className="rounded-full border border-border/70 bg-white/75 px-3 py-1 dark:bg-white/5">
+                Enterprise SaaS and self-hosted
+              </span>
+              <span className="rounded-full border border-border/70 bg-white/75 px-3 py-1 dark:bg-white/5">
+                Written for implementation teams
+              </span>
             </div>
           </div>
         </div>
 
-        <div className="group relative overflow-hidden rounded-xl border border-green-100/80 dark:border-emerald-900/40 bg-card p-6 space-y-3 transition-all duration-500 hover:-translate-y-1 hover:border-green-300 dark:hover:border-emerald-700/60 hover:shadow-lg hover:shadow-green-200/35 dark:hover:shadow-emerald-900/30">
-          <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/40 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
-          <p className="text-xs uppercase tracking-wide text-muted-foreground">Featured • {featuredPost.tag}</p>
-          <h2 className="relative z-10 text-2xl font-semibold">{featuredPost.title}</h2>
-          <p className="relative z-10 text-muted-foreground">{featuredPost.description}</p>
-          <div className="relative z-10">
-            <Button
-              variant="default"
-              asChild
-              className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
-            >
-              <Link href={featuredPost.href}>Read Featured Article</Link>
-            </Button>
+        <div className="relative overflow-hidden rounded-[1.75rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] p-7 shadow-[0_18px_40px_-32px_hsl(var(--foreground)/0.14)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))] md:p-8">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent dark:via-white/20" />
+          <div className="relative z-10 space-y-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              Featured Reading • {featuredPost.tag}
+            </p>
+            <h2 className="max-w-3xl text-2xl font-semibold tracking-[-0.03em] md:text-3xl">
+              {featuredPost.title}
+            </h2>
+            <p className="max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
+              {featuredPost.description}
+            </p>
+            <div>
+              <Button
+                variant="default"
+                asChild
+                className="rounded-full px-5 shadow-[0_16px_30px_-20px_hsl(var(--brand)/0.5)] transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <Link href={featuredPost.href}>Read The Featured Article</Link>
+              </Button>
+            </div>
           </div>
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold">Latest Articles</h2>
+          <h2 className="text-2xl font-semibold tracking-[-0.03em]">Latest Articles</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {recentPosts.map((post) => (
               <Link key={post.title} href={post.href}>
-                <Card className="group relative h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200/35 hover:border-green-300 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/30">
-                  <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/35 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
-                  <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
+                <Card className="group relative h-full overflow-hidden rounded-[1.5rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] shadow-[0_18px_38px_-30px_hsl(var(--foreground)/0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-brand/20 hover:shadow-[0_22px_44px_-32px_hsl(var(--foreground)/0.16)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]">
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent dark:via-white/20" />
                   <CardHeader>
-                    <div className="inline-flex w-fit rounded-full border border-green-200/80 bg-green-50/70 px-2.5 py-1 text-[11px] font-medium text-muted-foreground dark:border-emerald-800/60 dark:bg-emerald-900/20">
+                    <div className="inline-flex w-fit rounded-full border border-border/70 bg-white/80 px-2.5 py-1 text-[11px] font-medium text-muted-foreground dark:bg-white/5">
                       {post.tag}
                     </div>
-                    <CardTitle className="relative z-10">{post.title}</CardTitle>
-                    <CardDescription className="relative z-10">{post.description}</CardDescription>
-                    <div className="pt-1 text-xs font-medium text-foreground/80 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-brand">
-                      {"Read article ->"}
+                    <CardTitle className="relative z-10 text-xl tracking-[-0.02em]">{post.title}</CardTitle>
+                    <CardDescription className="relative z-10 text-sm leading-6">{post.description}</CardDescription>
+                    <div className="pt-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/70 transition-colors duration-300 group-hover:text-brand">
+                      Read Article
                     </div>
                   </CardHeader>
                 </Card>
@@ -224,24 +242,25 @@ export default function BlogPage() {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold">Read by Track</h2>
+          <h2 className="text-2xl font-semibold tracking-[-0.03em]">Read by Track</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {tracks.map((track) => (
-              <Card key={track.title} className="group relative h-full overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200/35 hover:border-green-300 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/30">
-                <div className="pointer-events-none absolute left-0 top-3 bottom-3 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-green-400 to-green-600 transition-transform duration-500 group-hover:scale-y-100 dark:from-emerald-400 dark:to-emerald-600" />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green-100/0 to-green-100/0 transition-all duration-500 group-hover:from-green-100/35 group-hover:to-transparent dark:group-hover:from-emerald-500/12" />
-                <div className="pointer-events-none absolute inset-y-0 left-[-55%] w-[48%] skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/80 dark:via-white/30 to-transparent opacity-0 transition-all duration-900 group-hover:left-[135%] group-hover:opacity-100" />
+              <Card
+                key={track.title}
+                className="group relative h-full overflow-hidden rounded-[1.5rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] shadow-[0_18px_38px_-30px_hsl(var(--foreground)/0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-brand/20 hover:shadow-[0_22px_44px_-32px_hsl(var(--foreground)/0.16)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]"
+              >
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent dark:via-white/20" />
                 <CardHeader className="space-y-3">
-                  <CardTitle>{track.title}</CardTitle>
-                  <CardDescription>{track.description}</CardDescription>
+                  <CardTitle className="tracking-[-0.02em]">{track.title}</CardTitle>
+                  <CardDescription className="text-sm leading-6">{track.description}</CardDescription>
                   <div className="space-y-2">
                     {track.links.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block rounded-lg border border-border/70 bg-background/70 px-3 py-2 text-sm text-foreground transition-all duration-300 hover:-translate-y-px hover:border-green-300 hover:text-brand hover:shadow-sm hover:shadow-green-200/30 dark:hover:border-emerald-700/60 dark:hover:shadow-emerald-900/25"
+                        className="block rounded-2xl border border-border/70 bg-white/70 px-4 py-3 text-sm text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/20 hover:text-brand hover:shadow-[0_16px_28px_-24px_hsl(var(--foreground)/0.16)] dark:bg-white/5"
                       >
-                        {`${item.text} ->`}
+                        {item.text}
                       </Link>
                     ))}
                   </div>
@@ -251,16 +270,17 @@ export default function BlogPage() {
           </div>
         </div>
 
-        <div className="text-center pt-2 space-y-3">
-          <p className="text-muted-foreground text-sm">
-            Need a deep-dive article on your stack? We can publish practical implementation notes for your use case.
+        <div className="space-y-3 pt-2 text-center">
+          <p className="text-sm text-muted-foreground">
+            Need a deeper note on a platform decision, migration path or integration pattern? We can write one with
+            your context in mind.
           </p>
           <Button
             variant="default"
             asChild
-            className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
+            className="rounded-full px-5 shadow-[0_16px_30px_-20px_hsl(var(--brand)/0.5)] transition-all duration-300 hover:-translate-y-0.5"
           >
-            <Link href="/contact#book">Request a Topic</Link>
+            <Link href="/contact#book">Request A Topic</Link>
           </Button>
         </div>
       </div>
