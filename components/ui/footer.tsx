@@ -17,7 +17,7 @@ function FooterContent({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="footer-content"
       className={cn(
-        "grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5",
+        "grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 lg:gap-7",
         className,
       )}
       {...props}
@@ -29,7 +29,7 @@ function FooterColumn({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="footer-column"
-      className={cn("flex flex-col gap-4", className)}
+      className={cn("flex flex-col gap-4.5", className)}
       {...props}
     />
   );

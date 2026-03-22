@@ -71,27 +71,26 @@ export default function FooterSection({
                 <div>
                   <h3 className="text-lg font-semibold uppercase tracking-[0.18em] text-foreground/92">{name}</h3>
                   <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                    Advisory & Delivery
+                    Strategic Delivery
                   </p>
                 </div>
               </div>
               <p className="text-sm leading-7 text-muted-foreground">
-                Enterprise implementation, integration and self-hosted delivery
-                for organisations that value clarity, control and long-term
-                maintainability.
+                Enterprise implementation, integration and self-hosted delivery for organisations that value clarity,
+                control and long-term composure.
               </p>
               <div className="flex flex-wrap gap-2 pt-1">
                 <Link
                   href="/contact#book"
                   className="inline-flex items-center rounded-full border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(246,249,245,0.92))] px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/25 hover:text-brand dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
                 >
-                  Schedule A Call
+                  Arrange A Call
                 </Link>
                 <Link
                   href="/services/onxeon-services"
                   className="inline-flex items-center rounded-full border border-border/70 bg-white/75 px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/18 hover:text-foreground dark:bg-white/5"
                 >
-                  Review Services
+                  Review Capabilities
                 </Link>
               </div>
             </FooterColumn>

@@ -103,13 +103,18 @@ export default function Navbar({
           >
             <Link
               href={homeUrl}
-              className="group relative flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-foreground/92"
+              className="group relative flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground/92"
             >
               <span className="transition-transform duration-300 group-hover:scale-[1.03]">
                 {logo}
               </span>
               <span className="hidden h-4 w-px bg-border/80 md:block" />
-              <span className="tracking-[0.22em]">{name}</span>
+              <span className="flex flex-col leading-none">
+                <span className="tracking-[0.22em]">{name}</span>
+                <span className="mt-1 hidden text-[9px] font-medium uppercase tracking-[0.2em] text-muted-foreground md:block">
+                  Strategic Delivery
+                </span>
+              </span>
             </Link>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
@@ -258,7 +263,7 @@ export default function Navbar({
                     href="/contact#book"
                     className="mobile-premium-tap mt-1 inline-flex items-center justify-center rounded-full border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(246,249,245,0.92))] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-200 hover:border-brand/25 hover:text-brand dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
                   >
-                    Schedule A Call
+                    Arrange A Call
                   </Link>
                 </nav>
               </SheetContent>

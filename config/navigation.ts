@@ -15,11 +15,11 @@ export const navbarActions = [
 ];
 
 export const navbarMobileServiceItems = [
-  { title: "Advisory & Delivery", href: "/services/onxeon-services" },
+  { title: "Strategic Delivery", href: "/services/onxeon-services" },
   { title: "CRM Solutions", href: "/services/crm-solutions" },
   { title: "ERP Solutions", href: "/services/erp-solutions" },
   { title: "Cloud Solutions", href: "/services/cloud-solutions" },
-  { title: "All Services", href: "/services" },
+  { title: "All Capabilities", href: "/services" },
 ];
 
 export const navbarMobileSolutionItems = [
@@ -92,10 +92,10 @@ export const solutionComponentItems = [
 
 export const serviceIntroItems = [
   {
-    title: "Advisory & Delivery",
+    title: "Strategic Delivery",
     href: "/services/onxeon-services",
     description:
-      "Explore how we structure implementation, integration and long-term support engagements.",
+      "Explore how we shape implementation, integration and long-term support engagements.",
   },
   {
     title: "CRM Solutions",
@@ -113,9 +113,9 @@ export const serviceIntroItems = [
     description: "Cloud infrastructure, environments and deployment stewardship.",
   },
   {
-    title: "All Services",
+    title: "All Capabilities",
     href: "/services",
-    description: "Review the full service portfolio and engagement models.",
+    description: "Review the full capability set and engagement models.",
   },
 ];
 
@@ -129,9 +129,9 @@ export const footerColumns = [
     ],
   },
   {
-    title: "Services",
+    title: "Capabilities",
     links: [
-      { text: "Advisory & Delivery", href: "/services/onxeon-services" },
+      { text: "Strategic Delivery", href: "/services/onxeon-services" },
       { text: "CRM Solutions", href: "/services/crm-solutions" },
       { text: "ERP Solutions", href: "/services/erp-solutions" },
       { text: "Cloud Solutions", href: "/services/cloud-solutions" },
@@ -147,11 +147,11 @@ export const footerColumns = [
     ],
   },
   {
-    title: "Resources",
+    title: "Insights",
     links: [
       { text: "Project Blueprints", href: "/blueprints" },
       { text: "Documentation", href: "/docs" },
-      { text: "Schedule A Call", href: "/contact#book" },
+      { text: "Arrange A Call", href: "/contact#book" },
     ],
   },
 ];
