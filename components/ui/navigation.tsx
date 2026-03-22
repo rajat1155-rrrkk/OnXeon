@@ -60,7 +60,7 @@ export default function Navigation({
   introItems = serviceIntroItems,
 }: NavigationProps) {
   const navItemClass =
-    "group/nav chrome-hover rounded-md border border-transparent";
+    "group/nav rounded-full border border-transparent px-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-foreground/78 transition-all duration-300 hover:text-foreground";
 
   return (
     <NavigationMenu className="hidden md:flex">
@@ -79,23 +79,20 @@ export default function Navigation({
                 <NavigationMenuTrigger className={navItemClass}>
                   {item.title}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="premium-dropdown-shell">
+                <NavigationMenuContent className="rounded-[1.5rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,252,249,0.95))] shadow-[0_24px_54px_-38px_hsl(var(--foreground)/0.16)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.96),rgba(21,25,23,0.94))]">
                   {item.content === "default" ? (
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
-                            className="premium-subsection-card premium-nav-card group/feature chrome-hover from-muted/35 to-muted/10 relative flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden shadow-sm shadow-brand/5 select-none focus:shadow-md"
+                            className="group/feature relative flex h-full w-full flex-col justify-end rounded-[1.25rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,252,249,0.94))] p-6 no-underline outline-hidden shadow-[0_18px_38px_-30px_hsl(var(--foreground)/0.14)] select-none dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
                             href={logoHref}
                           >
-                            <span className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover/feature:opacity-100 [background:linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.08)_22%,transparent_42%)] dark:[background:linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.04)_22%,transparent_42%)]" />
-                            <span className="pointer-events-none absolute -top-10 -left-[58%] h-24 w-[40%] -skew-x-12 rounded-md bg-white/30 opacity-0 blur-[1px] transition-all duration-900 group-hover/feature:left-[118%] group-hover/feature:opacity-100 dark:bg-white/14" />
-                            <span className="pointer-events-none absolute -bottom-7 left-[12%] h-6 w-20 rounded-md border border-white/20 bg-white/8 opacity-0 blur-[0.5px] transition-all duration-700 group-hover/feature:left-[66%] group-hover/feature:opacity-100 dark:border-white/10 dark:bg-white/4" />
                             {logo}
-                            <div className="mt-4 mb-2 text-lg font-medium">
+                            <div className="mb-2 mt-4 text-lg font-medium tracking-[-0.02em]">
                               {logoTitle}
                             </div>
-                            <p className="text-muted-foreground text-sm leading-tight">
+                            <p className="text-sm leading-6 text-muted-foreground">
                               {logoDescription}
                             </p>
                           </Link>
@@ -145,16 +142,13 @@ function ListItem({
           data-slot="list-item"
           className={cn(
             "group/item premium-nav-card chrome-hover relative block space-y-1 rounded-md border border-border/55 bg-card/55 p-3 leading-none no-underline outline-hidden shadow-[0_10px_20px_-20px_hsl(var(--foreground)/0.4)] select-none hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            "premium-subsection-card",
+            "rounded-[1.1rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(250,252,249,0.94))] p-4 shadow-[0_14px_28px_-24px_hsl(var(--foreground)/0.14)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]",
             className,
           )}
           {...props}
         >
-          <span className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover/item:opacity-100 [background:linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.08)_30%,transparent_52%)] dark:[background:linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.04)_30%,transparent_52%)]" />
-          <span className="pointer-events-none absolute top-1/2 -left-[55%] h-10 w-[34%] -translate-y-1/2 -skew-x-12 rounded-sm bg-white/30 opacity-0 blur-[1px] transition-all duration-900 group-hover/item:left-[120%] group-hover/item:opacity-100 dark:bg-white/16" />
-          <span className="pointer-events-none absolute right-2 bottom-2 h-1.5 w-6 rounded-[2px] border border-white/20 bg-white/10 opacity-0 transition-all duration-500 group-hover/item:w-8 group-hover/item:opacity-100 dark:border-white/10 dark:bg-white/5" />
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+          <div className="text-sm leading-none font-medium tracking-[-0.01em]">{title}</div>
+          <p className="line-clamp-2 text-sm leading-6 text-muted-foreground">
             {children}
           </p>
         </Link>

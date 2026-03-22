@@ -77,24 +77,22 @@ export default function Navbar({
     <header className={cn("sticky top-0 z-50 -mb-3 px-3 pb-3 md:-mb-4 md:px-4 md:pb-4", className)}>
       <div
         className={cn(
-          "fade-bottom pointer-events-none absolute inset-x-0 top-0 h-40 overflow-hidden border-b bg-gradient-to-b from-white/[0.1] via-white/[0.05] to-transparent shadow-[inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.2),0_14px_30px_rgba(0,0,0,0.06)] backdrop-blur-[3px] backdrop-saturate-135 backdrop-contrast-110 backdrop-brightness-102 transition-all duration-300 dark:from-white/[0.05] dark:via-white/[0.024] dark:backdrop-brightness-108",
+          "fade-bottom pointer-events-none absolute inset-x-0 top-0 h-40 overflow-hidden border-b bg-gradient-to-b from-white/[0.12] via-white/[0.06] to-transparent shadow-[inset_0_1px_0_rgba(255,255,255,0.55),0_12px_28px_rgba(0,0,0,0.05)] backdrop-blur-[4px] backdrop-saturate-135 backdrop-contrast-105 transition-all duration-300 dark:from-white/[0.05] dark:via-white/[0.02]",
           isScrolled
-            ? "border-white/48 shadow-[inset_0_1px_0_rgba(255,255,255,0.72),inset_0_-1px_0_rgba(255,255,255,0.24),0_18px_34px_rgba(0,0,0,0.08),0_0_0_1px_rgba(255,255,255,0.26)] dark:border-white/24 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.34),inset_0_-1px_0_rgba(255,255,255,0.13),0_18px_34px_rgba(0,0,0,0.28),0_0_0_1px_rgba(255,255,255,0.09)]"
-            : "border-white/22 dark:border-white/10",
+            ? "border-white/44 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_18px_36px_rgba(0,0,0,0.07),0_0_0_1px_rgba(255,255,255,0.18)] dark:border-white/20 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.28),0_18px_36px_rgba(0,0,0,0.24),0_0_0_1px_rgba(255,255,255,0.08)]"
+            : "border-white/20 dark:border-white/10",
         )}
       >
-        <div className="absolute inset-0 opacity-75 [background:radial-gradient(125%_58%_at_10%_10%,rgba(255,255,255,0.34),transparent_56%),radial-gradient(90%_50%_at_76%_8%,rgba(255,255,255,0.24),transparent_62%),radial-gradient(75%_38%_at_52%_0%,rgba(255,255,255,0.20),transparent_58%),radial-gradient(55%_30%_at_35%_4%,rgba(255,255,255,0.16),transparent_70%)] dark:opacity-52" />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/45 to-transparent" />
-        <div className="absolute -top-7 left-[6%] h-20 w-56 rotate-[-3deg] rounded-full bg-white/28 blur-xl dark:bg-white/13" />
-        <div className="absolute -top-7 right-[11%] h-16 w-52 rotate-[2.8deg] rounded-full bg-white/22 blur-xl dark:bg-white/11" />
-        <div className="absolute top-2 left-[34%] h-10 w-28 rotate-[-1.5deg] rounded-full bg-white/16 blur-lg dark:bg-white/8" />
-        <div className="absolute right-[26%] top-[10px] h-[1px] w-16 bg-gradient-to-r from-transparent via-white/80 to-transparent dark:via-white/30" />
+        <div className="absolute inset-0 opacity-70 [background:radial-gradient(118%_55%_at_12%_10%,rgba(255,255,255,0.3),transparent_58%),radial-gradient(84%_48%_at_78%_8%,rgba(255,255,255,0.18),transparent_62%),radial-gradient(52%_24%_at_48%_0%,rgba(255,255,255,0.14),transparent_68%)] dark:opacity-45" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent dark:via-white/25" />
+        <div className="absolute -top-6 left-[8%] h-16 w-48 rotate-[-2deg] rounded-full bg-white/20 blur-xl dark:bg-white/10" />
+        <div className="absolute -top-6 right-[12%] h-14 w-44 rotate-[2deg] rounded-full bg-white/16 blur-xl dark:bg-white/8" />
       </div>
       <div className="max-w-container relative mx-auto">
         <NavbarComponent
           className={cn(
             "relative rounded-xl px-2 transition-all duration-300",
-            isScrolled ? "py-3 md:py-5" : "py-2.5 md:py-4",
+            isScrolled ? "py-3 md:py-4.5" : "py-2.5 md:py-4",
           )}
         >
           <NavbarLeft
@@ -105,12 +103,13 @@ export default function Navbar({
           >
             <Link
               href={homeUrl}
-              className="group relative flex items-center gap-2 text-xl font-bold"
+              className="group relative flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-foreground/92"
             >
-              <span className="transition-transform duration-300 group-hover:scale-105 group-hover:rotate-[-4deg]">
+              <span className="transition-transform duration-300 group-hover:scale-[1.03]">
                 {logo}
               </span>
-              {name}
+              <span className="hidden h-4 w-px bg-border/80 md:block" />
+              <span className="tracking-[0.22em]">{name}</span>
             </Link>
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
@@ -126,7 +125,7 @@ export default function Navbar({
                 <Button
                   key={`${action.text}-${action.href}`}
                   variant={action.variant || "default"}
-                  className="mobile-premium-tap group/nav-cta relative isolate overflow-hidden rounded-full border border-border/70 px-4 shadow-[0_10px_24px_-16px_hsl(var(--foreground)/0.35)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/45 hover:shadow-[0_14px_28px_-18px_hsl(var(--brand)/0.6)] before:absolute before:inset-y-0 before:left-[-58%] before:w-[40%] before:skew-x-[-18deg] before:rounded-[inherit] before:bg-white/32 dark:before:bg-white/12 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[122%] hover:before:opacity-100"
+                  className="mobile-premium-tap relative isolate overflow-hidden rounded-full border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(246,249,245,0.92))] px-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground shadow-[0_12px_24px_-18px_hsl(var(--foreground)/0.22)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:text-brand hover:shadow-[0_16px_30px_-22px_hsl(var(--foreground)/0.22)] dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
                   asChild
                 >
                   <Link href={action.href}>
@@ -140,7 +139,7 @@ export default function Navbar({
                   key={`${action.text}-${action.href}`}
                   variant="ghost"
                   size="lg"
-                  className="relative hidden overflow-hidden text-sm md:inline-flex transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-green-200/25 dark:hover:shadow-emerald-900/30 before:absolute before:inset-y-0 before:left-[-65%] before:w-[44%] before:skew-x-[-18deg] before:bg-white/25 dark:before:bg-white/10 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[125%] hover:before:opacity-100"
+                  className="relative hidden rounded-full px-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-foreground/78 md:inline-flex transition-all duration-300 hover:-translate-y-0.5 hover:text-foreground"
                   asChild
                 >
                   <Link href={action.href}>
@@ -154,7 +153,7 @@ export default function Navbar({
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="shrink-0 md:hidden"
+                  className="shrink-0 rounded-full border border-border/70 bg-white/70 shadow-[0_10px_20px_-16px_hsl(var(--foreground)/0.18)] md:hidden dark:bg-white/5"
                 >
                   <Menu className="size-5" />
                   <span className="sr-only">Toggle navigation menu</span>
@@ -164,7 +163,7 @@ export default function Navbar({
                 <nav className="grid gap-4 text-base font-medium">
                   <Link
                     href={homeUrl}
-                    className="group/item relative flex items-center gap-2 rounded-lg border border-border/70 bg-card/65 px-3 py-2.5 text-lg font-semibold transition-all duration-300 active:scale-[0.99]"
+                    className="group/item relative flex items-center gap-2 rounded-[1.25rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] px-4 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground/90 shadow-[0_16px_30px_-24px_hsl(var(--foreground)/0.18)] transition-all duration-300 active:scale-[0.99] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]"
                   >
                     <span>{name}</span>
                   </Link>
@@ -172,13 +171,12 @@ export default function Navbar({
                     <Link
                       key={`${link.text}-${link.href}`}
                       href={link.href}
-                      className="mobile-premium-tap group/item relative overflow-hidden rounded-lg border border-border/70 bg-card/60 px-3 py-2.5 text-muted-foreground transition-all duration-300 hover:border-brand/40 hover:bg-brand/10 hover:text-foreground active:scale-[0.99]"
+                      className="mobile-premium-tap group/item relative overflow-hidden rounded-[1.1rem] border border-border/70 bg-white/70 px-4 py-3 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/25 hover:text-foreground active:scale-[0.99] dark:bg-white/5"
                     >
-                      <span className="pointer-events-none absolute inset-y-0 left-[-55%] w-[42%] -skew-x-12 bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-0 transition-all duration-700 group-active/item:left-[130%] group-active/item:opacity-100 dark:via-white/20" />
                       {link.text}
                     </Link>
                   ))}
-                  <div className="rounded-lg border border-border/70 bg-card/55 p-3">
+                  <div className="rounded-[1.25rem] border border-border/70 bg-white/70 p-3 dark:bg-white/5">
                     <button
                       type="button"
                       onClick={() =>
@@ -186,7 +184,7 @@ export default function Navbar({
                           prev === "services" ? null : "services",
                         )
                       }
-                      className="flex w-full items-center justify-between rounded-md px-1 py-1 text-left text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground active:scale-[0.99]"
+                      className="flex w-full items-center justify-between rounded-md px-1 py-1 text-left text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground active:scale-[0.99]"
                     >
                       Services
                       <span
@@ -210,15 +208,14 @@ export default function Navbar({
                         <Link
                           key={item.title}
                           href={item.href}
-                          className="mobile-premium-tap group/item relative overflow-hidden rounded-md border border-transparent px-2 py-1.5 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/30 hover:bg-brand/10 hover:text-foreground active:scale-[0.99]"
+                          className="mobile-premium-tap group/item relative overflow-hidden rounded-xl border border-transparent px-3 py-2 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/18 hover:bg-white/80 hover:text-foreground active:scale-[0.99] dark:hover:bg-white/6"
                         >
-                          <span className="pointer-events-none absolute inset-y-0 left-0 w-0 rounded-r-full bg-brand/60 transition-all duration-300 group-hover/item:w-[3px]" />
                           {item.title}
                         </Link>
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-lg border border-border/70 bg-card/55 p-3">
+                  <div className="rounded-[1.25rem] border border-border/70 bg-white/70 p-3 dark:bg-white/5">
                     <button
                       type="button"
                       onClick={() =>
@@ -226,7 +223,7 @@ export default function Navbar({
                           prev === "solutions" ? null : "solutions",
                         )
                       }
-                      className="flex w-full items-center justify-between rounded-md px-1 py-1 text-left text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground active:scale-[0.99]"
+                      className="flex w-full items-center justify-between rounded-md px-1 py-1 text-left text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground active:scale-[0.99]"
                     >
                       Solutions
                       <span
@@ -250,9 +247,8 @@ export default function Navbar({
                         <Link
                           key={item.title}
                           href={item.href}
-                          className="mobile-premium-tap group/item relative overflow-hidden rounded-md border border-transparent px-2 py-1.5 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/30 hover:bg-brand/10 hover:text-foreground active:scale-[0.99]"
+                          className="mobile-premium-tap group/item relative overflow-hidden rounded-xl border border-transparent px-3 py-2 text-sm text-muted-foreground transition-all duration-300 hover:border-brand/18 hover:bg-white/80 hover:text-foreground active:scale-[0.99] dark:hover:bg-white/6"
                         >
-                          <span className="pointer-events-none absolute inset-y-0 left-0 w-0 rounded-r-full bg-brand/60 transition-all duration-300 group-hover/item:w-[3px]" />
                           {item.title}
                         </Link>
                       ))}
@@ -260,7 +256,7 @@ export default function Navbar({
                   </div>
                   <Link
                     href="/contact#book"
-                    className="mobile-premium-tap mt-1 inline-flex items-center justify-center rounded-lg border border-brand/40 bg-brand/12 px-3 py-2 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-brand/18 hover:shadow-sm hover:shadow-brand/20"
+                    className="mobile-premium-tap mt-1 inline-flex items-center justify-center rounded-full border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(246,249,245,0.92))] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-200 hover:border-brand/25 hover:text-brand dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
                   >
                     Schedule A Call
                   </Link>
