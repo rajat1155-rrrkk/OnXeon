@@ -1,6 +1,7 @@
 import CTA from "../components/sections/cta/default";
 import Hero from "../components/sections/hero/default";
 import {
+  HomeProofSection,
   HomeTypicalProjectsSection,
   HomeWhatWeDoSection,
   HomeWhyOnXeonSection,
@@ -22,6 +23,7 @@ export default function Home() {
         description="We implement and integrate enterprise platforms such as Salesforce, SAP and ServiceNow, and we deliver carefully considered self-hosted alternatives across CRM, ERP and cloud."
         buttons={homepageHeroButtons}
       />
+      <HomeProofSection />
       <HomeWhatWeDoSection />
       <HomeWhyOnXeonSection />
       <HomeTypicalProjectsSection />

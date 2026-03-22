@@ -27,6 +27,11 @@ export interface ProjectItem {
   description: string;
 }
 
+export interface ProofItem {
+  title: string;
+  description: string;
+}
+
 export const homepageHeroButtons = [
   {
     href: "/contact#book",
@@ -247,5 +252,23 @@ export const typicalProjects: ProjectItem[] = [
     name: "System Modernization",
     description:
       "Measured modernisation of legacy workflows, integrations and platform architecture without needless disruption.",
+  },
+];
+
+export const proofHighlights: ProofItem[] = [
+  {
+    title: "Vendor-neutral platform guidance",
+    description:
+      "Recommendations shaped by operating fit, governance and long-term control rather than a fixed product bias.",
+  },
+  {
+    title: "Delivery from architecture to handover",
+    description:
+      "Programmes scoped with implementation, integration, rollout and internal ownership in mind from the outset.",
+  },
+  {
+    title: "Enterprise and self-hosted fluency",
+    description:
+      "Comfort across Salesforce, SAP and ServiceNow as well as self-hosted stacks such as ERPNext, Odoo and Nextcloud.",
   },
 ];
