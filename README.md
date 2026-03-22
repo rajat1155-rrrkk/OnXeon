@@ -131,6 +131,12 @@ Our focus is on building scalable, maintainable, and production-ready software t
 Website:  
 https://www.onxeon.com
 
+Contact form delivery:
+
+- Set `CONTACT_WEBHOOK_URL` to route inquiries to your CRM, automation flow, or backend endpoint.
+- Optionally set `CONTACT_WEBHOOK_BEARER_TOKEN` if that endpoint requires bearer auth.
+- If no webhook is configured, inquiries are stored server-side in a temporary local file as a fallback.
+
 GitHub:  
 https://github.com/rajat1155-rrrkk
 

@@ -34,6 +34,41 @@ function getFieldValue(formData: FormData, key: string) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+async function persistInquiryLocally(submission: Record<string, string>) {
+  const inquiryDirectory = join(tmpdir(), "onxeon-contact");
+  await mkdir(inquiryDirectory, { recursive: true });
+  await appendFile(join(inquiryDirectory, "inquiries.ndjson"), `${JSON.stringify(submission)}\n`, "utf8");
+}
+
+async function deliverInquiry(submission: Record<string, string>) {
+  const webhookUrl = process.env.CONTACT_WEBHOOK_URL?.trim();
+  const bearerToken = process.env.CONTACT_WEBHOOK_BEARER_TOKEN?.trim();
+
+  if (!webhookUrl) {
+    await persistInquiryLocally(submission);
+    return "local";
+  }
+
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(bearerToken ? { Authorization: `Bearer ${bearerToken}` } : {}),
+    },
+    body: JSON.stringify({
+      source: "onxeon-contact-form",
+      submission,
+    }),
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Webhook delivery failed with status ${response.status}`);
+  }
+
+  return "webhook";
+}
+
 export async function submitContactInquiry(
   _previousState: ContactFormState,
   formData: FormData,
@@ -87,21 +122,22 @@ export async function submitContactInquiry(
   };
 
   try {
-    const inquiryDirectory = join(tmpdir(), "onxeon-contact");
-    await mkdir(inquiryDirectory, { recursive: true });
-    await appendFile(join(inquiryDirectory, "inquiries.ndjson"), `${JSON.stringify(submission)}\n`, "utf8");
+    const deliveryMode = await deliverInquiry(submission);
+
+    return {
+      status: "success",
+      message:
+        deliveryMode === "webhook"
+          ? "Thanks. Your inquiry has been delivered and we will review it shortly."
+          : "Thanks. Your inquiry has been saved and we will review it shortly.",
+    };
   } catch (error) {
-    console.error("Failed to persist contact inquiry", error);
+    console.error("Failed to handle contact inquiry", error);
 
     return {
       status: "error",
-      message: "Your inquiry could not be saved right now. Please try again shortly.",
+      message: "Your inquiry could not be delivered right now. Please try again shortly.",
       fields,
     };
   }
-
-  return {
-    status: "success",
-    message: "Thanks. Your inquiry has been received and we will review it shortly.",
-  };
 }
