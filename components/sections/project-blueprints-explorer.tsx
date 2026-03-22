@@ -1131,10 +1131,10 @@ export default function ProjectBlueprintsExplorer() {
               key={track}
               type="button"
               onClick={() => setByTrack(track)}
-              className={`mobile-premium-tap chrome-hover rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
+              className={`mobile-premium-tap rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] transition-all duration-300 ${
                 selected
-                  ? "border-brand/45 bg-brand/12 text-foreground shadow-sm shadow-brand/20"
-                  : "border-border/70 bg-card/70 text-muted-foreground hover:border-brand/35 hover:bg-brand/8 hover:text-foreground"
+                  ? "border-brand/35 bg-white/90 text-foreground shadow-[0_12px_24px_-20px_hsl(var(--foreground)/0.18)] dark:bg-white/8"
+                  : "border-border/70 bg-white/70 text-muted-foreground hover:border-brand/25 hover:text-foreground dark:bg-white/5"
               }`}
             >
               {track} <span className="opacity-70">({count})</span>
@@ -1152,10 +1152,10 @@ export default function ProjectBlueprintsExplorer() {
               key={category}
               type="button"
               onClick={() => setByCategory(category)}
-              className={`mobile-premium-tap chrome-hover rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
+              className={`mobile-premium-tap rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] transition-all duration-300 ${
                 selected
-                  ? "border-brand/45 bg-brand/12 text-foreground shadow-sm shadow-brand/20"
-                  : "border-border/70 bg-card/70 text-muted-foreground hover:border-brand/35 hover:bg-brand/8 hover:text-foreground"
+                  ? "border-brand/35 bg-white/90 text-foreground shadow-[0_12px_24px_-20px_hsl(var(--foreground)/0.18)] dark:bg-white/8"
+                  : "border-border/70 bg-white/70 text-muted-foreground hover:border-brand/25 hover:text-foreground dark:bg-white/5"
               }`}
             >
               {category} <span className="opacity-70">({count})</span>
@@ -1164,7 +1164,7 @@ export default function ProjectBlueprintsExplorer() {
         })}
       </div>
 
-      <div className="grid gap-3 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {filteredBlueprints.map((item) => {
           const selected = active.id === item.id;
           return (
@@ -1172,17 +1172,18 @@ export default function ProjectBlueprintsExplorer() {
               key={item.id}
               type="button"
               onClick={() => setActiveBlueprint(item.id)}
-              className={`group chrome-hover chrome-float-card premium-subsection-card text-left rounded-xl p-4 transition-all duration-300 ${
+              className={`group text-left rounded-[1.5rem] border p-5 transition-all duration-300 ${
                 selected
-                  ? "border-brand/45 bg-brand/10 shadow-md shadow-brand/20"
-                  : "hover:border-brand/35 hover:bg-brand/8"
+                  ? "border-brand/25 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,251,247,0.95))] shadow-[0_22px_44px_-32px_hsl(var(--foreground)/0.16)] dark:border-brand/20 dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
+                  : "border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] shadow-[0_18px_38px_-30px_hsl(var(--foreground)/0.14)] hover:-translate-y-1 hover:border-brand/18 hover:shadow-[0_22px_44px_-32px_hsl(var(--foreground)/0.16)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]"
               }`}
             >
-              <span className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100 [background:linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.1)_30%,transparent_52%)] dark:[background:linear-gradient(110deg,transparent_0%,rgba(255,255,255,0.05)_30%,transparent_52%)]" />
-              <span className="pointer-events-none absolute top-1/2 -left-[55%] h-10 w-[34%] -translate-y-1/2 -skew-x-12 rounded-sm bg-white/55 opacity-0 blur-[1px] transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100 dark:bg-white/22" />
-              <p className="text-sm font-semibold">{item.title}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{item.summary}</p>
-              <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                {item.category} • {item.track}
+              </p>
+              <p className="mt-2 text-lg font-semibold tracking-[-0.02em]">{item.title}</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.summary}</p>
+              <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Open Blueprint
               </p>
             </button>
@@ -1192,22 +1193,30 @@ export default function ProjectBlueprintsExplorer() {
 
       <div
         key={panelKey}
-        className="premium-dropdown-shell animate-appear group relative overflow-hidden rounded-2xl border p-6 transition-all duration-500 hover:shadow-xl hover:shadow-brand/20"
+        className="animate-appear relative overflow-hidden rounded-[1.75rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] p-6 shadow-[0_22px_46px_-34px_hsl(var(--foreground)/0.15)] transition-all duration-300 dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/65 to-transparent" />
-        <div className="pointer-events-none absolute -top-16 right-3 h-28 w-28 rounded-full bg-brand/20 blur-2xl dark:bg-brand/14" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent dark:via-white/20" />
+        <div className="pointer-events-none absolute -top-16 right-3 h-28 w-28 rounded-full bg-brand/12 blur-2xl dark:bg-brand/12" />
 
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
-            {active.category} Blueprint
-          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              {active.category} Blueprint
+            </p>
+            <span className="rounded-full border border-border/70 bg-white/75 px-2.5 py-1 text-[11px] font-medium text-muted-foreground dark:bg-white/5">
+              {active.track}
+            </span>
+            <span className="rounded-full border border-border/70 bg-white/75 px-2.5 py-1 text-[11px] font-medium text-muted-foreground dark:bg-white/5">
+              {active.timeline}
+            </span>
+          </div>
 
-          <h2 className="mt-3 text-2xl font-semibold">{active.title}</h2>
-          <p className="mt-2 text-muted-foreground">{active.summary}</p>
+          <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] md:text-3xl">{active.title}</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground md:text-base">{active.summary}</p>
 
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+            <div className="rounded-[1.25rem] border border-border/70 bg-white/70 p-4 dark:bg-white/5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Environment
               </p>
               <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
@@ -1217,8 +1226,8 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+            <div className="rounded-[1.25rem] border border-border/70 bg-white/70 p-4 dark:bg-white/5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Use Cases
               </p>
               <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
@@ -1228,8 +1237,8 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+            <div className="rounded-[1.25rem] border border-border/70 bg-white/70 p-4 dark:bg-white/5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Integration Layer
               </p>
               <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
@@ -1239,8 +1248,8 @@ export default function ProjectBlueprintsExplorer() {
               </ul>
             </div>
 
-            <div className="premium-subsection-card chrome-hover rounded-xl p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+            <div className="rounded-[1.25rem] border border-border/70 bg-white/70 p-4 dark:bg-white/5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Delivery Model
               </p>
               <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
