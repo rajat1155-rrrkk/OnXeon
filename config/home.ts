@@ -42,12 +42,12 @@ export interface SnapshotItem {
 export const homepageHeroButtons = [
   {
     href: "/contact#book",
-    text: "Schedule a Consultation",
+    text: "Arrange A Private Consultation",
     variant: "default" as const,
   },
   {
     href: "/solutions",
-    text: "Explore Solutions",
+    text: "Review Solution Paths",
     variant: "glow" as const,
   },
 ];

@@ -15,9 +15,9 @@ import { Mockup, MockupFrame } from "../../ui/mockup";
 import { Section } from "../../ui/section";
 
 const heroHighlights = [
-  "Enterprise delivery leadership",
-  "Vendor-neutral architecture counsel",
-  "Maintainability designed in from day one",
+  "Strategic delivery stewardship",
+  "Vendor-neutral architecture judgment",
+  "Maintainability designed in from the outset",
 ];
 
 interface HeroButtonProps {
@@ -42,19 +42,19 @@ export default function Hero({
   description = "Implementation, customization, and integration for CRM, ERP, and cloud platforms.",
   mockup = <LogoPlayground />,
   badge = (
-    <Badge
+      <Badge
       variant="outline"
       className="group/badge animate-appear relative inline-flex max-w-full flex-wrap items-center justify-center gap-2 overflow-hidden rounded-full border border-brand/18 bg-white/82 px-3 py-2 text-center shadow-[0_14px_34px_-28px_hsl(var(--foreground)/0.16)] backdrop-blur-xl sm:flex-nowrap dark:bg-card/78"
     >
       <span className="pointer-events-none absolute inset-0 rounded-full border border-white/45 opacity-80 dark:border-white/8" />
       <span className="text-muted-foreground text-[11px] tracking-[0.12em] uppercase sm:text-xs">
-        Advisory And Delivery
+        Strategic Delivery
       </span>
       <Link
         href="/contact#book"
         className="group/xeon mobile-premium-tap relative z-10 inline-flex items-center gap-1.5 rounded-full border border-brand/14 bg-brand/6 px-2.5 py-1 text-[11px] font-semibold tracking-[0.08em] uppercase text-foreground transition-all duration-300 group-hover/badge:border-brand/24 group-hover/badge:bg-brand/9 group-hover/badge:text-brand"
       >
-        Schedule A Call
+        Arrange A Call
         <ArrowRightIcon className="size-3 transition-transform duration-300 group-hover/xeon:translate-x-1 group-hover/xeon:scale-110" />
       </Link>
     </Badge>
@@ -87,13 +87,13 @@ export default function Hero({
           {badge !== false && badge}
           <div className="relative z-10 max-w-5xl">
             <p className="animate-appear text-muted-foreground mb-5 text-[11px] font-semibold tracking-[0.3em] uppercase sm:text-xs">
-              Enterprise Delivery With Measured Craft
+              Enterprise Systems With Measured Composure
             </p>
             <h1 className="animate-appear from-foreground via-foreground to-foreground/78 relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-[1] font-semibold tracking-[-0.05em] text-balance text-transparent sm:text-6xl sm:leading-[1] md:text-8xl md:leading-[1]">
               {title}
             </h1>
           </div>
-          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[760px] text-balance leading-7 opacity-0 delay-100 sm:text-[1.15rem] sm:leading-8">
+          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[760px] text-balance leading-7 opacity-0 delay-100 sm:text-[1.12rem] sm:leading-8">
             {description}
           </p>
           {buttons !== false && buttons.length > 0 && (
@@ -121,6 +121,9 @@ export default function Hero({
                 key={item}
                 className="rounded-[1.45rem] border border-white/72 bg-white/76 px-5 py-6 text-left shadow-[0_16px_32px_-28px_hsl(var(--foreground)/0.12)] backdrop-blur-xl dark:border-white/8 dark:bg-card/68"
               >
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  Principle
+                </p>
                 <div className="mb-5 h-px w-10 bg-gradient-to-r from-brand/35 to-transparent" />
                 <p className="text-sm leading-6 text-foreground/84">{item}</p>
               </div>
