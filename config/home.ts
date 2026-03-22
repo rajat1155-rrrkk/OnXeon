@@ -32,6 +32,13 @@ export interface ProofItem {
   description: string;
 }
 
+export interface SnapshotItem {
+  title: string;
+  context: string;
+  outcome: string;
+  approach: string;
+}
+
 export const homepageHeroButtons = [
   {
     href: "/contact#book",
@@ -270,5 +277,26 @@ export const proofHighlights: ProofItem[] = [
     title: "Enterprise and self-hosted fluency",
     description:
       "Comfort across Salesforce, SAP and ServiceNow as well as self-hosted stacks such as ERPNext, Odoo and Nextcloud.",
+  },
+];
+
+export const deliverySnapshots: SnapshotItem[] = [
+  {
+    title: "CRM and ERP operating alignment",
+    context: "Illustrative enterprise programme spanning sales workflow, finance visibility and downstream reporting.",
+    outcome: "A clearer system-of-record model with fewer manual handoffs between commercial and operations teams.",
+    approach: "Discovery, integration mapping, phased rollout and internal handover planning from day one.",
+  },
+  {
+    title: "Self-hosted operational stack",
+    context: "Illustrative self-hosted environment for teams seeking lower recurring cost and stronger data control.",
+    outcome: "A more controlled platform footprint with cleaner ownership, deployment discipline and upgrade clarity.",
+    approach: "Platform selection, infrastructure setup, workflow tailoring and long-term operating guidance.",
+  },
+  {
+    title: "System modernisation without disruption",
+    context: "Illustrative modernisation brief where legacy processes had to evolve without destabilising operations.",
+    outcome: "A steadier transition path with staged change, integration continuity and more confident internal adoption.",
+    approach: "Process audit, target architecture, measured migration planning and post-launch stabilisation.",
   },
 ];
