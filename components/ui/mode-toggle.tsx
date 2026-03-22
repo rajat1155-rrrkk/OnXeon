@@ -35,9 +35,8 @@ export function ModeToggle() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="group mobile-premium-tap relative gap-1.5 rounded-md border border-border/70 bg-card/70 px-2.5 py-1 text-xs shadow-sm transition-all duration-300 hover:border-brand/40 hover:bg-brand/10 hover:shadow-brand/20"
+          className="group mobile-premium-tap relative gap-1.5 rounded-full border border-border/70 bg-white/75 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] shadow-[0_12px_24px_-20px_hsl(var(--foreground)/0.18)] transition-all duration-300 hover:border-brand/25 hover:text-brand dark:bg-white/5"
         >
-          <span className="pointer-events-none absolute inset-y-0 left-[-55%] w-[40%] -skew-x-12 bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-0 transition-all duration-700 group-hover:left-[125%] group-hover:opacity-100 dark:via-white/20" />
           <span className="capitalize">{theme}</span>
           <span className="inline"> theme</span>
           <ChevronsUpDownIcon className="size-3" />
@@ -45,7 +44,7 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="w-40 rounded-xl border-border/70 bg-card/95 p-1 backdrop-blur-sm"
+        className="w-40 rounded-[1.1rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,252,249,0.95))] p-1 backdrop-blur-sm dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(31,35,32,0.94),rgba(24,28,25,0.92))]"
       >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
@@ -102,13 +101,11 @@ export function ThemeCycleButton({
   return (
     <Button
       variant="ghost"
-      className={`mobile-premium-tap group relative h-8 w-8 overflow-hidden rounded-full border border-border/75 bg-card/80 p-0 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-px hover:border-brand/45 hover:bg-brand/10 hover:shadow-[0_8px_20px_-12px_hsl(var(--brand)/0.7)] active:scale-95 focus-visible:ring-2 focus-visible:ring-brand/45 ${className ?? ""}`}
+      className={`mobile-premium-tap group relative h-8 w-8 overflow-hidden rounded-full border border-border/75 bg-white/75 p-0 shadow-[0_12px_22px_-18px_hsl(var(--foreground)/0.16)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-px hover:border-brand/25 active:scale-95 focus-visible:ring-2 focus-visible:ring-brand/35 dark:bg-white/5 ${className ?? ""}`}
       onClick={() => setTheme(next)}
       aria-label={`Switch theme, current ${active}`}
       title={`Theme: ${active} → ${next}`}
     >
-      <span className="pointer-events-none absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_30%_25%,hsl(var(--brand)/0.22),transparent_58%)]" />
-      <span className="pointer-events-none absolute inset-y-0 left-[-60%] w-[45%] -skew-x-12 bg-gradient-to-r from-transparent via-white/75 to-transparent opacity-0 transition-all duration-700 group-hover:left-[130%] group-hover:opacity-100 dark:via-white/20" />
       <Icon className={iconClass} />
     </Button>
   );

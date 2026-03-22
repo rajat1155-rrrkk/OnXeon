@@ -7,7 +7,7 @@ export const navbarMobileLinks = [
 
 export const navbarActions = [
   {
-    text: "Schedule A Call",
+    text: "Arrange A Call",
     href: "/contact#book",
     isButton: true,
     variant: "default" as const,
@@ -51,7 +51,7 @@ export const desktopMenuItems = [
     href: "/blueprints",
   },
   {
-    title: "Advisory Call",
+    title: "Contact",
     isLink: true,
     href: "/contact#book",
   },
@@ -164,8 +164,8 @@ export const footerPolicies = [
 export const footerCopyright = "© 2026 OnXeon. All rights reserved.";
 
 export const navigationBranding = {
-  logoTitle: "Advisory & Delivery",
+  logoTitle: "Strategic Delivery",
   logoDescription:
-    "Enterprise implementation, integration and support for organisations building with long-term intent.",
+    "Enterprise implementation and integration shaped for organisations that value composure, control and long-term fit.",
   logoHref: "/services/onxeon-services",
 };
