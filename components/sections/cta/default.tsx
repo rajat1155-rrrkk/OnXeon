@@ -27,7 +27,7 @@ export default function CTA({
   buttons = [
     {
       href: siteConfig.getStartedUrl,
-      text: "Get Started",
+      text: "Arrange A Conversation",
       variant: "default",
     },
   ],
@@ -44,6 +44,10 @@ export default function CTA({
             {title}
           </h2>
         </div>
+        <p className="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
+          Share the context, constraints and direction you are weighing. We will come back with a practical next step,
+          not a vague sales process.
+        </p>
         {buttons !== false && buttons.length > 0 && (
           <div className="flex justify-center gap-4">
             {buttons.map((button, index) => (

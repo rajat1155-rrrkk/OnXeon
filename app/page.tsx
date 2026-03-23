@@ -1,6 +1,7 @@
 import CTA from "../components/sections/cta/default";
 import Hero from "../components/sections/hero/default";
 import {
+  HomeEngagementSection,
   HomeProofSection,
   HomeSnapshotsSection,
   HomeTypicalProjectsSection,
@@ -28,6 +29,7 @@ export default function Home() {
       <HomeProofSection />
       <HomeWhatWeDoSection />
       <HomeWhyOnXeonSection />
+      <HomeEngagementSection />
       <HomeSnapshotsSection />
       <HomeTypicalProjectsSection />
       <CTA title="Discuss Your Next Strategic Build" />

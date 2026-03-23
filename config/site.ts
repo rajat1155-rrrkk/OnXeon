@@ -1,13 +1,12 @@
 export const siteConfig = {
   name: "OnXeon",
   url: "https://onxeon.com",
-  getStartedUrl:
-    "https://onxeon.com",
-  ogImage: "/og-image.png",
+  getStartedUrl: "https://onxeon.com/contact#book",
+  ogImage: "/og.jpg",
   description:
-    "OnXeon builds custom software, AI tools and modern websites for startups and businesses.",
+    "Enterprise implementation, integration and self-hosted delivery for organisations that value clarity, control and long-term maintainability.",
   links: {
-    twitter: "https://twitter.com/mikolajdobrucki",
+    twitter: "https://x.com/onxeon",
     github: "https://github.com/rajat1155-rrrkk",
     email: "/contact#book",
   },

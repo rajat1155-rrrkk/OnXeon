@@ -39,6 +39,11 @@ export interface SnapshotItem {
   approach: string;
 }
 
+export interface EngagementStep {
+  title: string;
+  description: string;
+}
+
 export const homepageHeroButtons = [
   {
     href: "/contact#book",
@@ -298,5 +303,28 @@ export const deliverySnapshots: SnapshotItem[] = [
     context: "Illustrative modernisation brief where legacy processes had to evolve without destabilising operations.",
     outcome: "A steadier transition path with staged change, integration continuity and more confident internal adoption.",
     approach: "Process audit, target architecture, measured migration planning and post-launch stabilisation.",
+  },
+];
+
+export const engagementSteps: EngagementStep[] = [
+  {
+    title: "Discover",
+    description:
+      "We clarify business context, platform constraints, stakeholder expectations and the operating realities around the programme.",
+  },
+  {
+    title: "Design",
+    description:
+      "We define architecture, delivery shape, integration boundaries and the implementation path with risk kept visible.",
+  },
+  {
+    title: "Deliver",
+    description:
+      "We execute with measured rollout, tight feedback loops and practical governance rather than unnecessary ceremony.",
+  },
+  {
+    title: "Support",
+    description:
+      "We stabilise, document and hand over clearly so internal teams can operate with more confidence after go-live.",
   },
 ];
