@@ -181,29 +181,29 @@ export default function LogoPlayground() {
   );
 
   return (
-    <div className="relative w-full overflow-hidden rounded-xl border border-green-100 bg-gradient-to-b from-green-50/90 to-card md:h-[400px] dark:border-emerald-900/40 dark:from-emerald-950/45 dark:to-card">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
-      <div className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_right,rgba(16,185,129,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(16,185,129,0.08)_1px,transparent_1px)] [background-size:30px_30px]" />
+    <div className="relative w-full overflow-hidden rounded-[1.5rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,252,249,0.95))] md:h-[400px] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent dark:via-white/20" />
+      <div className="pointer-events-none absolute inset-0 [background-image:linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] [background-size:30px_30px]" />
 
       <div className="relative z-10 space-y-3 p-4 md:hidden">
         <div>
-          <p className="text-xs font-semibold tracking-wide text-foreground">Architecture Preview</p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            Mobile view shows a compact plan. Open on desktop for full interactive configurator.
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Architecture Preview</p>
+          <p className="mt-1 text-xs leading-5 text-muted-foreground">
+            Mobile view shows a compact plan. Open on desktop for the full interactive configurator.
           </p>
         </div>
 
-        <div className="rounded-lg border border-green-200 bg-white/95 p-3 dark:border-emerald-800/60 dark:bg-card/92">
-          <p className="text-sm font-semibold text-foreground">{plan.title}</p>
+        <div className="rounded-[1rem] border border-border/70 bg-white/88 p-3 dark:bg-card/92">
+          <p className="text-sm font-semibold tracking-[-0.01em] text-foreground">{plan.title}</p>
           <p className="mt-1 text-xs text-muted-foreground">
             Timeline: <span className="font-medium text-foreground">{plan.timeline}</span> · Cost:{" "}
             <span className="font-medium text-foreground">{plan.costBand}</span>
           </p>
-          <p className="mt-2 text-[11px] text-muted-foreground">{plan.modeNote}</p>
+          <p className="mt-2 text-[11px] leading-5 text-muted-foreground">{plan.modeNote}</p>
         </div>
 
-        <div className="rounded-lg border border-green-100 bg-white/90 p-3 dark:border-emerald-900/40 dark:bg-card">
-          <p className="text-[11px] font-semibold text-foreground">Recommended Stack</p>
+        <div className="rounded-[1rem] border border-border/70 bg-white/82 p-3 dark:bg-card">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">Recommended Stack</p>
           <ul className="mt-2 space-y-1 text-[11px] text-muted-foreground">
             {plan.stack.slice(0, 4).map((item) => (
               <li key={item}>• {item}</li>
@@ -214,13 +214,13 @@ export default function LogoPlayground() {
         <div className="flex flex-col gap-2 sm:flex-row">
           <Link
             href="/contact#book"
-            className="inline-flex items-center justify-center rounded-md border border-green-200 bg-white px-3 py-2 text-xs font-medium text-foreground transition hover:border-green-300 dark:border-emerald-800/60 dark:bg-card"
+            className="inline-flex items-center justify-center rounded-full border border-border/70 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-foreground transition hover:border-brand/25 dark:bg-card"
           >
-            Book Consultation
+            Arrange A Call
           </Link>
           <Link
             href="/services/onxeon-services"
-            className="inline-flex items-center justify-center rounded-md border border-green-100 bg-green-50/70 px-3 py-2 text-xs font-medium text-muted-foreground transition hover:border-green-300 hover:text-foreground dark:border-emerald-900/40 dark:bg-emerald-900/20"
+            className="inline-flex items-center justify-center rounded-full border border-border/70 bg-white/80 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground transition hover:border-brand/18 hover:text-foreground dark:bg-white/6"
           >
             View Services
           </Link>
@@ -228,9 +228,9 @@ export default function LogoPlayground() {
       </div>
 
       <div className="absolute inset-0 hidden grid-cols-12 md:grid">
-        <div className="col-span-4 border-r border-green-100 bg-white/94 p-3 dark:border-emerald-900/40 dark:bg-card/88">
-          <p className="text-xs font-semibold tracking-wide text-foreground">Architecture Configurator</p>
-          <p className="mt-1 text-xs text-muted-foreground">Get a practical implementation blueprint</p>
+        <div className="col-span-4 border-r border-border/70 bg-white/92 p-3 dark:bg-card/88">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Architecture Configurator</p>
+          <p className="mt-1 text-xs text-muted-foreground">Shape a practical implementation blueprint</p>
 
           <div className="mt-3 space-y-2 text-[11px]">
             <label className="block">
@@ -238,7 +238,7 @@ export default function LogoPlayground() {
               <select
                 value={affordability}
                 onChange={(e) => setAffordability(e.target.value as Affordability)}
-                className="w-full rounded-md border border-green-200 bg-white px-2 py-1 text-foreground dark:border-emerald-800/60 dark:bg-card"
+                className="w-full rounded-md border border-border/70 bg-white px-2 py-1 text-foreground dark:bg-card"
               >
                 <option value="balanced">Balanced (Enterprise + Self-Hosted)</option>
                 <option value="enterprise">Enterprise Systems First</option>
@@ -251,7 +251,7 @@ export default function LogoPlayground() {
               <select
                 value={toolChoice}
                 onChange={(e) => setToolChoice(e.target.value as ToolChoice)}
-                className="w-full rounded-md border border-green-200 bg-white px-2 py-1 text-foreground dark:border-emerald-800/60 dark:bg-card"
+                className="w-full rounded-md border border-border/70 bg-white px-2 py-1 text-foreground dark:bg-card"
               >
                 <optgroup label="PM / Work Management">
                   <option value="plane">Plane (self-hosted)</option>
