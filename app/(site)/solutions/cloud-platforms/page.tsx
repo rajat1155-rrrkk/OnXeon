@@ -64,7 +64,7 @@ export default function CloudPlatformsPage() {
               href="/contact#book"
               className="relative inline-flex items-center gap-1.5 overflow-hidden rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/18 hover:text-brand after:absolute after:right-2 after:top-1/2 after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-brand/80 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100"
             >
-              Schedule A Call
+              Arrange A Call
             </Link>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function CloudPlatformsPage() {
             asChild
             className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
           >
-            <Link href="/contact#book">Discuss Your Cloud Direction</Link>
+            <Link href="/contact#book">Discuss Cloud Direction</Link>
           </Button>
           <Button variant="outline" asChild>
             <Link href="/services/cloud-solutions">View Cloud Services</Link>

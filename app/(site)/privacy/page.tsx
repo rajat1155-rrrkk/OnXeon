@@ -14,8 +14,8 @@ export default function PrivacyPage() {
     <Section>
       <div className="max-w-4xl mx-auto py-24 space-y-8">
         <div className="group relative overflow-hidden rounded-[2rem] border border-white/72 bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(251,252,250,0.94))] p-8 shadow-[0_24px_54px_-40px_hsl(var(--foreground)/0.16)] transition-all duration-500 hover:shadow-[0_30px_62px_-44px_hsl(var(--foreground)/0.2)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,32,29,0.92),rgba(21,25,23,0.9))] md:p-10">
-          <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-green-300/18 blur-3xl dark:bg-emerald-500/14" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-400/70 to-transparent dark:via-emerald-400/60" />
+          <div className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full bg-brand/10 blur-3xl dark:bg-brand/10" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent dark:via-white/20" />
           <div className="relative z-10 space-y-3">
             <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-muted-foreground">
               Legal & Privacy
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
             <p className="text-muted-foreground">Last updated: February 25, 2026</p>
             <Link
               href="/contact#book"
-              className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/55 hover:bg-brand/16 hover:text-brand hover:shadow-[0_0_14px_hsl(var(--brand)/0.24)]"
+              className="inline-flex items-center rounded-full border border-brand/25 bg-white/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground transition-all duration-300 hover:-translate-y-px hover:border-brand/45 hover:text-brand dark:bg-white/5"
             >
               Contact On Privacy
             </Link>
@@ -205,8 +205,8 @@ export default function PrivacyPage() {
             .
           </p>
           <p className="text-muted-foreground">
-            Note: This policy is a practical template and should be reviewed by
-            qualified legal counsel before production use.
+            This policy provides a general website-level overview and should be reviewed with qualified legal counsel
+            to confirm suitability for your operating jurisdiction and contractual model.
           </p>
         </section>
       </div>

@@ -1,5 +1,6 @@
 import { type VariantProps } from "class-variance-authority";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -58,12 +59,12 @@ export default function CTA({
                 asChild
                 className="group/btn mobile-premium-tap relative isolate overflow-hidden rounded-full border border-border/70 px-6 shadow-[0_10px_24px_-16px_hsl(var(--foreground)/0.35)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:border-brand/45 hover:shadow-[0_14px_28px_-18px_hsl(var(--brand)/0.6)] before:absolute before:inset-y-0 before:left-[-58%] before:w-[40%] before:skew-x-[-18deg] before:rounded-[inherit] before:bg-white/32 dark:before:bg-transparent before:opacity-0 before:transition-all before:duration-700 hover:before:left-[122%] hover:before:opacity-100 dark:hover:before:opacity-0"
               >
-                <a href={button.href} className="relative overflow-hidden rounded-[inherit]">
+                <Link href={button.href} className="relative overflow-hidden rounded-[inherit]">
                   <span className="pointer-events-none absolute inset-y-0 left-[-35%] w-6 -skew-x-12 rounded-[inherit] bg-brand/35 opacity-0 blur-sm transition-all duration-300 group-hover/btn:left-[112%] group-hover/btn:opacity-100 dark:opacity-0 dark:group-hover/btn:opacity-0" />
                   {button.icon}
                   {button.text}
                   {button.iconRight}
-                </a>
+                </Link>
               </Button>
             ))}
           </div>

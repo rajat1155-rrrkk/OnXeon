@@ -54,7 +54,7 @@ export default function CustomDevelopmentPage() {
               href="/contact#book"
               className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-foreground transition-all duration-300 hover:-translate-y-px hover:scale-[1.02] hover:border-brand/55 hover:bg-brand/18 hover:text-brand hover:shadow-lg hover:shadow-brand/20"
             >
-              Schedule A Call
+              Arrange A Call
             </Link>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function CustomDevelopmentPage() {
             asChild
             className="relative overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-300/40 dark:hover:shadow-emerald-900/40 before:absolute before:inset-y-0 before:left-[-60%] before:w-1/2 before:skew-x-[-18deg] before:bg-white/45 dark:before:bg-white/20 before:opacity-0 before:transition-all before:duration-700 hover:before:left-[130%] hover:before:opacity-100"
           >
-            <Link href="/contact#book">Discuss Your Custom Build</Link>
+            <Link href="/contact#book">Discuss A Custom Build</Link>
           </Button>
           <Button variant="outline" asChild>
             <Link href="/solutions/system-integration">See Integration Patterns</Link>
