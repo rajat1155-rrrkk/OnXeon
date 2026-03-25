@@ -13,7 +13,7 @@ import {
 } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../../logos/launch-ui";
+import OnXeonMark from "../../logos/onxeon-mark";
 import { Button, buttonVariants } from "../../ui/button";
 import {
   Navbar as NavbarComponent,
@@ -50,7 +50,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({
-  logo = <LaunchUI />,
+  logo = <OnXeonMark />,
   name = "OnXeon",
   homeUrl = "/",
   mobileLinks = navbarMobileLinks,

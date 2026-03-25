@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const LaunchUI = () => {
+const OnXeonMark = () => {
   return (
     <span className="group relative inline-flex items-center justify-center">
       <Image
@@ -15,4 +15,4 @@ const LaunchUI = () => {
   );
 };
 
-export default LaunchUI;
+export default OnXeonMark;

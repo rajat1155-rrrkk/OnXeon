@@ -1,5 +1,3 @@
-import { siteConfig } from "@/config/site";
-
 import { Section } from "../../ui/section";
 
 interface StatItemProps {
@@ -17,26 +15,24 @@ interface StatsProps {
 export default function Stats({
   items = [
     {
-      label: "used by",
-      value: Math.round(siteConfig.stats.figma / 100) / 10,
-      suffix: "k",
-      description: "designers on Figma Community",
+      label: "covering",
+      value: "CRM",
+      description: "Salesforce, ServiceNow, and carefully selected self-hosted CRM delivery.",
     },
     {
-      label: "over",
-      value: siteConfig.stats.github,
-      description: "clones and forks of the template on Github",
+      label: "spanning",
+      value: "ERP",
+      description: "SAP, ERPNext, and Odoo programmes aligned to operational realities.",
     },
     {
-      label: "already",
-      value: Math.round(siteConfig.stats.cli / 100) / 10,
-      suffix: "k",
-      description: "installations with shadcn/ui CLI",
+      label: "extending",
+      value: "Cloud",
+      description: "AWS, Azure, GCP, and self-hosted infrastructure execution.",
     },
     {
-      label: "includes",
-      value: siteConfig.stats.sections,
-      description: "blocks and sections",
+      label: "coordinating",
+      value: "Integration",
+      description: "Workflow, API, and data movement across business-critical systems.",
     },
   ],
   className,

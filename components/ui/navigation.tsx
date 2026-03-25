@@ -12,7 +12,7 @@ import {
 } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../logos/launch-ui";
+import OnXeonMark from "../logos/onxeon-mark";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -53,7 +53,7 @@ interface NavigationProps {
 export default function Navigation({
   menuItems = desktopMenuItems,
   components = solutionComponentItems,
-  logo = <LaunchUI />,
+  logo = <OnXeonMark />,
   logoTitle = navigationBranding.logoTitle,
   logoDescription = navigationBranding.logoDescription,
   logoHref = navigationBranding.logoHref,

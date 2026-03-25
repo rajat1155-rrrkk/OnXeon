@@ -8,7 +8,7 @@ import {
 } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../../logos/launch-ui";
+import OnXeonMark from "../../logos/onxeon-mark";
 import {
   Footer,
   FooterBottom,
@@ -38,7 +38,7 @@ interface FooterProps {
 }
 
 export default function FooterSection({
-  logo = <LaunchUI />,
+  logo = <OnXeonMark />,
   name = "OnXeon",
   columns = footerColumns,
   copyright = footerCopyright,

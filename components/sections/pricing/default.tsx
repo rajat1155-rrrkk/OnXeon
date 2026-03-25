@@ -1,6 +1,5 @@
 import { User, Users } from "lucide-react";
 
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 import { PricingColumn, PricingColumnProps } from "../../ui/pricing-column";
@@ -14,59 +13,60 @@ interface PricingProps {
 }
 
 export default function Pricing({
-  title = "Build your dream landing page, today.",
-  description = "Get lifetime access to all the components. No recurring fees. Just simple, transparent pricing.",
+  title = "Illustrative Engagement Models",
+  description = "Typical ways organisations work with OnXeon. Scope, timing, and commercials are ultimately shaped around your operating environment.",
   plans = [
     {
-      name: "Free",
-      description: "For everyone starting out on a website for their big idea",
-      price: 0,
-      priceNote: "Free and open-source forever. Get started now.",
+      name: "Advisory Sprint",
+      description: "For teams clarifying platform direction, delivery shape, and migration risk.",
+      price: "Custom",
+      priceNote: "Usually used to frame decisions, priorities, and a credible execution path.",
       cta: {
         variant: "glow",
-        label: "Get started for free",
-        href: "/docs/getting-started/introduction",
+        label: "Arrange A Call",
+        href: "/contact#book",
       },
       features: [
-        "1 website template",
-        "9 blocks and sections",
-        "4 custom animations",
+        "Discovery workshops and stakeholder alignment",
+        "Architecture and platform-fit guidance",
+        "Phasing, risk, and operating model recommendations",
       ],
       variant: "default",
       className: "hidden lg:flex",
     },
     {
-      name: "Pro",
+      name: "Implementation Programme",
       icon: <User className="size-4" />,
-      description: "For early-stage founders, solopreneurs and indie devs",
-      price: 99,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      description: "For organisations executing CRM, ERP, cloud, or integration initiatives.",
+      price: "Scoped",
+      priceNote: "Structured around project complexity, internal capacity, and programme cadence.",
       cta: {
         variant: "default",
-        label: "Get all-access",
-        href: siteConfig.pricing.pro,
+        label: "Discuss A Programme",
+        href: "/contact#book",
       },
       features: [
-        `${siteConfig.stats.templates} templates`,
-        `${siteConfig.stats.sections} blocks and sections`,
-        `${siteConfig.stats.illustrations} illustrations`,
-        `${siteConfig.stats.animations} custom animations`,
+        "Implementation leadership and delivery oversight",
+        "Configuration, integration, and rollout coordination",
+        "Documentation, enablement, and operational handover",
       ],
       variant: "glow-brand",
     },
     {
-      name: "Pro Team",
+      name: "Stewardship Retainer",
       icon: <Users className="size-4" />,
-      description: "For teams and agencies working on cool products together",
-      price: 499,
-      priceNote: "Lifetime access. Free updates. No recurring fees.",
+      description: "For teams that need calm ongoing support after go-live or between major initiatives.",
+      price: "Ongoing",
+      priceNote: "Best suited to iterative optimisation, issue stewardship, and roadmap continuity.",
       cta: {
         variant: "default",
-        label: "Get all-access for your team",
-        href: siteConfig.pricing.team,
+        label: "Review Support Options",
+        href: "/contact#book",
       },
       features: [
-        "All the templates, components and sections available for your entire team",
+        "Change requests, advisory input, and release support",
+        "Integration stewardship and platform enhancements",
+        "Continuity across vendor, internal, and platform teams",
       ],
       variant: "glow",
     },

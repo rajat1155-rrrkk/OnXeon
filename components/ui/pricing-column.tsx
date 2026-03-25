@@ -30,7 +30,7 @@ export interface PricingColumnProps
   name: string;
   icon?: ReactNode;
   description: string;
-  price: number;
+  price: number | string;
   originalPrice?: number;
   promotionText?: ReactNode;
   priceNote: string;
@@ -56,6 +56,8 @@ export function PricingColumn({
   className,
   ...props
 }: PricingColumnProps) {
+  const isNumericPrice = typeof price === "number";
+
   return (
     <div
       className={cn(pricingColumnVariants({ variant, className }))}
@@ -82,7 +84,7 @@ export function PricingColumn({
           </p>
         </header>
         <section className="flex flex-col gap-3">
-          {originalPrice !== undefined && (
+          {isNumericPrice && originalPrice !== undefined && (
             <div className="flex h-6 items-baseline gap-1">
               <span className="text-muted-foreground text-lg font-medium line-through">
                 {originalPrice > 0 && price !== originalPrice
@@ -93,15 +95,21 @@ export function PricingColumn({
           )}
           <div className="flex items-center gap-3 lg:flex-col lg:items-start xl:flex-row xl:items-center">
             <div className="flex flex-col gap-1">
-              <div className="flex items-baseline gap-1">
-                <span className="text-muted-foreground text-2xl font-bold">
-                  $
-                </span>
-                <span className="text-6xl font-bold">{price}</span>
-              </div>
+              {isNumericPrice ? (
+                <div className="flex items-baseline gap-1">
+                  <span className="text-muted-foreground text-2xl font-bold">
+                    $
+                  </span>
+                  <span className="text-6xl font-bold">{price}</span>
+                </div>
+              ) : (
+                <div className="text-5xl font-bold tracking-[-0.04em]">
+                  {price}
+                </div>
+              )}
             </div>
             <div className="flex min-h-[40px] flex-col">
-              {price > 0 && (
+              {isNumericPrice && price > 0 && (
                 <>
                   <span className="text-sm">one-time payment</span>
                   <span className="text-muted-foreground text-sm">

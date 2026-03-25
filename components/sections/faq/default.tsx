@@ -27,117 +27,94 @@ export default function FAQ({
   title = "Questions and Answers",
   items = [
     {
-      question:
-        "Why building a great landing page is critical for your business?",
+      question: "What kinds of engagements does OnXeon typically support?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            In today&apos;s AI-driven world, standing out is harder than ever.
-            While anyone can build a product, a professional landing page makes
-            the difference between success and failure.
+            We usually support enterprise implementation programmes, integration
+            workstreams, self-hosted modernisation, and post-launch stewardship.
           </p>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Launch UI helps you ship faster without compromising on quality.
+            That can range from early advisory work through to delivery
+            execution, handover, and ongoing operational support.
           </p>
         </>
       ),
     },
     {
-      question: "Why use Launch UI instead of a no-code tool?",
+      question: "Do you only implement enterprise SaaS platforms?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[600px]">
-            No-code tools lock you into their ecosystem with recurring fees and
-            limited control. They often come with performance issues and make it
-            difficult to integrate with your product.
+            No. We work across enterprise SaaS platforms such as Salesforce,
+            SAP, ServiceNow, and cloud providers, but we also support
+            carefully selected self-hosted alternatives when they are a better
+            fit for cost, control, or operating model.
           </p>
           <p className="text-muted-foreground mb-4 max-w-[600px]">
-            You can&apos;t even change your hosting provider and basic things
-            like web analytics come as extra costs and paid add-ons.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[600px]">
-            What might seem like a convenient solution today could paint you
-            into a corner tomorrow, limiting your ability to scale and adapt.
-            Launch UI gives you full control of your code while maintaining
-            professional quality.
+            The recommendation should follow the business reality, not the other
+            way around.
           </p>
         </>
       ),
     },
     {
-      question:
-        "How Launch UI is different from other components libraries and templates?",
+      question: "When does a self-hosted option make sense?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Launch UI stands out with premium design quality and delightful
-            touches of custom animations and illustrations.
+            Self-hosted options are often worth evaluating when licence cost,
+            data residency, platform flexibility, or long-term ownership matter
+            more than buying into a large vendor ecosystem.
           </p>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            All components are carefully crafted to help position your product
-            as a professional tool, avoiding the generic template look.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            Unlike many libraries that rely on outdated CSS practices and old
-            dependencies, Launch UI is built with modern technologies and best
-            practices in mind.
+            They are not always the right answer, but they can be a strong fit
+            when the organisation can support the operating model properly.
           </p>
         </>
       ),
     },
     {
-      question: 'Why exactly does it mean that "The code is yours"?',
+      question: "How do you approach integrations and handover?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The basic version of Launch UI is open-source and free forever,
-            under a do-whatever-you-want license.
+            We prioritise integration clarity early: ownership, contracts, data
+            flows, failure handling, and operational visibility all need to be
+            thought through before go-live.
           </p>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The pro version that contains more components and options is a
-            one-time purchase that gives you lifetime access to all current and
-            future content. Use it for unlimited personal and commercial
-            projects - no recurring fees or restrictions.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            For complete details about licensing and usage rights, check out{" "}
-            <Link href="/pricing" className="text-foreground underline">
-              the pricing page
-            </Link>
-            .
+            Handover usually includes documentation, operating guidance,
+            support patterns, and enough structure for internal teams to keep
+            moving without dependency on guesswork.
           </p>
         </>
       ),
     },
     {
-      question: "Are Figma files included?",
+      question: "Can OnXeon work alongside an internal team or incumbent vendor?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[580px]">
-          Yes! The complete Launch UI template is available for free on the{" "}
-          <Link
-            href="https://www.figma.com/community/file/1420131743903900629/launch-ui-landing-page-components-ui-kit"
-            className="text-foreground underline"
-          >
-            Figma community
-          </Link>
-          .
+          Yes. Many engagements work best when we operate as an advisory and
+          delivery layer around internal stakeholders, platform owners, or
+          specialist vendors rather than replacing them.
         </p>
       ),
     },
     {
-      question: "Can I get a discount?",
+      question: "How do we start the conversation?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Actually, yes! I&apos;m always acively looking for beta testers of
-            new features. If you are interested in exchanging feedback for a
-            discount, please contact me via{" "}
-            <a
-              href={siteConfig.links.email}
-              className="underline underline-offset-2"
-            >
-              email
-            </a>
+            The easiest starting point is a short conversation around your
+            current systems, delivery pressure, and the decision or programme
+            you need to move forward.
+          </p>
+          <p className="text-muted-foreground mb-4 max-w-[580px]">
+            If that sounds helpful, get in touch via{" "}
+            <Link href={siteConfig.links.email} className="underline underline-offset-2">
+              the contact page
+            </Link>
             .
           </p>
         </>
